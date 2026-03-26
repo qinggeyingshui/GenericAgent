@@ -1,28 +1,20 @@
-# TODO - Batch 17 (R98-R10x)
+# TODO - Batch 18 (R105-R11x)
 # 生成时间: 2026-03-26
-# 批判性反思: Batch16工具链丰富(word/pdf/phone/git)，但工具间联动不足；GNN库缺3篇(GIN/MPNN/OGB)；PATH修复脚本悬空未执行；word_toolkit缺实战应用场景
+# 批判性反思: Batch17工具覆盖面广(GNN/Word/PATH/ability_map)，但PPT能力弱；图表仅验证未封装；local_skills只有2个SKILL；ppt_com_toolkit缺图表/更多形状
 # 价值公式: AI训练数据无法覆盖 x 对未来协作有持久收益
-# 核心方向: 工具联动深化(Word报告/GNN入库) + 遗留高优修复(PATH/GIN/MPNN/OGB) + 新能力节点(arXiv抓取/Word模板)
+# 核心方向: PPT能力深化(图表封装/SmartArt/更多形状) + local_skills扩展(图片搜索SKILL) + GNN论文库继续扩充 + 工具联动(PPT+图表+论文库)
 # 执行顺序: 1->2->3->4->5->6
 
 ## 待执行
 
-1. [x] 产出 | GNN论文库补全GIN/MPNN/OGB三篇缺失论文 | crossref_report.md已识别教案引用但库中缺失GIN(Xu2019)/MPNN(Gilmer2017)/OGB(Hu2020)三篇；手动构造元数据调用add()入库，补全PAPERS.md | 验收：PAPERS.md含GIN/MPNN/OGB三条记录，crossref_report覆盖率从90%提升至100%
+1. [ ] 产出 | ppt_com_toolkit扩展：add_chart()封装 | 将python-pptx图表能力封装为add_chart(slide,chart_type,data,l,t,w,h,title)统一接口，支持COLUMN/BAR/LINE/PIE四种类型，数据格式为{categories:[],series:{名:[]}}；写入ppt_com_toolkit.py并在ppt_lab/验证 | 验收：add_chart函数存在，生成含4种图表的test_charts.pptx，文件>30KB
 
-2. [x] 产出 | GNN论文库CLI查询工具 | 基于research_paper_kb_like.py封装kb_cli.py命令行工具，支持search/list/fetch三命令+关键词/年份过滤，输出Markdown表格；与crossref_report联动可直接查询缺失论文状态 | 验收：kb_cli.py存在，三命令均可运行输出格式化结果
+2. [ ] 产出 | ppt_com_toolkit扩展：更多AutoShape支持 | 用win32com AddShape封装add_shape(slide,shape_type,l,t,w,h,fill,text)，覆盖三角形(13)/右箭头(20)/五角星(12)/流程图过程框(109)等常用类型；支持形状内文字；更新ability_map.md | 验收：add_shape函数存在，生成含6种AutoShape的test_shapes.pptx
 
-3. [x] 产出 | arXiv GNN论文在线抓取→自动入库pipeline | 基于pdf_reader.py+research_paper_kb_like.py，实现从arXiv abstract页抓取论文元数据(标题/作者/摘要/年份/arXiv ID)并调用add()写入PAPERS.md；用>=2篇2025/2026年GNN新论文验证完整链路 | 验收：arxiv2kb.py存在，能从arXiv URL自动入库>=2篇论文
+3. [ ] 产出 | local_skills新增图片搜索SKILL | 实现local_skills/image_search.py：用Unsplash免费API(无需key的source.unsplash.com)或Pixabay按关键词下载图片到本地缓存，返回本地路径；支持指定尺寸；与add_picture联动 | 验收：image_search.py存在，search("graph neural network")能返回>=1张本地缓存图片路径
 
-4. [x] 环境 | PATH异常修复执行+验证 | R41已生成fix_path.ps1但从未执行；先备份PATH，运行fix_path.ps1删除不存在路径条目，验证修复前后PATH条目数变化，输出修复报告 | 验收：修复前后PATH对比报告，异常条目数从22降低，系统PATH可正常使用
+4. [ ] 产出 | GNN完整教案PPT自动生成器 | 基于lesson_plan.md + ppt_com_toolkit + add_chart，生成L01_GNN导论.pptx：封面/目录/教学目标/核心概念(含图表)/论文精读/课堂练习/总结共8张以上幻灯片；图表展示GNN模型对比数据 | 验收：lesson2ppt.py存在，生成L01_GNN导论.pptx>50KB，含>=8张幻灯片
 
-5. [x] 产出 | GNN教案→Word讲义自动生成器 | 基于word_toolkit.py+teaching_kb，实现lesson_plan.md→Word讲义自动转换：章节标题/正文/重点论文引用表格/参考文献列表；先实现L01一个教案，验证pipeline | 验收：lesson2word.py存在，生成L01_GNN导论_讲义.docx，含正确章节结构+论文引用表
+5. [ ] 产出 | arXiv批量抓取：2025年GNN新论文入库 | 用arxiv2kb.py批量抓取2025年GNN相关最新论文>=5篇(Graph Transformer/GraphMamba/分子图等方向)；更新PAPERS.md；生成入库摘要报告 | 验收：PAPERS.md新增>=5篇2025年论文，kb_cli search GNN输出>=20篇
 
-6. [x] 产出 | local_skills能力树可视化 | 扫描local_skills/目录所有.py文件，提取函数签名+docstring，生成ability_map.md：按类别归组(搜索/PPT/论文/文档/系统)，标注每个函数的输入输出，方便快速查阅可用工具 | 验收：ability_map.md存在，覆盖local_skills/下>=80%函数，含分类索引
-
-## 已完成（Batch 16）
-[x] 产出 | word_toolkit.py封装
-[x] 产出 | PDF→GNN论文库自动入库pipeline
-[x] 产出 | ADB手机文件同步工具
-[x] 产出 | teaching_kb与GNN论文库交叉引用查询
-[x] 产出 | git仓库初始化+关键产出版本快照
-[x] 自身演进 | memory_scanner全量审计+过时记录修正
+6. [ ] 自身演进 | ppt_com_sop深化：完整PPT制作流程文档 | 结合本批次PPT实战经验，将ppt_com_sop.md扩展为完整制作指南：布局规范/配色方案/字体规则/动画最佳实践/图表选型指南；为未来PPT任务提供决策依据 | 验收：ppt_com_sop.md>100行，含完整制作流程章节
