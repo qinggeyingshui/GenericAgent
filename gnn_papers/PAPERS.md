@@ -172,3 +172,25 @@ arxiv: "arXiv:2005.00687"
 venue: "NeurIPS 2020"
 keywords: ["OGB", "benchmark", "graph dataset", "leaderboard", "GNN evaluation"]
 relevance: "评测基准：OGB标准化GNN评测数据集与排行榜，适合L05/L06课程实验和论文复现基准，指导学生选择评测数据集"
+
+---
+id: "arXiv240208678"
+title: "Graph Mamba: Towards Learning on Graphs with State Space Models"
+authors: ["Ali Behrouz", "Farnoosh Hashemi"]
+year: "2024"
+arxiv: "arXiv:2402.08678"
+venue: "arXiv preprint"
+keywords: ["GNN", "graph neural network"]
+summary: "Graph Neural Networks (GNNs) have shown promising potential in graph representation learning. The majority of GNNs define a local message-passing mechanism, propagating information over the graph by stacking multiple layers. These methods, however, are known to suffer from two major limitations: ove"
+relevance: "arXiv:2402.08678 自动入库"
+
+---
+id: "arXiv170602216"
+title: "Inductive Representation Learning on Large Graphs"
+authors: ["William L. Hamilton", "Rex Ying", "Jure Leskovec"]
+year: "2024"
+arxiv: "arXiv:1706.02216"
+venue: "arXiv preprint"
+keywords: ["GNN", "graph neural network"]
+summary: "Low-dimensional embeddings of nodes in large graphs have proved extremely useful in a variety of prediction tasks, from content recommendation to identifying protein functions. However, most existing approaches require that all nodes in the graph are present during training of the embeddings; these "
+relevance: "arXiv:1706.02216 自动入库"
