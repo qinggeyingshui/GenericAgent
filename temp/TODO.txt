@@ -13,7 +13,7 @@
 
 3. [x] 产出 | local_skills新增图片搜索SKILL | 实现local_skills/image_search.py：用Unsplash免费API(无需key的source.unsplash.com)或Pixabay按关键词下载图片到本地缓存，返回本地路径；支持指定尺寸；与add_picture联动 | 验收：image_search.py存在，search("graph neural network")能返回>=1张本地缓存图片路径
 
-4. [ ] 产出 | GNN完整教案PPT自动生成器 | 基于lesson_plan.md + ppt_com_toolkit + add_chart，生成L01_GNN导论.pptx：封面/目录/教学目标/核心概念(含图表)/论文精读/课堂练习/总结共8张以上幻灯片；图表展示GNN模型对比数据 | 验收：lesson2ppt.py存在，生成L01_GNN导论.pptx>50KB，含>=8张幻灯片
+4. [x] 产出 | GNN完整教案PPT自动生成器 | 基于lesson_plan.md + ppt_com_toolkit + add_chart，生成L01_GNN导论.pptx：封面/目录/教学目标/核心概念(含图表)/论文精读/课堂练习/总结共8张以上幻灯片；图表展示GNN模型对比数据 | 验收：lesson2ppt.py存在，生成L01_GNN导论.pptx>50KB，含>=8张幻灯片
 
 5. [ ] 产出 | arXiv批量抓取：2025年GNN新论文入库 | 用arxiv2kb.py批量抓取2025年GNN相关最新论文>=5篇(Graph Transformer/GraphMamba/分子图等方向)；更新PAPERS.md；生成入库摘要报告 | 验收：PAPERS.md新增>=5篇2025年论文，kb_cli search GNN输出>=20篇
 
