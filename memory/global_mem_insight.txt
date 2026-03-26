@@ -5,6 +5,7 @@
 自主探索任务: autonomous_operation_sop(报告→temp/autonomous_reports/history.txt，不在memory下) | 与定时任务完全独立
 教案知识库: teaching_kb_sop+temp/autonomous_reports/R06_教案助手知识库结构规划.md
 GNN论文库: gnn_papers/PAPERS.md | 接口: local_skills/research_paper_kb_like.py(list/search/add/fetch)
+图片搜索: local_skills/image_search.py(loremflickr无需key,search(kw,w,h,count)->路径列表,缓存temp/image_cache/,坑:unsplash已503)
 任务设计: task_design_sop
 手机操控: adb_ui.py | 文件同步: temp/phone_sync.py(list/pull/push)
 Word文档: temp/word_toolkit.py(win32com,新建/编辑/表格/图片) | 坑:中文Word下add_bullet_list()报错(List Bullet样式不存在)，改用Paragraphs.Add()+LeftIndent+前缀
