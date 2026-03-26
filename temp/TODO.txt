@@ -13,7 +13,7 @@
 
 3. [x] 产出 | arXiv GNN论文在线抓取→自动入库pipeline | 基于pdf_reader.py+research_paper_kb_like.py，实现从arXiv abstract页抓取论文元数据(标题/作者/摘要/年份/arXiv ID)并调用add()写入PAPERS.md；用>=2篇2025/2026年GNN新论文验证完整链路 | 验收：arxiv2kb.py存在，能从arXiv URL自动入库>=2篇论文
 
-4. [ ] 环境 | PATH异常修复执行+验证 | R41已生成fix_path.ps1但从未执行；先备份PATH，运行fix_path.ps1删除不存在路径条目，验证修复前后PATH条目数变化，输出修复报告 | 验收：修复前后PATH对比报告，异常条目数从22降低，系统PATH可正常使用
+4. [x] 环境 | PATH异常修复执行+验证 | R41已生成fix_path.ps1但从未执行；先备份PATH，运行fix_path.ps1删除不存在路径条目，验证修复前后PATH条目数变化，输出修复报告 | 验收：修复前后PATH对比报告，异常条目数从22降低，系统PATH可正常使用
 
 5. [ ] 产出 | GNN教案→Word讲义自动生成器 | 基于word_toolkit.py+teaching_kb，实现lesson_plan.md→Word讲义自动转换：章节标题/正文/重点论文引用表格/参考文献列表；先实现L01一个教案，验证pipeline | 验收：lesson2word.py存在，生成L01_GNN导论_讲义.docx，含正确章节结构+论文引用表
 
