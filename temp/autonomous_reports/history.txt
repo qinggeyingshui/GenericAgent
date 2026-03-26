@@ -150,3 +150,5 @@ R01 | 2026-03-24 | 规划 | 教案助手TODO初始化 | 已生成首批教案相
   - demo_beautiful_gnn_v2.pptx: 14页49KB验证通过
   - L05_GNN前沿_美化版.pptx: 17页60KB真实课程验证通过
 报告: ./autonomous_reports/R77_PPT美化升级.md
+
+[R109] 2026-03-26 lesson2ppt L01_GNN导论.pptx 10slides 55KB DONE | 坑:lesson2ppt.py依赖ppt_lab(不存在);长脚本截断需分段写文件再执行
