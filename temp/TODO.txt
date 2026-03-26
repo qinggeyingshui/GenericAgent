@@ -11,7 +11,7 @@
 
 2. [x] 产出 | ppt_com_toolkit扩展：更多AutoShape支持 | 用win32com AddShape封装add_shape(slide,shape_type,l,t,w,h,fill,text)，覆盖三角形(13)/右箭头(20)/五角星(12)/流程图过程框(109)等常用类型；支持形状内文字；更新ability_map.md | 验收：add_shape函数存在，生成含6种AutoShape的test_shapes.pptx
 
-3. [ ] 产出 | local_skills新增图片搜索SKILL | 实现local_skills/image_search.py：用Unsplash免费API(无需key的source.unsplash.com)或Pixabay按关键词下载图片到本地缓存，返回本地路径；支持指定尺寸；与add_picture联动 | 验收：image_search.py存在，search("graph neural network")能返回>=1张本地缓存图片路径
+3. [x] 产出 | local_skills新增图片搜索SKILL | 实现local_skills/image_search.py：用Unsplash免费API(无需key的source.unsplash.com)或Pixabay按关键词下载图片到本地缓存，返回本地路径；支持指定尺寸；与add_picture联动 | 验收：image_search.py存在，search("graph neural network")能返回>=1张本地缓存图片路径
 
 4. [ ] 产出 | GNN完整教案PPT自动生成器 | 基于lesson_plan.md + ppt_com_toolkit + add_chart，生成L01_GNN导论.pptx：封面/目录/教学目标/核心概念(含图表)/论文精读/课堂练习/总结共8张以上幻灯片；图表展示GNN模型对比数据 | 验收：lesson2ppt.py存在，生成L01_GNN导论.pptx>50KB，含>=8张幻灯片
 
