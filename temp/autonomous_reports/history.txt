@@ -1,3 +1,4 @@
+[R103][2026-03-26] 产出 | GNN教案→Word讲义自动生成器 lesson2word.py | 读取lesson_plan.md生成L01_GNN导论_讲义.docx(14889B)，含标题/目标/重难点/教学过程/论文表格/作业/参考；坑:中文Word List Bullet样式不存在，改用段落+前缀；报告→R103_lesson2word.md
 [R102][2026-03-26] 环境 | PATH修复 | USER PATH 22→15条(删7条旧Python37/QQ游戏/IDEA/dotnet无效路径)；SYSTEM PATH 8条无效需管理员运行fix_path.ps1；报告→R102_PATH修复报告.md
 [R101][2026-03-26] 产出 | arXiv在线抓取入库pipeline arxiv2kb.py | 支持URL/ID输入，自动去重；验证GraphMamba(2402.08678)+GraphSAGE(1706.02216)入库成功，PAPERS.md现16篇
 [R100][2026-03-26] 产出 | GNN论文库CLI查询工具kb_cli.py | list/search/fetch三命令+年份/关键词过滤，Markdown表格输出，联网fetch验证通过

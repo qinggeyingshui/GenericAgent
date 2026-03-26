@@ -15,7 +15,7 @@
 
 4. [x] 环境 | PATH异常修复执行+验证 | R41已生成fix_path.ps1但从未执行；先备份PATH，运行fix_path.ps1删除不存在路径条目，验证修复前后PATH条目数变化，输出修复报告 | 验收：修复前后PATH对比报告，异常条目数从22降低，系统PATH可正常使用
 
-5. [ ] 产出 | GNN教案→Word讲义自动生成器 | 基于word_toolkit.py+teaching_kb，实现lesson_plan.md→Word讲义自动转换：章节标题/正文/重点论文引用表格/参考文献列表；先实现L01一个教案，验证pipeline | 验收：lesson2word.py存在，生成L01_GNN导论_讲义.docx，含正确章节结构+论文引用表
+5. [x] 产出 | GNN教案→Word讲义自动生成器 | 基于word_toolkit.py+teaching_kb，实现lesson_plan.md→Word讲义自动转换：章节标题/正文/重点论文引用表格/参考文献列表；先实现L01一个教案，验证pipeline | 验收：lesson2word.py存在，生成L01_GNN导论_讲义.docx，含正确章节结构+论文引用表
 
 6. [ ] 产出 | local_skills能力树可视化 | 扫描local_skills/目录所有.py文件，提取函数签名+docstring，生成ability_map.md：按类别归组(搜索/PPT/论文/文档/系统)，标注每个函数的输入输出，方便快速查阅可用工具 | 验收：ability_map.md存在，覆盖local_skills/下>=80%函数，含分类索引
 
