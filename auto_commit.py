@@ -40,14 +40,16 @@ def auto_commit(message=None):
         p = os.path.join(AGENT_ROOT, f)
         if os.path.exists(p):
             code, out, err = run(["git", "add", "-f", f])
-            print(f"  force-add {f}: {"OK" if code==0 else err}")
+            status = "OK" if code == 0 else err
+            print(f"  force-add {f}: {status}")
 
     # 正常add
     for f in NORMAL_ADD:
         p = os.path.join(AGENT_ROOT, f)
         if os.path.exists(p):
             code, out, err = run(["git", "add", f])
-            print(f"  add {f}: {"OK" if code==0 else err}")
+            status = "OK" if code == 0 else err
+            print(f"  add {f}: {status}")
 
     # 检查是否有变更
     code, out, err = run(["git", "diff", "--cached", "--quiet"])
