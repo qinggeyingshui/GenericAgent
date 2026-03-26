@@ -145,3 +145,30 @@ venue: "unknown"
 summary: "(auto-imported test)"
 keywords: []
 relevance: "auto-imported"
+
+---
+id: "GIN2019"
+title: "How Powerful are Graph Neural Networks?"
+year: "2019"
+arxiv: "arXiv:1810.00826"
+venue: "ICLR 2019"
+keywords: ["GIN", "graph isomorphism network", "expressiveness", "Weisfeiler-Leman", "GNN"]
+relevance: "基础必读：GIN原论文，从图同构角度分析GNN表达能力上界，适合L02图神经网络基础课程理论部分，与GCN/GAT对比教学"
+
+---
+id: "MPNN2017"
+title: "Neural Message Passing for Quantum Chemistry"
+year: "2017"
+arxiv: "arXiv:1704.01212"
+venue: "ICML 2017"
+keywords: ["MPNN", "message passing", "quantum chemistry", "molecular graph", "GNN"]
+relevance: "框架基础：消息传递神经网络MPNN统一框架原论文，适合L02介绍GNN统一消息传递范式，是GCN/GAT/GIN的理论基础"
+
+---
+id: "OGB2020"
+title: "Open Graph Benchmark: Datasets for Machine Learning on Graphs"
+year: "2020"
+arxiv: "arXiv:2005.00687"
+venue: "NeurIPS 2020"
+keywords: ["OGB", "benchmark", "graph dataset", "leaderboard", "GNN evaluation"]
+relevance: "评测基准：OGB标准化GNN评测数据集与排行榜，适合L05/L06课程实验和论文复现基准，指导学生选择评测数据集"
