@@ -9,7 +9,7 @@
 
 1. [x] 产出 | ppt_com_toolkit扩展：add_chart()封装 | 将python-pptx图表能力封装为add_chart(slide,chart_type,data,l,t,w,h,title)统一接口，支持COLUMN/BAR/LINE/PIE四种类型，数据格式为{categories:[],series:{名:[]}}；写入ppt_com_toolkit.py并在ppt_lab/验证 | 验收：add_chart函数存在，生成含4种图表的test_charts.pptx，文件>30KB
 
-2. [ ] 产出 | ppt_com_toolkit扩展：更多AutoShape支持 | 用win32com AddShape封装add_shape(slide,shape_type,l,t,w,h,fill,text)，覆盖三角形(13)/右箭头(20)/五角星(12)/流程图过程框(109)等常用类型；支持形状内文字；更新ability_map.md | 验收：add_shape函数存在，生成含6种AutoShape的test_shapes.pptx
+2. [x] 产出 | ppt_com_toolkit扩展：更多AutoShape支持 | 用win32com AddShape封装add_shape(slide,shape_type,l,t,w,h,fill,text)，覆盖三角形(13)/右箭头(20)/五角星(12)/流程图过程框(109)等常用类型；支持形状内文字；更新ability_map.md | 验收：add_shape函数存在，生成含6种AutoShape的test_shapes.pptx
 
 3. [ ] 产出 | local_skills新增图片搜索SKILL | 实现local_skills/image_search.py：用Unsplash免费API(无需key的source.unsplash.com)或Pixabay按关键词下载图片到本地缓存，返回本地路径；支持指定尺寸；与add_picture联动 | 验收：image_search.py存在，search("graph neural network")能返回>=1张本地缓存图片路径
 

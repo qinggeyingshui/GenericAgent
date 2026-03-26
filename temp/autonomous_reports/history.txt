@@ -1,3 +1,4 @@
+[R107][2026-03-26] 产出 | ppt_com_toolkit add_shape()通用AutoShape封装 | SHAPE_*常量+add_shape(type/l/t/w/h/fill/text);6种形状验证38KB;报告→R107_add_shape.md
 [R106][2026-03-26] 产出 | ppt_chart_toolkit.py add_chart()封装 | python-pptx图表统一接口,支持COLUMN/BAR/LINE/PIE,data={categories,series};test_charts.pptx验证56KB/4张;报告→R106_ppt_chart_toolkit.md
 [R105][2026-03-26] 规划 | Batch18任务规划 | 6条TODO:add_chart封装/AutoShape扩展/image_search SKILL/教案PPT生成器/2025新论文入库/ppt_com_sop深化；核心方向PPT能力深化+local_skills扩展；报告→R105_batch18_planning.md
 [R104][2026-03-26] 产出 | local_skills能力树可视化 ability_map.md | 用ast.parse扫描12个工具文件提取75个函数签名+docstring，按论文/PPT/Word/系统/自主5类归组；覆盖率>=80%；报告→R104_ability_map.md

@@ -318,3 +318,54 @@ def apply_theme_colors(slide, theme="tech_blue"):
     r, g, b = t["bg"]
     set_bg_solid(slide, r, g, b)
     return t["accent"]
+
+# ============================================================
+# R107 新增 add_shape() 通用AutoShape封装 (2026-03-26)
+# ============================================================
+
+# MsoAutoShapeType 常用类型常量
+SHAPE_TRIANGLE    = 13   # 等腰三角形
+SHAPE_RIGHT_ARROW = 20   # 右箭头
+SHAPE_PENTAGON    = 56   # 五边形
+SHAPE_STAR5       = 12   # 五角星
+SHAPE_FLOWCHART   = 109  # 流程图:过程框
+SHAPE_CALLOUT     = 100  # 矩形标注
+SHAPE_DIAMOND     = 4    # 菱形
+SHAPE_PARALLELOGRAM = 25 # 平行四边形
+
+def add_shape(slide, shape_type, l, t, w, h,
+              fill=(0, 180, 216), line_color=None, line_width=0,
+              text=None, text_sz=16, text_bold=False,
+              text_color=(255, 255, 255), text_align="center",
+              font="微软雅黑"):
+    """
+    通用 AutoShape 封装，支持所有 MsoAutoShapeType 类型。
+    shape_type: int，MsoAutoShapeType常量，或使用本模块SHAPE_*常量
+      常用: 1=矩形,4=菱形,5=圆角矩形,9=椭圆,12=五角星,13=三角形,
+            20=右箭头,25=平行四边形,56=五边形,100=矩形标注,109=流程图过程框
+    l, t, w, h: 厘米，位置和尺寸
+    fill: RGB元组，填充色
+    line_color: RGB元组或None(无边框)
+    line_width: 边框宽度(磅)
+    text: 形状内文字，None则不添加
+    text_sz: 字号
+    text_bold: 粗体
+    text_color: 文字颜色RGB元组
+    text_align: "left"|"center"|"right"
+    font: 字体名
+    返回 shape COM对象
+    """
+    shp = slide.Shapes.AddShape(shape_type, cm(l), cm(t), cm(w), cm(h))
+    r, g, b = fill
+    shp.Fill.Solid()
+    shp.Fill.ForeColor.RGB = rgb(r, g, b)
+    if line_color:
+        lr, lg, lb = line_color
+        shp.Line.ForeColor.RGB = rgb(lr, lg, lb)
+        shp.Line.Weight = line_width if line_width else 1.5
+    else:
+        shp.Line.Visible = False
+    if text is not None:
+        shape_text(shp, text, sz=text_sz, bold=text_bold,
+                   color=text_color, align=text_align, font=font)
+    return shp
