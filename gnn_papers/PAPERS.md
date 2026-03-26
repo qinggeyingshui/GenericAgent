@@ -135,3 +135,13 @@ venue: "SIGIR 2024"
 keywords: ["GraphGPT", "instruction tuning", "LLM", "GNN", "graph understanding", "graph token"]
 summary: "Graph Neural Networks (GNNs) have evolved to understand graph structures through recursive exchanges and aggregations among nodes. We propose GraphGPT that aligns GNNs with a large language model to enable graph instruction tuning. A graph encoder converts structural graph signals into tokens that LLMs can process, enabling zero-shot and few-shot generalization to unseen graphs. Outperforms existing GNN models on various graph learning tasks."
 relevance: "前沿架构：Graph token + LLM指令微调，适合L04/L05前沿系统课程，展示GNN与LLM的深度融合"
+
+---
+id: "QUICK_START"
+title: "🚀 从零开始： 分钟跑起来"
+year: "2024"
+arxiv: "QUICK_START"
+venue: "unknown"
+summary: "(auto-imported test)"
+keywords: []
+relevance: "auto-imported"
