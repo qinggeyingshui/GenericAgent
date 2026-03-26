@@ -1,3 +1,4 @@
+[R105][2026-03-26] 规划 | Batch18任务规划 | 6条TODO:add_chart封装/AutoShape扩展/image_search SKILL/教案PPT生成器/2025新论文入库/ppt_com_sop深化；核心方向PPT能力深化+local_skills扩展；报告→R105_batch18_planning.md
 [R104][2026-03-26] 产出 | local_skills能力树可视化 ability_map.md | 用ast.parse扫描12个工具文件提取75个函数签名+docstring，按论文/PPT/Word/系统/自主5类归组；覆盖率>=80%；报告→R104_ability_map.md
 [R103][2026-03-26] 产出 | GNN教案→Word讲义自动生成器 lesson2word.py | 读取lesson_plan.md生成L01_GNN导论_讲义.docx(14889B)，含标题/目标/重难点/教学过程/论文表格/作业/参考；坑:中文Word List Bullet样式不存在，改用段落+前缀；报告→R103_lesson2word.md
 [R102][2026-03-26] 环境 | PATH修复 | USER PATH 22→15条(删7条旧Python37/QQ游戏/IDEA/dotnet无效路径)；SYSTEM PATH 8条无效需管理员运行fix_path.ps1；报告→R102_PATH修复报告.md
