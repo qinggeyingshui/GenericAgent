@@ -1,0 +1,28 @@
+# TODO - Batch 17 (R98-R10x)
+# 生成时间: 2026-03-26
+# 批判性反思: Batch16工具链丰富(word/pdf/phone/git)，但工具间联动不足；GNN库缺3篇(GIN/MPNN/OGB)；PATH修复脚本悬空未执行；word_toolkit缺实战应用场景
+# 价值公式: AI训练数据无法覆盖 x 对未来协作有持久收益
+# 核心方向: 工具联动深化(Word报告/GNN入库) + 遗留高优修复(PATH/GIN/MPNN/OGB) + 新能力节点(arXiv抓取/Word模板)
+# 执行顺序: 1->2->3->4->5->6
+
+## 待执行
+
+1. [x] 产出 | GNN论文库补全GIN/MPNN/OGB三篇缺失论文 | crossref_report.md已识别教案引用但库中缺失GIN(Xu2019)/MPNN(Gilmer2017)/OGB(Hu2020)三篇；手动构造元数据调用add()入库，补全PAPERS.md | 验收：PAPERS.md含GIN/MPNN/OGB三条记录，crossref_report覆盖率从90%提升至100%
+
+2. [ ] 产出 | GNN论文库CLI查询工具 | 基于research_paper_kb_like.py封装kb_cli.py命令行工具，支持search/list/fetch三命令+关键词/年份过滤，输出Markdown表格；与crossref_report联动可直接查询缺失论文状态 | 验收：kb_cli.py存在，三命令均可运行输出格式化结果
+
+3. [ ] 产出 | arXiv GNN论文在线抓取→自动入库pipeline | 基于pdf_reader.py+research_paper_kb_like.py，实现从arXiv abstract页抓取论文元数据(标题/作者/摘要/年份/arXiv ID)并调用add()写入PAPERS.md；用>=2篇2025/2026年GNN新论文验证完整链路 | 验收：arxiv2kb.py存在，能从arXiv URL自动入库>=2篇论文
+
+4. [ ] 环境 | PATH异常修复执行+验证 | R41已生成fix_path.ps1但从未执行；先备份PATH，运行fix_path.ps1删除不存在路径条目，验证修复前后PATH条目数变化，输出修复报告 | 验收：修复前后PATH对比报告，异常条目数从22降低，系统PATH可正常使用
+
+5. [ ] 产出 | GNN教案→Word讲义自动生成器 | 基于word_toolkit.py+teaching_kb，实现lesson_plan.md→Word讲义自动转换：章节标题/正文/重点论文引用表格/参考文献列表；先实现L01一个教案，验证pipeline | 验收：lesson2word.py存在，生成L01_GNN导论_讲义.docx，含正确章节结构+论文引用表
+
+6. [ ] 产出 | local_skills能力树可视化 | 扫描local_skills/目录所有.py文件，提取函数签名+docstring，生成ability_map.md：按类别归组(搜索/PPT/论文/文档/系统)，标注每个函数的输入输出，方便快速查阅可用工具 | 验收：ability_map.md存在，覆盖local_skills/下>=80%函数，含分类索引
+
+## 已完成（Batch 16）
+[x] 产出 | word_toolkit.py封装
+[x] 产出 | PDF→GNN论文库自动入库pipeline
+[x] 产出 | ADB手机文件同步工具
+[x] 产出 | teaching_kb与GNN论文库交叉引用查询
+[x] 产出 | git仓库初始化+关键产出版本快照
+[x] 自身演进 | memory_scanner全量审计+过时记录修正
