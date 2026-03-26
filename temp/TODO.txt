@@ -9,7 +9,7 @@
 
 1. [x] 产出 | GNN论文库补全GIN/MPNN/OGB三篇缺失论文 | crossref_report.md已识别教案引用但库中缺失GIN(Xu2019)/MPNN(Gilmer2017)/OGB(Hu2020)三篇；手动构造元数据调用add()入库，补全PAPERS.md | 验收：PAPERS.md含GIN/MPNN/OGB三条记录，crossref_report覆盖率从90%提升至100%
 
-2. [ ] 产出 | GNN论文库CLI查询工具 | 基于research_paper_kb_like.py封装kb_cli.py命令行工具，支持search/list/fetch三命令+关键词/年份过滤，输出Markdown表格；与crossref_report联动可直接查询缺失论文状态 | 验收：kb_cli.py存在，三命令均可运行输出格式化结果
+2. [x] 产出 | GNN论文库CLI查询工具 | 基于research_paper_kb_like.py封装kb_cli.py命令行工具，支持search/list/fetch三命令+关键词/年份过滤，输出Markdown表格；与crossref_report联动可直接查询缺失论文状态 | 验收：kb_cli.py存在，三命令均可运行输出格式化结果
 
 3. [ ] 产出 | arXiv GNN论文在线抓取→自动入库pipeline | 基于pdf_reader.py+research_paper_kb_like.py，实现从arXiv abstract页抓取论文元数据(标题/作者/摘要/年份/arXiv ID)并调用add()写入PAPERS.md；用>=2篇2025/2026年GNN新论文验证完整链路 | 验收：arxiv2kb.py存在，能从arXiv URL自动入库>=2篇论文
 

@@ -1,3 +1,4 @@
+[R100][2026-03-26] 产出 | GNN论文库CLI查询工具kb_cli.py | list/search/fetch三命令+年份/关键词过滤，Markdown表格输出，联网fetch验证通过
 [R99][2026-03-26] 产出 | GNN论文库补全GIN/MPNN/OGB | 调用add()入库GIN(Xu2019)/MPNN(Gilmer2017)/OGB(Hu2020)三篇；验证搜索通过，PAPERS.md现共14篇
 [R98][2026-03-26] 规划 | Batch17任务规划 | 6条TODO:GNN补全(GIN/MPNN/OGB)/kb_cli/arXiv入库/PATH修复/lesson2word/ability_map；subagent评审完成替换2条低分项
 [R97][2026-03-26] 自身演进 | global_mem.txt全量审计 | 发现4项问题，已patch 2处(论文数5→10篇,PATH备注)，PASS
