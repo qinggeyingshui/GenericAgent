@@ -54,6 +54,7 @@
 - 竞赛: 软件杯, 亚太杯, TI杯, 华为ICT
 - 项目目录: E:\2026 (GenericAgent, VQA, topo_pretrain_base, KDD, SITP)
 - GNN论文库: GenericAgent/gnn_papers/PAPERS.md (10篇, list/search接口: GenericAgent/local_skills/research_paper_kb_like.py)
+- Git仓库: GenericAgent/.git (main分支) | 一键快照: temp/auto_commit.py
 - 长期目标: PPT专家——探索本地PowerPoint软件制作精美学术PPT方案；ppt_lab/为实验区，主.venv驱动(pptx 1.0.2)；用户2026-03-26明确指示：空闲时持续提升本地PowerPoint操作制作PPT的功能
 - ppt_lab API: PPTBuilder(scheme_name=)；add_title/section/content/toc/comparison/stats/icon_cards/timeline/step_cards/highlight_content/ending_slide；lesson2ppt.py <md> <pptx> <scheme>
 
