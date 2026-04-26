@@ -124,6 +124,7 @@ class GeneraticAgent:
                 self.task_queue.task_done(); continue
             self.is_running = True
             rquery = smart_format(raw_query.replace('\n', ' '), max_str_len=200)
+            self.task_start_index = len(self.history)  # 记录任务起始位置
             self.history.append(f"[USER]: {rquery}")
             
             sys_prompt = get_system_prompt() + getattr(self.llmclient.backend, 'extra_sys_prompt', '')
@@ -135,13 +136,19 @@ class GeneraticAgent:
                 handler.working['passed_sessions'] = ps = self.handler.working.get('passed_sessions', 0) + 1
                 if ps > 0: handler.working['key_info'] += f'\n[SYSTEM] 此为 {ps} 个对话前设置的key_info，若已在新任务，先更新或清除工作记忆。\n'
             self.handler = handler
+            # 自动注入抽象规律到working memory（预防已知错误）
+            try:
+                from memory.reflection.reflection_helper import get_meta_patterns
+                if patterns := get_meta_patterns():
+                    handler.working['key_info'] = handler.working.get('key_info', '') + f'\n[错误规避] {patterns[:800]}'
+            except: pass
             user_input = raw_query
             if source == 'feishu' and len(self.history) > 1:   # 如果有历史记录且来自飞书，注入到首轮 user_input 中（支持/restore恢复上下文）
                 user_input = handler._get_anchor_prompt() + f"\n\n### 用户当前消息\n{raw_query}"
-            #if 'gpt' in self.get_llm_name(model=True): handler._done_hooks.append('请确定任务是否完成，如果完成请给出信息完整的简报回答，如未完成需要继续工具调用直到完成任务，确实需要问用户应使用ask_user工具')
+            if 'gpt' in self.get_llm_name(model=True): handler._done_hooks.append('请确定用户任务是否完成，如未完成需要继续工具调用直到完成任务，确实需要问用户应使用ask_user工具')
             # although new handler, the **full** history is in llmclient, so it is full history!
             gen = agent_runner_loop(self.llmclient, sys_prompt, user_input, 
-                                handler, TOOLS_SCHEMA, max_turns=70, verbose=self.verbose)
+                                handler, TOOLS_SCHEMA, max_turns=40, verbose=self.verbose)
             try:
                 full_resp = ""; last_pos = 0
                 for chunk in gen:
@@ -156,6 +163,15 @@ class GeneraticAgent:
                 if '</file_content>' in full_resp: full_resp = re.sub(r'<file_content>\s*(.*?)\s*</file_content>', r'\n````\n<file_content>\n\1\n</file_content>\n````', full_resp, flags=re.DOTALL)                
                 display_queue.put({'done': full_resp, 'source': source})
                 self.history = handler.history_info
+                # 自动触发reflection（递归保护：reflection任务本身不再触发）
+                is_reflection_task = getattr(self, 'task_name', '').startswith('reflection')
+                if handler and getattr(handler, 'has_error', False) and not is_reflection_task:
+                    try: 
+                        sys.path.insert(0, os.path.join(script_dir, 'memory', 'reflection'))
+                        import importlib
+                        # 只传target_pid，让reflection_helper从model_responses文件提取当前任务的完整对话
+                        importlib.import_module('reflection_helper').spawn_reflection_agent(target_pid=os.getpid())
+                    except Exception as e: pass  # 静默失败
             except Exception as e:
                 print(f"Backend Error: {format_error(e)}")
                 display_queue.put({'done': full_resp + f'\n```\n{format_error(e)}\n```', 'source': source})
@@ -196,6 +212,7 @@ if __name__ == '__main__':
     threading.Thread(target=agent.run, daemon=True).start()
 
     if args.task:
+        agent.task_name = args.task  # 用于递归保护检测
         agent.task_dir = d = os.path.join(script_dir, f'temp/{args.task}'); nround = ''
         infile = os.path.join(d, 'input.txt')
         if args.input:

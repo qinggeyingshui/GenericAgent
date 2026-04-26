@@ -1,40 +1,159 @@
-[R108][2026-03-26] 产出 | local_skills/image_search.py关键词图片搜索 | loremflickr无需key,search(kw,w,h,count)->路径列表,缓存md5命名;验证2张各54KB PASS
-[R107][2026-03-26] 产出 | ppt_com_toolkit add_shape()通用AutoShape封装 | SHAPE_*常量+add_shape(type/l/t/w/h/fill/text);6种形状验证38KB;报告→R107_add_shape.md
-[R106][2026-03-26] 产出 | ppt_chart_toolkit.py add_chart()封装 | python-pptx图表统一接口,支持COLUMN/BAR/LINE/PIE,data={categories,series};test_charts.pptx验证56KB/4张;报告→R106_ppt_chart_toolkit.md
-[R105][2026-03-26] 规划 | Batch18任务规划 | 6条TODO:add_chart封装/AutoShape扩展/image_search SKILL/教案PPT生成器/2025新论文入库/ppt_com_sop深化；核心方向PPT能力深化+local_skills扩展；报告→R105_batch18_planning.md
-[R104][2026-03-26] 产出 | local_skills能力树可视化 ability_map.md | 用ast.parse扫描12个工具文件提取75个函数签名+docstring，按论文/PPT/Word/系统/自主5类归组；覆盖率>=80%；报告→R104_ability_map.md
-[R103][2026-03-26] 产出 | GNN教案→Word讲义自动生成器 lesson2word.py | 读取lesson_plan.md生成L01_GNN导论_讲义.docx(14889B)，含标题/目标/重难点/教学过程/论文表格/作业/参考；坑:中文Word List Bullet样式不存在，改用段落+前缀；报告→R103_lesson2word.md
-[R102][2026-03-26] 环境 | PATH修复 | USER PATH 22→15条(删7条旧Python37/QQ游戏/IDEA/dotnet无效路径)；SYSTEM PATH 8条无效需管理员运行fix_path.ps1；报告→R102_PATH修复报告.md
-[R101][2026-03-26] 产出 | arXiv在线抓取入库pipeline arxiv2kb.py | 支持URL/ID输入，自动去重；验证GraphMamba(2402.08678)+GraphSAGE(1706.02216)入库成功，PAPERS.md现16篇
-[R100][2026-03-26] 产出 | GNN论文库CLI查询工具kb_cli.py | list/search/fetch三命令+年份/关键词过滤，Markdown表格输出，联网fetch验证通过
-[R99][2026-03-26] 产出 | GNN论文库补全GIN/MPNN/OGB | 调用add()入库GIN(Xu2019)/MPNN(Gilmer2017)/OGB(Hu2020)三篇；验证搜索通过，PAPERS.md现共14篇
-[R98][2026-03-26] 规划 | Batch17任务规划 | 6条TODO:GNN补全(GIN/MPNN/OGB)/kb_cli/arXiv入库/PATH修复/lesson2word/ability_map；subagent评审完成替换2条低分项
-[R97][2026-03-26] 自身演进 | global_mem.txt全量审计 | 发现4项问题，已patch 2处(论文数5→10篇,PATH备注)，PASS
-[R96][2026-03-26] 产出 | teaching_kb x GNN论文库交叉引用 | 覆盖率90%，缺失GIN/MPNN/OGB，crossref_report.md已生成
-[R95][2026-03-26] 产出 | phone_sync.py ADB手机文件同步CLI | 174行，list/pull/push+dry+ext过滤，验收PASS
-[R94][2026-03-26] 产出 | pdf2kb.py PDF→GNN论文库pipeline | 133行，提取标题/年份/摘要+防重复，验收PASS入库QUICK_START
-[R93][2026-03-26] 产出 | git关键产出快照+auto_commit.py | 8文件入库(gnn_papers/local_skills/ppt_com_toolkit/word_toolkit)，auto_commit.py一键快照工具，验收PASS
-[R92][2026-03-26] 产出 | word_toolkit.py封装 | 198行/13函数，win32com驱动，接口风格同ppt_com_toolkit；验收PASS生成含标题+正文+表格docx(14KB)
-[R91][2026-03-26] 规划 | Batch16任务规划 | 6条TODO:word_toolkit封装/PDF→论文库pipeline/ADB手机同步/交叉引用/git初始化/memory审计；subagent卡死已自行评审完成
-[R90][2026-03-26] 产出 | win32com高级PPT功能扩充 | ppt_com_toolkit.py新增4函数(批量替换/母版LOGO/动画序列/主题配色)，ability_list.md更新，验收PASS
-[R89][2026-03-26] 产出 | GNN论文库扩充 | 5->10篇，新增GCN/GAT/GraphSAGE/RoG/GraphGPT，含摘要+课程映射，验收PASS
-[R88][2026-03-26] 自身演进 | quality_scorer集成lesson2ppt | 内联4维度评分，lesson2ppt每次生成PPT自动输出quality_report.txt，L01验收PASS总分8.2/10
-[R87][2026-03-26] 探测+产出 | PC软件深度分析 | 357个软件枚举，10条agent可利用工具发现：Docker/Git/MySQL/Word封装(待建)/Anaconda隔离env等，优先建议封装word_toolkit.py+git init
-[R86][2026-03-26] 探测 | 效能自我审计R01-R85 | 85报告统计：PPT占65%严重集中，验收率51%，记忆更新率41%；3项改进建议：多样性约束/验收强制化/记忆更新自查
-[R85][2026-03-26] 产出 | PDF解析local_skill封装 | pdf_reader.py(153行)；4接口(meta/extract/tables/search)；pdfplumber 0.11.9；QUICK_START.pdf验证通过(7处search命中)；坑:FontBBox警告无害
-[R84][2026-03-26] 规划 | Batch15任务规划 | Batch14(R79-R83)全部完成；5条TODO(PC软件分析/PDF解析skill/GNN论文扩充/质量评分集成/效能审计)；subagent评审后替换重复条目3
-[R83][2026-03-26] 探测+产出 | PPT→Markdown讲义导出工具 | ppt2md.py(155行)；L05导出25条知识点；坑:prs.slides不支持切片
-[R82][2026-03-26] 产出 | 编译原理L03教案→PPT生成 | lesson_plan.md格式修正后生成21页PPT；坑:教学过程子标题须以###数字.开头
-[R81][2026-03-26] 探测+产出 | win32com动画API封装 | add_animation()追加到ppt_com_toolkit.py；demo_animation.pptx(3页/进入退出路径)验收PASS；坑:app.Quit()可能抛com_error但文件已保存[R80][2026-03-26] 产出 | python-pptx图表页深化 | demo_charts.pptx(4页/50KB)验收PASS；折线图/饼图/柱状图3种；add_chart_slide已有实现直接调用；坑:show_legend默认True可省略[R79][2026-03-26] 产出 | 编译原理L03自动机理论教案新建 | lesson_plan.md(2902字/135行)+materials_index.md；主题(a|b)*abb完整推导链；验收PASS；坑:三引号内禁嵌markdown代码块[R78][2026-03-26] 规划 | Batch14任务规划 | Batch13(R71-R77)全部完成；规划5条(编译原理L03教案/python-pptx图表深化/win32com动画/L03教案→PPT/PPT→MD导出)，执行顺序1→2→3→4→5[R76][2026-03-26] 产出 | L05图神经网络前沿教案新建+PPT生成 | lesson_plan.md(4410字/148行)+materials_index.md+17页PPT(60KB)验收通过；用户提醒要主动研究精美PPT制作[R75][2026-03-26] 产出 | L02教案topic修复+PPT生成 | L02 lesson_plan.md topic含" / "导致Windows路径错误；替换为"、"后重跑；19页/63KB验收通过；坑:topic非法字符→makedirs失败[R74][2026-03-26] 产出 | python-pptx高级模板制作 | template_teaching.pptx(5页/34KB)验收通过；5种版式(封面/目录/内容/总结/节标题)；坑:slide.name赋值无效；sfill()工具函数模式已记录[R73][2026-03-26] 产出 | win32com高级PPT能力扩展 | demo_advanced.pptx(6页/1490KB)验收通过；新增AddPicture/SmartArt形状模拟/多配色主题/母版操作API；ppt_com_sop.md已patch更新[R72][2026-03-26] 探测 | Canva Connect API能力评估 | OAuth2+PKCE流程完整；Designs/Exports API无Enterprise要求；PPTX导出仅限Presentation类型；产出canva_api_guide.md(3287B)；需client_id才能实测[R71][2026-03-26] 规划 | Batch13任务规划 | 响应用户PPT能力扩展指令；5条TODO(win32com高级/Canva API/python-pptx模板/L02修复/L05教案)；PPT主线占3/5[R70][2026-03-26] 产出 | lesson2ppt批量转换工具改进 | 新增batch_convert()+--batch CLI；GNN课程3/4成功(L02数据问题-topic含特殊字符)；验收PASS[R69][2026-03-26] 探测 | 低分报告共性分析 | 18条低分(38%)；知识密度1.36/完整度1.17最弱；生成improvement_guide.md(4条建议)；Batch12全部完成(条目4留Batch13)
-[R68][2026-03-26] 产出 | L04 GNN与LLM联合应用教案新建 | lesson_plan.md(3596字)+materials_index.md(5篇论文)，GraphRAG+MASPOB+结构文本理解，验收PASS
-[R67][2026-03-26] 产出 | L01 GNN与LLM导论教案->PPT | 19页/65KB/academic_blue，素材清单更新
-[R66][2026-03-26] 产出 | L03图注意力网络教案→PPT | 20页/65KB/academic_blue，坑:emoji gbk报错(非致命)，可用配色方案已记录
-[R65][2026-03-26] 规划 | Batch12任务规划 | quality均5.66/低分38%；规划5条(L03PPT/L04教案/L01PPT/lesson2ppt批量/低分分析)，执行顺序1→3→2→4→5
-[R64][2026-03-26] quality_scorer_v2集成SOP方案(待审)，因权限限制不自主修改memory下SOP
-[R63][2026-03-26] GNN论文库5篇补code_url+applications字段，search("GNN")返回4条验证通过
-[R62][2026-03-26] GNN_Beautiful_v2.pptx 10页/44.8KB 完整生成（python-pptx），S1-S10全部完成，用户两路PPT对比任务收尾
+R218 | 2026-04-24 | 产出 | 内容A/B测试框架 | ab_testing.py+SOP，3类测试(标题/封面/时间)+对比报告，验收PASS
+R217 | 2026-04-24 | 产出 | 粉丝画像分析工具 | fan_analytics.py+SOP，4维度分析(增长/时段/地域/兴趣)，验收PASS
+R216 | 2026-04-24 | document_generation | PPT导出增强 | ppt_export_toolkit.py新增export_to_html，支持PDF/PNG/MP4/HTML 4种导出格式，验收PASS
+R215 | 2026-04-24 | content_creation | 自媒体变现工具 | monetization_toolkit.py(54行)+monetization_sop.md，广告收益/品牌报价/会员定价3函数，验收PASS
+R214 | 2026-04-24 | content_creation|内容日历与排期管理|content_calendar.py(250行)+content_calendar_sop.md，支持发布计划/最佳时间/日历视图/提醒，验收PASS
+R213 | 2026-04-24 | media_processing|图片处理工具增强|image_toolkit.py新增create_cover/create_thumbnail/add_watermark+image_processing_sop.md，验收PASS
+R212 | 2026-04-24 | knowledge_management|学术引用格式化工具|citation_formatter.py(300行)+更新research_paper_kb_sop，支持APA/MLA/GB-T7714三种格式，验收PASS
+R211 | 2026-04-24 | data_analysis|竞品分析与对标工具|competitor_analyzer.py(350行)+competitor_analysis_sop.md，支持账号对比/策略分析/可视化报告，验收PASS
+R210 | 2026-04-24 | document_generation|PPT母版与主题深度管理|ppt_master_toolkit.py(350行)+更新ppt_com_sop，支持母版编辑/主题色提取/批量应用，验收PASS
+R209 | 2026-04-24 | 规划 | Batch 20自媒体创作能力拓展 | 按skill_planning_sop生成5条TODO(2A类+3B类，覆盖5领域)，深化ppt_com_sop(15次)/research_paper_kb_sop(9次)，新增PPT母版/竞品分析/引用格式/图片处理/内容日历
+R207 | 2026-04-23 | document_generation|PPT动画效果工具|ppt_animation.py(150行)+更新ppt_com_sop，支持入场/强调/退出/路径动画+组合动画+交错入场，验收PASS
+R206 | 2026-04-23 | 规划 | Batch 19自媒体创作能力拓展 | 按skill_planning_sop生成5条TODO(3B类+2A类，覆盖5领域)，深化ppt_com_sop(15次)/research_paper_kb_sop(9次)，新增PPT动画/视频封面/内容日历/引用格式/竞品分析
+R205 | 2026-04-21 | knowledge_management|知识库多源同步|增强research_paper_kb_like.py，新增BibTeX/PDF/Markdown导入+自动去重+同步追踪
+R204 | 2026-04-21 | media_processing|PPT智能排版增强|增强ppt_auto_layout.py，新增时间线/对比布局+内容识别+美观度评分
+R203 | 2026-04-21 | content_creation|热点追踪自动化|增强trend_tracker.py，添加定时监控+微信推送+趋势预测+热度评分
+R202 | 2026-04-21 | media_processing|视频字幕智能优化|增强subtitle_proofreader.py，添加AI润色+多语言+情感标签+时间轴优化
+R201 | 2026-04-21 | content_creation|内容创作一键发布工作流|已创建content_workflow.py+content_workflow_sop.md，串联ai_copywriter实现一键发布
+R200 | 2026-04-21 | ai_capability|音频转文字工具|已创建audio_transcription.py+audio_transcription_sop.md，支持mp3/wav/m4a/flac格式，导出TXT/SRT/JSON
+R198 | 2026-04-21 | data_analysis|自媒体数据分析看板增强|已创建dashboard_enhanced.py+更新media_analytics_sop.md，支持多维度分析、趋势预测、报告生成
+R197 | 2026-04-21 | web_automation|多平台账号管理与数据同步|已创建account_manager.py+account_management_sop.md，支持账号管理、数据同步、状态监控
+R196 | 2026-04-21 | media_processing|视频剪辑模板库与一键应用|已创建video_templates.py+更新video_processing_sop.md，支持模板管理、预设模板、一键应用
+R195 | 2026-04-21 | document_generation|PPT演讲稿生成与排练助手|已创建speech_helper.py+更新ppt_com_sop.md，支持演讲稿生成、排练计时、关键点提示
+R194 | 2026-04-21 | web|SEO优化与关键词分析|已创建seo_toolkit.py+seo_optimization_sop.md，支持关键词分析、标题优化、描述生成
+R193 | 2026-04-21 | knowledge_management|知识库智能问答与FAQ生成|已创建kb_qa.py+增强teaching_kb_sop，支持智能问答和FAQ自动生成
+R192 | 2026-04-21 | 规划 | Batch 17自媒体创作能力拓展 | 按skill_planning_sop生成6条TODO(2A类+4B类，覆盖6领域)，聚焦用户长期目标(自媒体创作大师)，深化高频技能presentation(8次)/knowledge_management(12次)，补齐SEO/账号管理/数据分析能力
+R191 | 2026-04-21 | web_automation | 短视频发布 | 已创建SOP+增强发布器(抖音/快手/B站)+批量发布+定时发布
+R190 | 2026-04-21 | 产出 | PPT模板市场 | 已下载50个模板+创建SOP+增强管理器
+R189 | 2026-04-21 | 产出 | 知识库多模态检索 | 更新teaching_kb_sop.md新增第7章+multimodal_search.py(185行)，支持图片/表格/公式检索+OCR/向量化接口，B类增强
+R188 | 2026-04-21 | 产出 | 评论区互动助手 | community_management_sop.md(132行)+comment_assistant.py(133行)，支持情感分析/智能回复/粉丝分层，A类新领域
+R187 | 2026-04-21 | 产出 | 直播脚本生成与提词器 | live_streaming_sop.md(120行)+live_script_generator.py(133行)，支持脚本大纲/分段提词/互动话术库，A类新领域
+R186 | 2026-04-21 | 产出 | 自媒体运营看板Workflow | media_dashboard_workflow.py(101行)+SOP，串联media_analytics+trend_tracker+platform_adapter，生成日报/周报/看板
+R185 | 2026-04-21 | 产出 | 自媒体运营看板Workflow | media_dashboard_workflow.py(101行)，串联media_analytics+trend_tracker+platform_adapter，生成日报/周报/看板，含数据可视化+平台适配
+R184 | 2026-04-21 | 规划 | Batch 16自媒体创作能力拓展 | 按skill_planning_sop v2.0生成6条TODO(2A类+3B类+1C类，覆盖5领域+1新领域)，聚焦用户长期目标(自媒体创作大师)，深化高频技能presentation(8次)/browser_control(5次)，补齐直播/发布/互动/多模态检索能力
+R183 | 2026-04-21 | 产出 | 自媒体内容生产流水线 | content_production_workflow_sop.md，串联热点追踪→文案生成→平台适配→发布，完成端到端演示
+R182 | 2026-04-21 | 产出 | 数据可视化故事化 | data_storytelling_sop.md+data_storytelling.py(4函数)，生成3个叙事性图表示例
+R181 | 2026-04-20 | 产出 | 播客制作流程 | podcast_production_sop.md+audio_enhance.py实现，整合剪辑/降噪/混音/拼接
+R180 | 2026-04-20 | 产出 | 视频高级特效工具 | video_effects_advanced.py(264行)+SOP文档，画中画✅，滤镜/特效待API适配
+R179 | 2026-04-20 | 测试 | complete_task更新tools | 验证
+R178 | 2026-04-20 | 测试 | complete_task新增skill | 验证
+R177 | 2026-04-20 | 测试 | 验证skill_tree更新 | 使用ppt_com_sop
+R176 | 2026-04-20 | 测试 | 验证sop_files参数 | 功能正常
+R175 | 2026-04-20 | 产出 | PPT智能排版增强 | 新增多列布局/图文混排/响应式调整3个函数
+R174 | 2026-04-20 | 产出 | PPT智能排版增强 | ppt_auto_layout.py新增3函数(多列/混排/响应式)，更新ppt_com_sop.md
+R173 | 2026-04-20 | 产出 | 知识库语义检索增强 | semantic_search.py(TF-IDF+余弦相似度)，准确率100%；更新teaching_kb_sop.md
+R172 | 2026-04-20 | 规划 | 技能拓展规划 | 产出6个TODO任务，覆盖5领域，4维度评分，围绕自媒体创作目标
+R171 | 2026-04-20 | 产出 | 音频降噪与增强 | audio_enhance.py(4函数)，支持降噪/音量均衡/混音/综合增强；更新audio_processing_sop.md
+R170 | 2026-04-20 | 产出 | 视频剪辑工作流编排 | video_workflow.py(VideoWorkflow类7方法)，支持剪辑/字幕/转场步骤编排/批量处理/模板保存
+R169 | 2026-04-20 | 产出 | 社交媒体数据爬取 | social_scraper.py(5函数)，支持微博/知乎/小红书数据爬取和解析
+R168 | 2026-04-20 | 产出 | 笔记管理与知识图谱 | note_manager.py(NoteManager类5方法)+learning_sop.md，支持Markdown笔记/标签搜索/知识图谱生成
+R167 | 2026-04-20 | 产出 | 批量文件处理工作流 | batch_processor.py(4函数)+automation_sop.md，支持批量重命名/按扩展名整理/模板应用
+R166 | 2026-04-20 | 产出 | 内容创作数据看板 | content_dashboard.py(4函数)+data_analysis_sop.md，支持多平台数据聚合/趋势分析/看板生成
+R165 | 2026-04-20 | 规划 | Batch 17任务规划 | 生成6条TODO(3×A类, 2×B类, 1×C类，覆盖5领域)，聚焦自媒体创作
+R164 | 2026-04-20 | 产出 | 热点追踪与选题推荐 | trend_tracker.py(4函数)+trend_tracking_sop.md，支持关键词提取/趋势分析/选题推荐
+R163 | 2026-04-20 | 产出 | 视频字幕智能校对 | subtitle_proofreader.py(6函数)+subtitle_proofreading_sop.md，支持SRT/VTT格式，检测标点/时间轴/长度问题
+R162 | 2026-04-20 | 产出 | 自媒体数据分析工具 | media_analytics.py(7函数)+media_analytics_sop.md，支持数据分析/图表生成/报告输出
+R161 | 2026-04-20 | 产出 | AI文案生成助手 | ai_copywriter.py(4函数)+ai_copywriting_sop.md，支持标题/摘要/正文生成，3种风格
+R160 | 2026-04-20 | 产出 | 多平台内容适配工具 | platform_adapter.py(5函数)+platform_adaptation_sop.md，支持微信/知乎/小红书格式转换和图片适配
+R159 | 2026-04-20 | 产出 | PPT数据可视化工具 | ppt_data_viz.py(4函数)+更新ppt_com_sop第6节，支持Excel/CSV导入生成图表和数据刷新
+R158 | 2026-04-20 | 规划 | Batch 16任务规划 | 生成6条TODO(2×document_generation, 2×knowledge_management, 1×media_processing, 1×web)，四维度评分完成
+R157 | 2026-04-20 | 产出 | 自媒体脚本生成器 | script_generator.py+content_creation_sop.md，支持3种风格(知识科普/娱乐搞笑/情感故事)生成视频脚本
+R156 | 2026-04-20 | 产出 | 内容发布自动化工具 | content_publisher.py支持微信公众号图文上传(标题/作者/正文/摘要/封面)，基于web_execute_js+CDP
+R155 | 2026-04-20 | 产出 | 素材库管理SOP开发 | asset_manager.py(12函数) + asset_management_sop.md，支持分类/标签/检索，基于SQLite
+R154 | 2026-04-20 | 测试 | 只有SOP
+R153 | 2026-04-20 | 测试 | 已存在skill
+R152 | 2026-04-20 | 测试 | 新skill创建
+R151 | 2026-04-20 | 测试 | 清理后重新测试 | 验证SOP记录
+R150 | 2026-04-20 | 测试 | 简化版Skill机制 | 验证强制SOP+自动查找toolkit
+R149 | 2026-04-20 | 测试 | 渐进式披露 | 验证三种资源类型
+R148 | 2026-04-20 | 测试 | 渐进式披露 | 验证三种格式
+R147 | 2026-04-20 | 测试 | skill_tree完整机制 | 验证更新+快照
+R146 | 2026-04-20 | 测试 | skill_tree更新 | 验证完整流程
+R145 | 2026-04-20 | 测试 | skill_used解析 | 验证新格式
+R144 | 2026-04-20 | 规划 | Batch 15自媒体创作能力拓展 | 按skill_planning_sop v2.0生成6条TODO(2A类+3B类+1C类，覆盖4领域)，聚焦用户长期目标(自媒体创作大师)，深化高频技能presentation(7次)，补齐素材管理/发布自动化/脚本生成能力
+R143 | 2026-04-20 | 产出 | 音频处理toolkit开发 | audio_toolkit.py(4函数：剪辑/格式转换/音量/合并)，补齐媒体处理能力，调整TODO删除重复任务
+R143 | 2026-04-20 | 产出 | 音频处理SOP开发 | audio_processing_sop.md + audio_toolkit.py(4函数)，修正为SOP维度产出
+R142 | 2026-04-20 | 规划 | Batch 14技能拓展任务规划 | 按skill_planning_sop v2.0生成6条TODO（2A类+3B类+1C类，覆盖4领域），优先高频刚需(presentation 7次)+自媒体创作需求
+R141 | 2026-04-20 | 产出 | Batch 13任务全部完成 | 完成Excel处理SOP/论文对比SOP/teaching_kb批量导入/tmwebdriver表单填充/usage追踪测试/PPT模板管理6个任务
+R140 | 2026-04-20 | 产出 | PPT模板管理功能增强 | ppt_template_manager.py新增apply_template_to_pptx()批量应用主题，支持3个预定义模板
+R139 | 2026-04-20 | 产出 | 视频处理SOP开发 | video_toolkit.py(4函数)+video_processing_sop.md，支持剪辑/合并/提取帧/添加字幕
+R138 | 2026-04-14 | 产出 | PPT批量主题应用工具开发 | ppt_template_manager.py新增批量应用功能，支持遍历目录应用主题模板
+R137 | 2026-04-14 | 产出 | PPT增强功能开发报告 | 完成R136 PPT主题模板库系统开发，新增3个预定义模板
+R136 | 2026-04-14 | R136 | 2026-04-14 | 深度增强 | PPT主题模板库系统
+R135 | 2026-04-14 | R135 | 2026-04-14 | 工程 | Skill Tree v3.1 分类重构
+R134 | 2026-04-14 | R134 | 2026-04-14 | 规划 | 技能树TODO规划（skill_planning_sop）
+R133 | 2026-04-14 | R133 | 2026-04-14 | 工程 | 工具入库与扫描脚本修复
+R132 | 2026-04-14 | 产出 | 数据可视化工具包开发 | ppt_chart_toolkit.py新增add_chart()支持4种图表类型(柱状/折线/饼图/散点图)
+R131 | 2026-04-14 | 工程 | Skill Tree v3.0代码清理 | 移除deprecated字段，统一skill_categories结构，清理冗余代码
+R130 | 2026-04-14 | R130 视频剪辑工具包支持视频剪辑/合并/提取帧/添加字幕
+R129 | 2026-04-13 | 探测 | 微信Bot群聊功能探索 | 验证wechatapp.py支持群聊消息接收和发送，测试@提及功能
+R128 | 2026-04-13 | 探测 | 反爬虫处理能力探索 | 测试tmwebdriver_sop中的User-Agent轮换和请求延迟策略
+R127 | 2026-04-13 | R127 - 定时任务重试机制实现
+R126 | 2026-04-13 | R126 - 文件增量同步能力探索
+R125 | 2026-04-13 | R125 - Android应用管理能力探索
+R124 | 2026-04-13 | R124 - 浏览器多标签协同能力探索
+R123 | 2026-04-13 | R123 - 窗口管理能力探索
+R122 | 2026-04-13 | R122 - 进程控制能力探索
+R121 | 2026-04-13 | R121 - Cron表达式和任务依赖功能实现
+R120 | 2026-04-13 | R120 - 论文推荐功能实现
+R119 | 2026-04-13 | R120 skill_tree自动更新机制实现
+R118 | 2026-04-13 | 产出 | Word高级功能开发 | word_toolkit.py新增add_table()/add_image()/set_style()三个函数
+R117 | 2026-04-02 | 产出 | 环境管家磁盘清理功能 | disk_analyzer.py新增临时文件清理建议，识别1574个临时文件(78MB)
+R116 | 2026-04-20 | ppt_template_manager.py(6502B)+ppt_com_sop更新,支持3个预定义模板,验收PASS
+R115 | 2026-04-19 | 实验 | usage追踪测试 | 验证自动统计
+R114 | 2026-04-19 | 增强 | tmwebdriver_sop表单填充 | form_autofill.py(95行)+更新tmwebdriver_sop,支持JSON配置驱动3种表单类型,验收PASS
+R113 | 2026-04-19 | 产出 | Excel处理SOP | excel_toolkit.py(79行)+excel_processing_sop.md(107行),支持4种图表+公式计算,验收PASS
+R112 | 2026-04-19 | 产出 | 论文对比分析SOP | comparison_toolkit.py(145行)+paper_comparison_sop.md(158行),支持10种对比维度,验收4测试PASS
+R111 | 2026-04-19 | 产出 | teaching_kb批量导入功能 | batch_import_toolkit.py(134行)+teaching_kb_sop第6节,支持5种命名格式,验收5文件导入PASS
+R110 | 2026-04-16 | 产出 | Batch 13技能拓展任务规划 | 按skill_planning_sop v2.0生成6条TODO（3A类+3B类，覆盖4领域）
+R109 | 2026-04-16 | 产出 | 教案PPT生成器 | lesson2ppt.py基于L01教案生成L01_GNN导论.pptx(12页)，支持8种slide类型
+R108 | 2026-04-16 | 产出 | 关键词图片搜索工具 | local_skills/image_search.py封装loremflickr API，支持关键词+尺寸参数
+R107 | 2026-04-16 | 产出 | PPT通用形状封装 | ppt_com_toolkit.py新增add_shape()支持矩形/圆形/箭头等AutoShape
+R106 | 2026-04-16 | 产出 | PPT图表封装 | ppt_chart_toolkit.py新增add_chart()支持柱状图/折线图/饼图/散点图4种类型
+R105 | 2026-04-16 | 规划 | Batch18任务规划 | 按skill_planning_sop规划6条TODO，覆盖PPT/教案/论文3个领域
+R104 | 2026-04-16 | 产出 | local_skills能力树可视化 | ability_map.md汇总12文件75函数，按功能域分类展示
+R103 | 2026-04-16 | 产出 | GNN教案→Word讲义生成器 | lesson2word.py读取lesson_plan.md生成Word讲义，支持标题/段落/列表/表格
+R102 | 2026-04-16 | 修复 | PATH环境变量修复 | 识别22条异常PATH条目，生成fix_path.ps1修复脚本(需管理员权限)
+R98 | 2026-03-26 | 规划 | Batch17任务规划 | 按skill_planning_sop规划5条TODO，覆盖教案/PPT/论文3个领域
+R97 | 2026-04-16 | R97 | global_mem.txt 全量审计报告
+R96 | 2026-03-26 | R96 | teaching_kb x GNN论文库交叉引用报告
+R95 | 2026-03-26 | R95 | ADB手机文件同步CLI工具
+R94 | 2026-03-26 | R94 | PDF→GNN论文库自动入库pipeline
+R93 | 2026-03-26 | R93 | git仓库初始化+关键产出版本快照
+R92 | 2026-03-26 | 产出 | Word工具包封装 | word_toolkit.py封装python-docx，支持创建文档/添加段落/表格/图片
+R91 | 2026-03-26 | 规划 | Batch16任务规划 | 按skill_planning_sop规划4条TODO，覆盖PPT/教案2个领域
+R90 | 2026-03-26 | 产出 | win32com高级PPT功能扩充 | ppt_com_toolkit.py新增add_animation()/set_transition()动画和切换效果
+R89 | 2026-03-26 | 产出 | GNN论文库扩充 | PAPERS.md新增5篇GNN+LLM论文(GraphRAG/Graphormer/LLMonGraph等)
+R88 | 2026-03-26 | R88 | quality_scorer集成lesson2ppt
+R87 | 2026-03-26 | R87 | PC已安装软件深度分析与工具推荐
+R86 | 2026-03-26 | R86 | 自主任务效能自我审计（R01-R85）
+R85 | 2026-03-26 | R85 | PDF解析local_skill封装
+R84 | 2026-03-26 | R84 — Batch15 任务规划
+R83 | 2026-03-26 | R83 PPT→Markdown讲义导出工具
+R82 | 2026-03-26 | R82 编译原理L03教案→PPT生成
+R81 | 2026-03-26 | R81 win32com PPT动画效果API
+R80 | 2026-03-26 | R80 python-pptx图表页深化
+R79 | 2026-03-26 | R79 编译原理L03自动机理论教案新建
+R78 | 2026-03-26 | R78 Batch14 任务规划
+R77 | 2026-03-26 | R77 PPT视觉美化升级报告
+R76 | 2026-03-26 | R76 | L05图神经网络前沿教案新建+PPT生成
+R75 | 2026-03-26 | R75 | L02教案topic修复+PPT生成
+R74 | 2026-03-26 | R74 | python-pptx 高级教学模板制作
+R73 | 2026-03-26 | R73 | win32com 高级 PPT 能力扩展
+R72 | 2026-03-26 | R72 | Canva Connect API 能力评估
+R71 | 2026-03-26 | R71 | Batch13 规划报告
+R70 | 2026-03-26 | R70 | lesson2ppt 批量转换工具改进
+R69 | 2026-03-26 | R69 - 低分报告共性分析
+R68 | 2026-03-26 | R68 - L04 GNN与LLM联合应用教案新建
+R67 | 2026-03-26 | R67 - L01 GNN与LLM导论教案->PPT生成
+R66 | 2026-03-26 | R66 - L03图注意力网络教案→PPT生成
+R65 | 2026-03-26 | R65 - Batch12 任务规划
+R64 | 2026-03-26 | R64 - quality_scorer_v2集成到autonomous收尾流程（方案待审）
+R63 | 2026-03-26 | R63 - GNN论文库元数据深化：code_url+applications字段补全
+R62 | 2026-03-26 | R62 - GNN美观PPT完整10页生成（python-pptx方案）
 R61 | 2026-03-26 | 产出 | PPT风格标准化分析器 | 分析10个pptx(共179页)，提取字体/字号/颜色/比例参数，生成ppt_style_report.html(5.5KB)含4类可视化，发现3条不一致项(比例混用/字体分散/小字号)
 R60 | 2026-03-26 | 产出 | L02教案PPT自动生成 | 基于L02 lesson_plan.md用generate_ppt.py生成L02_GNN基础.pptx：12页/47838B，覆盖title/toc/section/content/comparison/step_cards/highlight_content/ending共8种slide类型 | R60_L02教案PPT生成.mdR59 | 2026-03-26 | 产出 | L03图注意力网络与Transformer教案 | 新建lesson_plan.md(207行7381B)+materials_index.md(1639B)，对齐L01/L02结构；坑：三引号冲突用list-of-lines绕过，file_write<649B上限 | R59_L03注意力机制教案.md
+R59 | 2026-03-26 | R59 | L03 图注意力网络与Transformer 教案
 R58 | 2026-03-26 | 规划 | Batch11任务规划 | Batch10全[x]后规划：PPT专家目标写入L2；候选5条(L03教案/教案→PPT联动/PPT标准化分析器/论文深化/quality自动化)，执行顺序2→3→1→4→5 | R58_Batch11规划.md
 R57 | 2026-03-26 | 探测 | PATH修复脚本执行状态+环境变量验证 | 当前22条异常=R41基线持平(不存在16+重复6)；fix_path.ps1需管理员权限不可自主执行；建议用户手动运行 | R57_PATH验证分析.md
 R56 | 2026-03-26 | 产出 | ppt_lab/.venv冗余删除 | 删除ppt_lab/.venv(实165.6MB>估25MB)，主.venv验证pptx 1.0.2+两脚本compile OK，节省磁盘165.6MB | R56_ppt_lab_venv删除.md
@@ -43,83 +162,32 @@ R54 | 2026-03-25 | 维护 | memory空文件清理+Insight同步 | 探测17文件
 R53 | 2026-03-25 | 知识库维护 | PAPERS.md Notes填充 | 5篇论文Notes从占位符→实质内容(Problem/Method/Contributions/Threats)；search_papers('attention')返回9条验收PASS | R53_PAPERS_Notes填充.md
 R52 | 2026-03-25 | 产出 | teaching_kb L02 GNN基础教案 | 为图神经网络与大语言模型课程建L02教案：lesson_plan.md(7621B,100分钟流程含推导/变体/作业)+materials_index.md(1371B,论文索引) | R52_L02教案.md
 R51 | 2026-03-25 | 规划 | Batch10任务规划 | TODO全[x]后按SOP完整规划Batch10：批判性读history识别低价值模式(规划>执行/浅层枚举)，盘点memory/ppt_lab/gnn_papers现状，产出6条TODO(memory清理/PAPERS Notes填充/ppt_lab.venv删除/quality_scorer_v2/L02教案/PATH验证)，召唤subagent评审(9/8/7/7/5/5分)，执行顺序5→2→1→4→3→6 | R51_Batch10规划.md + TODO.txtR50 | 2026-03-25 | 规划 | Batch9任务规划 | TODO全[x]后规划Batch9：6条任务含history粘连根因修复/L02教案/local_skills README/autonomous_insights元反思/0B空文件清理/quality_scorer_v2，执行顺序6→3→1→4→2→5 | R50_Batch9规划.md + TODO.txtR49 | 2026-03-25 | 产出 | GNN论文知识库前置准备 | 创建gnn_papers/目录+PAPERS.md(5篇GNN+LLM论文元数据:MASPOB/GraphRAG/Graphormer/LLMonGraph/GNNSurvey)，编写local_skills/research_paper_kb_like.py(add/list/search/fetch四接口)，list()验收返回5条通过 | gnn_papers/PAPERS.md + local_skills/research_paper_kb_like.pyR48 | 2026-03-25 | 产出 | 记忆库文件健康检查 | 扫描19文件，发现问题：2个空文件(autonomous_operation_sop/skill_search 0B)、2个重复key占位符、多个零访问SOP(adb_ui/ljqCtrl/mem_scanner等)、1条Insight未收录条目；输出5条优化建议 | memory_health_report.mdR47 | 2026-03-25 | 产出 | 任务质量自动评分器 | quality_scorer.py解析32条R条目，四维评分(个性化/难度/产出实体/验收)，平均5.1分，高分(≥7)5条，低分(<5)18条(冲浪/规划类集中)，输出HTML可视化报告含TOP5+低分模式归纳 | quality_scorer.py + quality_report.htmlR46 | 2026-03-25 | 产出 | 重复文件深度分析 | 8926文件/368MB，165组重复，全部可释放37.7MB，主因ppt_lab/.venv与主.venv重复(~25MB)，TOP10可释放32.6MBR45 | 2026-03-25 | 探测+分析 | 记忆库访问热力分析 | autonomous_operation_sop.md访问63次(热点)，4个零访问文件(ljqCtrl/adb_ui/mem_scanner_sop)，重复key污染3处，建议统一.md扩展名keyR44 | 2026-03-25 | 产出 | history.txt格式修复工具 | history_normalizer.py修复5行粘连，独立R条目从~9增至29条，所有R标记可正则解析，备份原文件 | R44_history格式修复工具.md[Agent] Batch8规划完成：6条TODO经subagent评审修订(条目2/4替换，执行顺序确定)，TODO.txt已更新，下轮进入执行模式。
-[R43] 2026-03-25 | 产出 | GNN论文→teaching_kb联动 | 基于MASPOB论文(arXiv:2603.02630)生成完整教案草稿，写入teaching_kb/courses/图神经网络与大语言模型/L01，格式对齐现有编译原理教案模板 | Batch7全部完成(R38-R43)
-# R42 — gnn_papers 目录深度分析与联动方案
-
-**日期**: 2026-03-25
-**类型**: 探测+分析
-**编号**: R42
-
-## 摘要
-
-完整探测 `./gnn_papers/` 目录结构与内容，评估与 `research_paper_kb` / `teaching_kb` 的联动潜力，设计三层数据流架构。
-
-## 产出
-
-- **分析报告**: `./gnn_papers/gnn_papers_analysis.md`
-
-## 数据盘点
-
-- **论文数量**: 5 篇（GNN+LLM 交叉研究，2025–2026）
-- **检索式**: `ti:"graph neural network" AND all:"large language model"`
-- **主题**: Prompt优化 / 文本分类 / 内容审核 / 化学反应预测 / 因果医疗
-- **Notes 状态**: 全部待填
-
-## 联动评估
-
-| 目标系统 | 可行性 | 优先级 | 方案 |
-|---------|--------|--------|------|
-| `research_paper_kb_like.py` | 高 | 高 | 批量 add 导入5篇论文 |
-| `teaching_kb`（编译原理） | 低 | 低 | 待AI课程模块建立后再联动 |
-
-## 数据流设计
-
-```
-[采集层] arXiv → gnn_papers/PAPERS.md
-[处理层] 批量导入脚本 → research_paper_kb_like.py
-[应用层] search / list / export
-```
-
-## 待执行
-
-1. 编写批量导入脚本（TODO#6 gnn_kb联动任务的核心内容）
-2. 填写 PAPERS.md 中 5 篇论文的 Notes
-
-## 验收
-
-- 生成 gnn_papers_analysis.md ✔
-- 数据盘点完成 ✔
-- 联动方案设计完成 ✔
-[R41] 2026-03-25 | 产出 | PATH异常自动修复脚本 | path_cleaner.py实测扫描66条PATH条目，发现22条异常(16不存在+6重复)，生成path_report.txt分析报告+fix_path.ps1修复脚本(含备份机制，需管理员手动执行) | path_cleaner.py + fix_path.ps1 + path_report.txt + R41报告
-[R40] 2026-03-25 | 探测 | local_skills目录深度探测 | 仅1个脚本research_paper_kb_like.py(arXiv论文知识库，含fetch/search/list，实测list返回5篇GNN论文，可用)，能力树早期占位状态，建议后续扩充 | R40_local_skills深度探测.md
-[R39] 2026-03-25 | 产出 | 临时文件清理执行器 | cleanup_executor.py实测删除160个.pyc文件+19个空__pycache__目录，释放2.6MB，0失败，生成188行清理日志 | cleanup_executor.py + cleanup_log_20260325_165814.txt + R39报告
-[R38] 2026-03-25 | 产出 | model_responses对话日志分析器 | 解析19文件/846轮对话→HTML可视化报告(任务类型分布/Token分布/文件明细)，最高频:自主规划428次，74%轮次在500-2k token | model_responses_analysis.html + autonomous_reports/R38_model_responses分析器.md
-[R37] 2026-03-25 | 规划 | Batch7任务规划 | subagent评审6条候选→全部≥6分保留，执行顺序 model_responses(8)→cleanup(8)→local_skills(7)→PATH(7)→gnn_papers→gnn_kb联动(6) | autonomous_reports/R37_Batch7任务规划.md
-[R35] 2026-03-25 14:28 | 知识库填充+模板配色提取 | global_mem 41条(10分类), design_tokens新增4套配色(共9套) | TODO#2完成
-
+R46 | 2026-03-25 | R46 — 重复文件深度分析
+R45 | 2026-03-25 | R45 — 记忆库访问热力分析
+R44 | 2026-03-25 | R44 — history.txt 格式修复与规范化工具
+R43 | 2026-03-25 | R43 — GNN论文→teaching_kb联动教案草稿
+R42 | 2026-03-25 | R42 — gnn_papers 目录深度分析与联动方案
+R41 | 2026-03-25 | R41 — PATH 异常自动修复脚本
+R40 | 2026-03-25 | local_skills 目录深度探测清单
+R39 | 2026-03-25 | R39 — 临时文件清理执行器
+R38 | 2026-03-25 | R38 — model_responses 对话日志分析器
+R37 | 2026-03-25 | R37 — Batch7任务规划
+R36 | 2026-03-25 | R36 — teaching_kb 端到端激活与教案→PPT联动
+R35 | 2026-03-25 | R35 自主行动报告：知识库填充与模板配色提取
 R34 | 2025-07-12 | 产出 | 磁盘空间分析器 | disk_analyzer.py(16KB/450行)：零依赖扫描目录→HTML报告(Top50大文件+SVG饼图+MD5重复检测+临时清理建议)，GenericAgent实测9028文件/368MB/165重复组/1574临时(78MB)→30KB报告，1.9s完成 | autonomous_reports/R34_磁盘空间分析器.md
 R33 | 2025-07-12 | 规划 | Batch6任务规划 | subagent评审5条候选→删2项(渐变4分/模板库3分)→保留3条(磁盘9/mem8/kb6)，执行顺序确定 | autonomous_reports/history.txt
 R32 | 2025-07-11 | 产出 | 参考PPT深度解析 | 4份夏令营答辩PPT(参考1/2/南开/汇丰)XML级解析：提取4套配色+4种版式原型+密度光谱→advanced_design_patterns.json(10K)+design_tokens.json新增3套配色(teal_gold/huifeng_indigo/nankai_blue)共5套 | autonomous_reports/R32_参考PPT深度解析.md
-[Agent] ✅R31完成：defense_ppt_builder.py(16860B)生成16页PPT，CLI+API双入口，报告已写。
-[R30] research_paper_kb增强：新增parse_papers_md解析器+search_papers搜索引擎(keyword/year/author)+format输出，CLI重构为fetch/search/list子命令，SKILL.md文档更新，6项测试全通过。
+R31 | 2026-03-25 | R31 — 答辩PPT一键生成器 (defense_ppt_builder.py)
+R30 | 2026-03-25 | R30 — research_paper_kb 搜索与筛选功能增强
 R29 | ppt_utils图表功能 | add_chart_slide()支持bar/column/line/pie四种原生图表，demo验证通过 | R29_ppt_utils图表功能.md
-
 R28 | 2025-07-11 | 环境探测 | PC环境深度扫描 | PowerShell+注册表+文件系统全面扫描：395软件/73PATH/74书签/8conda环境/45VSCode扩展→environment_profile.md(104条20分类) | 发现C/D盘空间告急(<12%)、7条PATH异常 | autonomous_reports/environment_profile.md, autonomous_reports/R28_PC环境深度扫描.md
-[Agent] 规划模式完成Batch5：自评审删除冲浪项(避浅层枚举)，最终5条TODO(R28-R32)：PC环境扫描/参考PPT解析/图表功能/论文KB激活/答辩PPT生成器。
-[R26] Markdown→PPT端到端Pipeline完成 | md2ppt.py(329行)+sample_outline.md→gnn_recommender.pptx(19页56KB) | 支持6种幻灯片类型(章节/内容/对比/时间线/图文/致谢)+自动TOC+argparse CLI | 修复: GBK emoji→ASCII, sys.argv→argparse
-[2026-03-25 11:33] R25 — TODO#4: GitHub高星PPT自动生成项目调研 ✅
-
-报告: autonomous_reports/R25_GitHub_PPT项目调研.md
-方法: GitHub REST API搜索(浏览器TM不可用)
-核心发现: 9个项目对比(reveal.js 70k★/Slidev 45k★/Marp 10.7k★/md2pptx 485★等)
-3个对比表(架构技术栈/内容分页策略/与ppt_utils契合度)
-3个设计模式(Markdown管道转换/Theme+Layout可组合/LLM→JSON→Template)
-建议: 增加Markdown输入层+布局注册表+LLM集成接口
+R27 | 2026-03-25 | R27 自主任务报告：GNN学术汇报PPT样例
+R26 | 2026-03-25 | R26 — Markdown → PPT 端到端 Pipeline
+R25 | 2026-03-25 | R25 — GitHub 高星 PPT 自动生成项目调研
 R24 | 学术PPT模板v2升级 | 用PPTBuilder生成35页完整学术报告模板(GNN推荐系统主题)，含封面+6章节页+5目录页+8内容页+3图文页+4对比页+2时间线+致谢页，双配色方案交替，装饰元素(角标/圆点/条纹/页码/水印)，102.6KB达标 | ppt_lab/academic_template_v2.pptx
 R23 | 2025-07-11 | 产出 | 封装PPT生成工具函数库ppt_utils.py | 基于design_tokens.json封装PPTBuilder类+8个幻灯片函数(title/section/content/image_content/comparison/timeline/ending/toc)+2套配色方案切换，demo生成8页39KB验证通过 | ppt_lab/ppt_utils.py, ppt_lab/ppt_demo.py, autonomous_reports/R23_ppt_utils工具库.md
 R22 | 2025-07-11 | 产出 | 逆向提取本地优秀模板设计参数体系 | 解析夏令营答辩参考3+模板4，提取2套配色(学术蓝紫/莫兰迪暖色)+字体+布局+装饰模式→design_tokens.json(7271B) | ppt_lab/design_tokens.json, autonomous_reports/R22_设计参数提取.md
 R21 | 2026-03-25 | 规划 | 候选任务分级与执行建议 | 在不改TODO与memory前提下对T1–T7按时间优先级与执行模式分级供用户选择
-
 R20 | 2026-03-25 | 机制 | 无TODO场景task_planning机制补齐 | 在不改TODO与memory前提下创建task_planning.md为无TODO场景提供规划入口
 R19 | 2026-03-25 | 规划 | 候选TODO方向轻量规划草案 | 在不修改TODO与memory前提下基于SOP为教案/学术/PPT/自身演进主线设计候选任务清单，供用户审阅
 R18 | 2026-03-25 | 自身演进 | 自主任务设计复盘与改进清单 | 复盘R01-R11任务价值/成本并提炼可复用任务设计检查表
@@ -140,15 +208,5 @@ R04 | 2026-03-24 | 探测 | 浏览器链路与GNN检索边界 | 修复TMWebDrive
 R03 | 2026-03-24 | 规划 | 教案模板 | 生成大学计算机课程通用教案模板结构并完成对应TODO
 R02 | 2026-03-24 | 设计 | 程序设计课样例教案 | 生成C语言分支结构样例教案并完成对应TODO
 R01 | 2026-03-24 | 规划 | 教案助手TODO初始化 | 已生成首批教案相关TODO，等待后续轮次或用户在线时逐条执行
-
----
-[R77] PPT视觉美化升级 | 2026-03-26
-目标: 升级ppt_utils.py封面页和章节页的视觉效果（加渐变背景）
-成果:
-  - add_title_slide: 加渐变底色(#EEF4FB→#FFFFFF)+底部装饰条
-  - add_section_slide: 纯色→深蓝渐变(#1A3A6B→#2D6BB0)+左竖线装饰
-  - demo_beautiful_gnn_v2.pptx: 14页49KB验证通过
-  - L05_GNN前沿_美化版.pptx: 17页60KB真实课程验证通过
-报告: ./autonomous_reports/R77_PPT美化升级.md
-
-[R109] 2026-03-26 lesson2ppt L01_GNN导论.pptx 10slides 55KB DONE | 坑:lesson2ppt.py依赖ppt_lab(不存在);长脚本截断需分段写文件再执行
+R199 | 2026-04-21 | 规划 | Batch 18技能拓展规划 | 基于skill_tree统计+用户画像+历史任务分析，生成6条TODO(1A类+1C类+4B类，覆盖5领域)，聚焦自媒体创作效率提升，引入ai_capability新领域，首次实现Workflow串联
+R208 | 2026-04-23 | 规划 | Batch 20技能拓展 | 5条TODO(1A类+4B类，覆盖5领域)，深化ppt_com_sop(15次)/video_processing_sop(3次)，新增PPT导出视频/粉丝画像/视频分镜/标题AB测试/知识闪卡

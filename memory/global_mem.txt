@@ -49,14 +49,9 @@
 
 ## USER_PROFILE
 - 大学: 同济大学 (Tongji University)
-- 研究方向: VQA, Graph ML(KDD/PANTHER), Topology Pretraining
-- 兴趣: AI/ML, IoT/ESP32, CTF, Web开发, 硬件(Verilog)
-- 竞赛: 软件杯, 亚太杯, TI杯, 华为ICT
-- 项目目录: E:\2026 (GenericAgent, VQA, topo_pretrain_base, KDD, SITP)
-- GNN论文库: GenericAgent/gnn_papers/PAPERS.md (10篇, list/search接口: GenericAgent/local_skills/research_paper_kb_like.py)
-- Git仓库: GenericAgent/.git (main分支) | 一键快照: temp/auto_commit.py
-- 长期目标: PPT专家——探索本地PowerPoint软件制作精美学术PPT方案；ppt_lab/为实验区，主.venv驱动(pptx 1.0.2)；用户2026-03-26明确指示：空闲时持续提升本地PowerPoint操作制作PPT的功能
-- ppt_lab API: PPTBuilder(scheme_name=)；add_title/section/content/toc/comparison/stats/icon_cards/timeline/step_cards/highlight_content/ending_slide；lesson2ppt.py <md> <pptx> <scheme>
+- 兴趣: 自媒体创作
+- Git仓库: GenericAgent/.git (main分支)
+- 长期目标: 自媒体创作大师，靠自媒体获取收益
 
 ## WECHAT_BOT
 - bot_id: 1ca4bb5bf751@im.bot | token: ~/.wxbot/token.json (勿读取)
@@ -65,8 +60,3 @@
 - uid获取: patch on_message写uid到temp/.wx_user_id，用户发一条消息即可
 - 定时备份: daily_log_backup.py + sche_tasks/daily_log_backup.json (23:20)
 - 注意: API直连会超时，需通过wechatapp.py进程或subprocess+PYTHONIOENCODING=utf-8调用
-
-## KNOWN_ISSUES
-- C/D盘空间紧张(<12%)
-- PATH异常22条：13条路径不存在(含MATLAB/WeChat DevTools/node_global等)+5条重复(nvm×3/Nmap×2/VS Code×2)+4条特殊 | 修复脚本: temp/fix_path.ps1 | 详细报告: temp/path_report.txt (R41) | 注: R41生成修复脚本，执行状态未确认
-- 重复文件：GenericAgent目录165组重复，可释放37.7MB，主因ppt_lab/.venv与主.venv重复(~25MB) | 详情: temp/autonomous_reports/R46_重复文件深度分析.md

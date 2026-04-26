@@ -63,3 +63,6 @@
 - `VERDICT: PASS` — 关键检查通过
 - `VERDICT: FAIL` — 未解决问题（附失败项+复现步骤）
 - `VERDICT: PARTIAL` — 仅限环境限制无法验证（说明原因）
+
+---
+automation.task_orchestration

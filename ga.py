@@ -263,6 +263,7 @@ class GenericAgentHandler(BaseHandler):
         self.cwd = cwd;  self.current_turn = 0
         self.history_info = last_history if last_history else []
         self.code_stop_signal = []
+        self.has_error = False  # 每个task开始时重置
         self._done_hooks = []
 
     def _get_abs_path(self, path):
@@ -514,6 +515,17 @@ class GenericAgentHandler(BaseHandler):
         return prompt
 
     def turn_end_callback(self, response, tool_calls, tool_results, turn, next_prompt, exit_reason):
+        # 累积错误：任何一轮有错误就标记（每个task开始时在__init__中重置）
+        for r in tool_results:
+            if isinstance(r, dict) and 'content' in r:
+                try:
+                    content = json.loads(r['content']) if isinstance(r['content'], str) else r['content']
+                    if isinstance(content, dict) and (content.get('status') == 'error' or content.get('exit_code', 0) != 0):
+                        self.has_error = True
+                        break
+                except (json.JSONDecodeError, TypeError):
+                    pass
+        self.tool_results = tool_results  # 保存tool_results供另外逻辑检查
         _c = re.sub(r'```.*?```|<thinking>.*?</thinking>', '', response.content, flags=re.DOTALL)
         rsumm = re.search(r"<summary>(.*?)</summary>", _c, re.DOTALL)
         if rsumm: summary = rsumm.group(1).strip()

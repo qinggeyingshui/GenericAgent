@@ -1,0 +1,1054 @@
+{
+  "version": "2.0",
+  "last_updated": "2026-04-24",
+  "skill_categories": {
+    "knowledge_management": {
+      "research_paper_kb_sop": {
+        "sop": "research_paper_kb_sop.md",
+        "tools": [
+          "arxiv2kb.py",
+          "kb_cli.py",
+          "pdf2kb.py",
+          "pdf_reader.py",
+          "research_paper_kb_like.py",
+          "search_kb_semantic.py",
+          "search_kb_semantic_v2.py",
+          "web2md.py"
+        ],
+        "functions": [
+          "add",
+          "build_index",
+          "cmd_fetch",
+          "cmd_list",
+          "cmd_search",
+          "convert",
+          "extract",
+          "extract_id",
+          "fetch",
+          "fetch_meta",
+          "fmt_table",
+          "list_papers",
+          "main",
+          "meta",
+          "parse_papers_md",
+          "process_dir",
+          "process_pdf",
+          "recommend_papers",
+          "search",
+          "search_semantic",
+          "tables"
+        ],
+        "usage_count": 9,
+        "last_used": "2026-04-20"
+      },
+      "paper_comparison_sop": {
+        "sop": "paper_comparison_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "teaching_kb_sop": {
+        "sop": "teaching_kb_sop.md",
+        "tools": [
+          "teaching_kb/",
+          "temp/tools/kb_qa.py",
+          "temp/tools/multimodal_search.py"
+        ],
+        "functions": [
+          "build_graph",
+          "detect_clusters",
+          "generate_html",
+          "load_papers",
+          "main",
+          "parse_block"
+        ],
+        "usage_count": 3,
+        "last_used": "2026-04-21"
+      },
+      "asset_management_sop": {
+        "sop": "asset_management_sop.md",
+        "tools": [
+          "asset_manager.py"
+        ],
+        "functions": [
+          "add_asset",
+          "batch_import",
+          "delete_asset",
+          "get_asset",
+          "init_db",
+          "list_categories",
+          "list_tags",
+          "search_assets",
+          "update_asset"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-20"
+      },
+      "paper_acquisition": {
+        "sop": "research_paper_kb_sop.md",
+        "tools": [
+          "research_paper_kb_like.py"
+        ],
+        "functions": [
+          "_parse_papers",
+          "add",
+          "fetch",
+          "list_papers",
+          "search"
+        ],
+        "usage_count": 2,
+        "last_used": "2026-04-24"
+      }
+    },
+    "document_generation": {
+      "ppt_com_sop": {
+        "sop": "ppt_com_sop.md",
+        "tools": [
+          "Marp CLI",
+          "lesson2ppt.py",
+          "lesson_plan_to_marp.py",
+          "ppt_auto_layout.py",
+          "ppt_batch_theme_applier.py",
+          "ppt_chart_styles.py",
+          "ppt_chart_toolkit.py",
+          "ppt_com_toolkit.py",
+          "ppt_smartart.py",
+          "ppt_template_manager.py",
+          "ppt_theme_manager.py",
+          "ppt_themes.json",
+          "speech_helper.py"
+        ],
+        "functions": [
+          "__init__",
+          "add_anim_appear",
+          "add_anim_sequence",
+          "add_animation",
+          "add_blank_slide",
+          "add_chart",
+          "add_chart_layout",
+          "add_image_text_layout",
+          "add_line_shape",
+          "add_mixed_content_layout",
+          "add_multi_column_layout",
+          "add_oval",
+          "add_picture",
+          "add_rect",
+          "add_rrect",
+          "add_shape",
+          "add_slide",
+          "add_table",
+          "add_text",
+          "add_text_layout",
+          "add_text_lines",
+          "apply_bg",
+          "apply_body",
+          "apply_theme_colors",
+          "apply_title",
+          "auto_select_layout",
+          "batch_convert",
+          "batch_replace_text",
+          "cm",
+          "convert_to_marp",
+          "create_content_slide",
+          "create_title_slide",
+          "export_market_template",
+          "extract_content_from_ppt",
+          "extract_key_points",
+          "format_prompts",
+          "generate_pptx",
+          "generate_speech",
+          "get_elapsed",
+          "get_market_manager",
+          "get_status",
+          "init_templates",
+          "lesson_to_ppt_config",
+          "list_templates",
+          "load_template",
+          "new_prs",
+          "open_ppt",
+          "optimize_speech",
+          "parse_lesson_plan",
+          "pause",
+          "process",
+          "quick_generate_speech",
+          "quick_rehearsal",
+          "resume",
+          "rgb",
+          "save_and_quit",
+          "save_prompts",
+          "save_prs",
+          "save_template",
+          "search_market_templates",
+          "set_bg_gradient",
+          "set_bg_solid",
+          "set_master_logo",
+          "set_transition",
+          "shape_text",
+          "start",
+          "update_materials_index"
+        ],
+        "usage_count": 15,
+        "last_used": "2026-04-21"
+      },
+      "ppt_template_manager_sop": {
+        "sop": "ppt_template_manager_sop.md",
+        "tools": [
+          "ppt_file_manager.py",
+          "ppt_template_manager.py"
+        ],
+        "functions": [
+          "__init__",
+          "_load_metadata",
+          "_save_metadata",
+          "add_tags",
+          "apply_bg",
+          "apply_body",
+          "apply_title",
+          "categorize_template",
+          "create_content_slide",
+          "create_title_slide",
+          "export_market_template",
+          "export_template",
+          "get_market_manager",
+          "get_statistics",
+          "init_templates",
+          "list_by_category",
+          "list_templates",
+          "load_template",
+          "save_template",
+          "scan_templates",
+          "search_market_templates",
+          "search_templates"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "word_processing_sop": {
+        "sop": "word_processing_sop.md",
+        "tools": [
+          "lesson2word.py",
+          "word_toolkit.py"
+        ],
+        "functions": [
+          "add_bullet_list",
+          "add_bullets",
+          "add_comment",
+          "add_heading",
+          "add_page_break",
+          "add_paragraph",
+          "add_picture",
+          "add_table",
+          "add_toc",
+          "apply_heading_style",
+          "build_report",
+          "build_word",
+          "markdown_to_word",
+          "new_doc",
+          "open_doc",
+          "open_word",
+          "save_and_quit",
+          "save_doc",
+          "set_page_margin"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-20"
+      },
+      "excel_processing_sop": {
+        "sop": "excel_processing_sop.md",
+        "tools": [
+          "data_visualization.py",
+          "excel_toolkit.py"
+        ],
+        "functions": [
+          "bar_chart",
+          "line_chart",
+          "multi_series_bar",
+          "pie_chart",
+          "scatter_plot"
+        ],
+        "usage_count": 2,
+        "last_used": "2026-04-20"
+      },
+      "document_conversion_sop": {
+        "sop": "document_conversion_sop.md",
+        "tools": [
+          "ppt2md.py"
+        ],
+        "functions": [
+          "classify_slide",
+          "extract_slide_texts",
+          "main",
+          "ppt_to_markdown"
+        ],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "ppt_creation": {
+        "sop": "ppt_com_sop.md",
+        "tools": [
+          "ppt_com_toolkit.py",
+          "ppt_chart_toolkit.py",
+          "ppt_template_manager.py",
+          "ppt_auto_layout.py",
+          "ppt_export_toolkit.py",
+          "speech_helper.py"
+        ],
+        "functions": [
+          "__init__",
+          "add_anim_appear",
+          "add_anim_sequence",
+          "add_animation",
+          "add_blank_slide",
+          "add_chart",
+          "add_chart_layout",
+          "add_comparison_layout",
+          "add_image_text_layout",
+          "add_line_shape",
+          "add_mixed_content_layout",
+          "add_multi_column_layout",
+          "add_oval",
+          "add_picture",
+          "add_rect",
+          "add_rrect",
+          "add_shape",
+          "add_slide",
+          "add_table",
+          "add_text",
+          "add_text_layout",
+          "add_text_lines",
+          "add_timeline_layout",
+          "apply_bg",
+          "apply_body",
+          "apply_theme_colors",
+          "apply_title",
+          "auto_select_layout",
+          "batch_replace_text",
+          "calc_beauty_score",
+          "cm",
+          "create_content_slide",
+          "create_title_slide",
+          "detect_content_type",
+          "export_market_template",
+          "extract_content_from_ppt",
+          "extract_key_points",
+          "format_prompts",
+          "generate_speech",
+          "get_elapsed",
+          "get_market_manager",
+          "get_status",
+          "init_templates",
+          "list_templates",
+          "load_template",
+          "new_prs",
+          "open_ppt",
+          "optimize_speech",
+          "pause",
+          "quick_generate_speech",
+          "quick_rehearsal",
+          "resume",
+          "rgb",
+          "save_and_quit",
+          "save_prompts",
+          "save_prs",
+          "save_template",
+          "search_market_templates",
+          "set_bg_gradient",
+          "set_bg_solid",
+          "set_master_logo",
+          "set_transition",
+          "shape_text",
+          "smart_layout",
+          "start"
+        ],
+        "usage_count": 5,
+        "last_used": "2026-04-24"
+      }
+    },
+    "media_processing": {
+      "video_processing_sop": {
+        "sop": "video_processing_sop.md",
+        "tools": [
+          "video_converter.py",
+          "video_editor.py",
+          "video_effects.py",
+          "video_templates.py",
+          "video_toolkit.py"
+        ],
+        "functions": [
+          "__init__",
+          "add_audio",
+          "add_subtitles",
+          "add_text",
+          "add_transition",
+          "apply_template",
+          "apply_transform",
+          "batch_add_transitions",
+          "clip_video",
+          "compress_video",
+          "convert_format",
+          "create_standard_ending",
+          "create_standard_opening",
+          "cut_video",
+          "delete_template",
+          "ending_template",
+          "extract_audio",
+          "extract_frames",
+          "get_video_info",
+          "list_templates",
+          "load_template",
+          "make_mask",
+          "merge_videos",
+          "opening_template",
+          "quick_apply_template",
+          "resize_func",
+          "resize_video",
+          "save_template",
+          "transform_func"
+        ],
+        "usage_count": 3,
+        "last_used": "2026-04-21"
+      },
+      "video_effects_advanced_sop": {
+        "sop": "video_effects_advanced_sop.md",
+        "tools": [
+          "video_effects_advanced.py"
+        ],
+        "functions": [
+          "_apply_blur",
+          "_apply_brightness",
+          "_apply_contrast",
+          "_apply_grayscale",
+          "_apply_mirror",
+          "_apply_sepia",
+          "_apply_sharpen",
+          "add_picture_in_picture",
+          "apply_effect",
+          "apply_filter",
+          "blur_frame",
+          "brightness_frame",
+          "contrast_frame",
+          "grayscale_frame",
+          "sepia_frame",
+          "sharpen_frame"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-20"
+      },
+      "audio_processing_sop": {
+        "sop": "audio_processing_sop.md",
+        "tools": [
+          "audio_enhance.py",
+          "audio_toolkit.py"
+        ],
+        "functions": [
+          "adjust_volume",
+          "clip_audio",
+          "convert_format",
+          "enhance_voice",
+          "merge_audios",
+          "mix_audio",
+          "normalize_volume",
+          "reduce_noise"
+        ],
+        "usage_count": 3,
+        "last_used": "2026-04-20"
+      },
+      "audio_transcription_sop": {
+        "sop": "audio_transcription_sop.md",
+        "tools": [
+          "audio_transcription.py"
+        ],
+        "functions": [
+          "__init__",
+          "_convert_to_wav",
+          "_format_time",
+          "export_json",
+          "export_srt",
+          "export_txt",
+          "quick_transcribe",
+          "transcribe",
+          "transcribe_long_audio"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "podcast_production_sop": {
+        "sop": "podcast_production_sop.md",
+        "tools": [
+          "audio_enhance.py",
+          "audio_toolkit.py"
+        ],
+        "functions": [
+          "adjust_volume",
+          "clip_audio",
+          "convert_format",
+          "enhance_voice",
+          "merge_audios",
+          "mix_audio",
+          "normalize_volume",
+          "reduce_noise"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-20"
+      },
+      "image_processing_sop": {
+        "sop": "image_processing_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "subtitle_proofreading_sop": {
+        "sop": "subtitle_proofreading_sop.md",
+        "tools": [
+          "subtitle_proofreader.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "video_workflow": {
+        "sop": "video_processing_sop.md",
+        "tools": [
+          "video_toolkit.py",
+          "video_templates.py"
+        ],
+        "functions": [
+          "__init__",
+          "add_subtitles",
+          "apply_template",
+          "clip_video",
+          "create_standard_ending",
+          "create_standard_opening",
+          "delete_template",
+          "ending_template",
+          "extract_frames",
+          "list_templates",
+          "load_template",
+          "merge_videos",
+          "opening_template",
+          "quick_apply_template",
+          "save_template"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      }
+    },
+    "content_creation": {
+      "content_creation_sop": {
+        "sop": "content_creation_sop.md",
+        "tools": [
+          "script_generator.py"
+        ],
+        "functions": [
+          "ScriptGenerator.generate",
+          "ScriptGenerator.generate_multi_style",
+          "create_script_generator",
+          "generate",
+          "generate_multi_style"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-20"
+      },
+      "ai_copywriting_sop": {
+        "sop": "ai_copywriting_sop.md",
+        "tools": [
+          "ai_copywriter.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "platform_adaptation_sop": {
+        "sop": "platform_adaptation_sop.md",
+        "tools": [
+          "platform_adapter.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "content_production_workflow_sop": {
+        "sop": "content_production_workflow_sop.md",
+        "tools": [
+          "ai_copywriter.py",
+          "platform_adapter.py",
+          "trend_tracker.py"
+        ],
+        "functions": [
+          "_adapt_wechat",
+          "_adapt_xiaohongshu",
+          "_adapt_zhihu",
+          "adapt_content",
+          "analyze_trend",
+          "batch_adapt",
+          "extract_keywords",
+          "generate_content",
+          "generate_full_copy",
+          "generate_summary",
+          "generate_title",
+          "recommend_topics",
+          "resize_image",
+          "track_trends"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "content_publisher_sop": {
+        "sop": "content_publisher_sop.md",
+        "tools": [
+          "content_publisher.py"
+        ],
+        "functions": [
+          "__init__",
+          "batch_publish_videos",
+          "create_wechat_publisher",
+          "get_publish_script",
+          "get_upload_cover_cdp_commands",
+          "publish",
+          "publish_video"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "account_management_sop": {
+        "sop": "account_management_sop.md",
+        "tools": [
+          "account_manager.py"
+        ],
+        "functions": [
+          "__init__",
+          "_load_accounts",
+          "_save_accounts",
+          "add_account",
+          "check_login_status",
+          "check_publish_status",
+          "get_account",
+          "get_account_summary",
+          "get_posts",
+          "get_stats_history",
+          "list_accounts",
+          "quick_add_account",
+          "quick_sync_post",
+          "remove_account",
+          "sync_posts",
+          "sync_stats",
+          "update_account"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "community_management_sop": {
+        "sop": "community_management_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "live_streaming_sop": {
+        "sop": "live_streaming_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "trend_tracking_sop": {
+        "sop": "trend_tracking_sop.md",
+        "tools": [
+          "trend_tracker.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "workflow": {
+        "sop": "content_workflow_sop.md",
+        "tools": [
+          "content_workflow.py",
+          "ai_copywriter.py",
+          "platform_adapter.py",
+          "account_manager.py"
+        ],
+        "functions": [
+          "__init__",
+          "_adapt_wechat",
+          "_adapt_xiaohongshu",
+          "_adapt_zhihu",
+          "_calc_quality",
+          "_calc_success_rate",
+          "_load_accounts",
+          "_save_accounts",
+          "adapt_content",
+          "add_account",
+          "batch_adapt",
+          "check_login_status",
+          "check_publish_status",
+          "create_and_publish",
+          "create_content",
+          "generate_content",
+          "generate_full_copy",
+          "generate_summary",
+          "generate_title",
+          "get_account",
+          "get_account_summary",
+          "get_posts",
+          "get_stats_history",
+          "list_accounts",
+          "publish_to_platforms",
+          "quick_add_account",
+          "quick_publish",
+          "quick_sync_post",
+          "remove_account",
+          "resize_image",
+          "sync_posts",
+          "sync_stats",
+          "update_account"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "trend_tracking": {
+        "sop": "trend_tracking_sop.md",
+        "tools": [
+          "trend_tracker.py"
+        ],
+        "functions": [
+          "analyze_hot_topics",
+          "analyze_trend",
+          "auto_monitor",
+          "calc_heat_score",
+          "extract_keywords",
+          "monitor_callback",
+          "predict_trend",
+          "recommend_topics",
+          "schedule_daily_monitor",
+          "send_wechat_alert",
+          "track_trends"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "ab_testing_sop": {
+        "sop": "ab_testing_sop.md",
+        "tools": [
+          "ab_testing.py"
+        ],
+        "functions": [
+          "_calc_score",
+          "_load_tests",
+          "_save_tests",
+          "analyze_test",
+          "create_cover_test",
+          "create_timing_test",
+          "create_title_test",
+          "generate_comparison_report",
+          "get_test",
+          "list_tests",
+          "record_metrics",
+          "run_demo"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-24"
+      }
+    },
+    "data_analysis": {
+      "data_analysis_sop": {
+        "sop": "data_analysis_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "data_storytelling_sop": {
+        "sop": "data_storytelling_sop.md",
+        "tools": [
+          "data_storytelling.py"
+        ],
+        "functions": [
+          "comparison_story",
+          "composition_story",
+          "distribution_story",
+          "trend_story"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "media_analytics_sop": {
+        "sop": "media_analytics_sop.md",
+        "tools": [
+          "dashboard_enhanced.py",
+          "media_analytics.py"
+        ],
+        "functions": [
+          "__init__",
+          "analyze_media_data",
+          "calculate_growth_rate",
+          "calculate_metrics",
+          "calculate_trend_score",
+          "content_type_analysis",
+          "create_heatmap",
+          "create_multi_line",
+          "create_pie_chart",
+          "generate_dashboard",
+          "generate_html_report",
+          "generate_report",
+          "load_data",
+          "platform_comparison",
+          "plot_comparison",
+          "plot_trend",
+          "predict_trend",
+          "quick_dashboard",
+          "quick_predict",
+          "time_trend_analysis"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "media_dashboard_workflow_sop": {
+        "sop": "media_dashboard_workflow_sop.md",
+        "tools": [
+          "media_dashboard_workflow.py"
+        ],
+        "functions": [
+          "create_dashboard",
+          "generate_daily_report",
+          "generate_weekly_report"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      },
+      "competitor_analysis_sop": {
+        "sop": "competitor_analysis_sop.md",
+        "tools": [
+          "competitor_analyzer.py"
+        ],
+        "functions": [
+          "analyze_content_strategy",
+          "compare_accounts",
+          "create_account",
+          "demo_competitor_analysis",
+          "generate_comparison_report",
+          "load_accounts_data",
+          "save_accounts_data",
+          "visualize_comparison"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-24"
+      }
+    },
+    "web_automation": {
+      "web_automation_sop": {
+        "sop": "web_automation_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "research_search_sop": {
+        "sop": "research_search_sop.md",
+        "tools": [
+          "parallel_search.py"
+        ],
+        "functions": [
+          "handle_data",
+          "handle_endtag",
+          "handle_starttag",
+          "parallel_search",
+          "search",
+          "search_brave",
+          "search_duckduckgo",
+          "search_github",
+          "search_serper"
+        ],
+        "usage_count": 1,
+        "last_used": "2026-04-20"
+      },
+      "seo_optimization_sop": {
+        "sop": "seo_optimization_sop.md",
+        "tools": [
+          "temp/tools/seo_toolkit.py"
+        ],
+        "functions": [],
+        "usage_count": 1,
+        "last_used": "2026-04-21"
+      }
+    },
+    "system_monitoring": {
+      "system_monitoring_sop": {
+        "sop": "system_monitoring_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "log_analysis_sop": {
+        "sop": "log_analysis_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      }
+    },
+    "meta_capability": {
+      "adb_ui": {
+        "sop": "",
+        "tools": [
+          "adb_ui.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "autonomous_operation_sop": {
+        "sop": "autonomous_operation_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "github_contribution_sop": {
+        "sop": "github_contribution_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "keychain": {
+        "sop": "",
+        "tools": [
+          "keychain.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "ljqCtrl": {
+        "sop": "",
+        "tools": [
+          "ljqCtrl.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "ljqCtrl_sop": {
+        "sop": "ljqCtrl_sop.md",
+        "tools": [
+          "ljqCtrl.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "memory_cleanup_sop": {
+        "sop": "memory_cleanup_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "memory_management_sop": {
+        "sop": "memory_management_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "ocr_utils": {
+        "sop": "",
+        "tools": [
+          "ocr_utils.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "plan_sop": {
+        "sop": "plan_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "procmem_scanner": {
+        "sop": "",
+        "tools": [
+          "procmem_scanner.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "procmem_scanner_sop": {
+        "sop": "procmem_scanner_sop.md",
+        "tools": [
+          "procmem_scanner.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "scheduled_task_sop": {
+        "sop": "scheduled_task_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "subagent": {
+        "sop": "subagent.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "tmwebdriver_sop": {
+        "sop": "tmwebdriver_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "ui_detect": {
+        "sop": "",
+        "tools": [
+          "ui_detect.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "verify_sop": {
+        "sop": "verify_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "vision_api": {
+        "sop": "",
+        "tools": [
+          "vision_api.template.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "vision_sop": {
+        "sop": "vision_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      },
+      "web_setup_sop": {
+        "sop": "web_setup_sop.md",
+        "tools": [],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-20"
+      }
+    }
+  }
+}

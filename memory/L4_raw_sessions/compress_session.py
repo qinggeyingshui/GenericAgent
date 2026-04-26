@@ -165,14 +165,23 @@ def batch_process(src, l4_dir=None, dry_run=True):
     tmp_dir = tempfile.mkdtemp(prefix='cs_batch_')
     results, skipped, errors = [], [], []
 
-    import time
+    import time, psutil
     cutoff = time.time() - 7200  # skip files modified within 2h
+
+    def _is_pid_active(fname):
+        try:
+            pid = int(fname.split('_')[-1].split('.')[0])
+            return psutil.pid_exists(pid)
+        except:
+            return False
 
     # Phase 1: Compress + Extract (to temp dir)
     for fp in raw_files:
         fname = os.path.basename(fp)
         if os.path.getmtime(fp) > cutoff:
             skipped.append((fname, 'recent(<2h)')); continue
+        if _is_pid_active(fname):
+            skipped.append((fname, 'pid_active')); continue
         try:
             dst, info = compress_session(fp, tmp_dir)
             if dst is None:
@@ -217,7 +226,7 @@ def batch_process(src, l4_dir=None, dry_run=True):
                 if f"{sn}.txt" not in names: zf.write(cp, f"{sn}.txt")
         print(f"  {mk}.zip: +{len(items)}")
 
-    # Phase 4: Delete raw files
+    # Phase 4: Delete raw files (only successfully processed ones)
     to_del = [rp for *_, rp in results]
     for fname, reason in skipped:
         if 'recent' in reason: continue  # active session still being written

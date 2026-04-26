@@ -112,10 +112,35 @@ web_execute_js script='{"cmd": "batch", "commands": [...]}'
 - `d=TMWebDriver()`, `d.set_session('url_pattern')`, `d.execute_js(code)` → 返回`{'data': value}`
 - simphtml：`str(simphtml.optimize_html_for_tokens(html))` — 返回BS4 Tag需str()
 
+## 表单自动填充 ⭐
+
+工具：`temp/form_autofill.py`
+
+**核心功能**：
+- JSON配置驱动的表单填充
+- 支持text/email/password/select/checkbox/radio等类型
+- 自动触发input/change事件（兼容React等框架）
+- 智能字段查找（name → id → 模糊匹配）
+
+**使用方法**：
+```python
+from form_autofill import fill_form_js
+
+config = {"username": "张三", "email": "test@example.com", "agree": True}
+js_code = fill_form_js(config, selector_prefix="#myForm")
+web_execute_js(script=js_code)
+```
+
+**返回值**：`[{field: "username", type: "text", success: true}, ...]`
+
+**注意**：文件上传需用CDP方式；动态表单需等待元素出现
+
 ## 连不上排查
-web_scan失败时按序排查（自动检测优先，用户参与放最后）：
-①浏览器没开？→检查浏览器进程是否在跑(tasklist/ps)，没有则启动并打开正常URL（⚠about:blank等内部页不加载扩展）
-②WS后台挂了？→本机18766端口没监听即dead→手动后台`from TMWebDriver import TMWebDriver; TMWebDriver()`起master
-③扩展没装？→读Chrome用户目录下`Secure Preferences`→`extensions.settings`中找`path`含`tmwd_cdp_bridge`的条目
-  找到→扩展已装，排查其他原因；没找到→走web_setup_sop
-④以上都正常仍连不上→请求用户协助
+web_scan失败时按序排查：
+①扩展没装？→检查Chrome扩展列表(chrome://extensions)是否有TMWebDriver扩展
+  没找到→走web_setup_sop；找到→确认已启用
+②浏览器没开？→检查①对应的浏览器进程是否在跑(tasklist/ps)，没有则启动并打开正常URL（⚠about:blank等内部页不加载扩展）
+③WS后台挂了？→socket.connect_ex(('127.0.0.1',18766))非0即dead→手动`from TMWebDriver import TMWebDriver; TMWebDriver()`起master
+
+---
+web_automation.browser_control

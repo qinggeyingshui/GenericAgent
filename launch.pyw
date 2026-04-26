@@ -55,9 +55,9 @@ def idle_monitor():
             now = time.time()
             if now - last_trigger_time < 120: continue
             last_reply = get_last_reply_time()
-            if now - last_reply > 1800:
+            if now - last_reply > 200:
                 print('[Idle Monitor] Detected idle state, injecting task...')
-                inject("[AUTO]🤖 用户已经离开超过30分钟，作为自主智能体，请阅读自动化sop，执行自动任务。")
+                inject("[AUTO]🤖 用户已经离开超过3分钟，作为自主智能体，请阅读自动化sop，执行自动任务。")
                 last_trigger_time = now
         except Exception as e:
             print(f'[Idle Monitor] Error: {e}')

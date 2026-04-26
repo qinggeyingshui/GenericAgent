@@ -80,3 +80,6 @@ def read_addrs(pid, addrs):
 - **选A/B联系人用wechat_db_utils.quick_connect查真人**，避免搜索触发广告弹窗（公众号/小程序名会弹广告）
 - **scan_memory返回格式**：默认返回str列表（每项"Addr:0x...\nHex:..."），非dict。提取地址用`[int(r.split('\n')[0].split(':')[1],16) for r in results]`
 - **侧栏点击禁止估算坐标**：会话列表顺序随消息变化。参考 vision_sop + wechat_send_sop 流程（截图→ask_vision→精确坐标→点击）
+
+---
+system_management.process_control

@@ -1,20 +1,5 @@
-# TODO - Batch 18 (R105-R11x)
-# 生成时间: 2026-03-26
-# 批判性反思: Batch17工具覆盖面广(GNN/Word/PATH/ability_map)，但PPT能力弱；图表仅验证未封装；local_skills只有2个SKILL；ppt_com_toolkit缺图表/更多形状
-# 价值公式: AI训练数据无法覆盖 x 对未来协作有持久收益
-# 核心方向: PPT能力深化(图表封装/SmartArt/更多形状) + local_skills扩展(图片搜索SKILL) + GNN论文库继续扩充 + 工具联动(PPT+图表+论文库)
-# 执行顺序: 1->2->3->4->5->6
-
-## 待执行
-
-1. [x] 产出 | ppt_com_toolkit扩展：add_chart()封装 | 将python-pptx图表能力封装为add_chart(slide,chart_type,data,l,t,w,h,title)统一接口，支持COLUMN/BAR/LINE/PIE四种类型，数据格式为{categories:[],series:{名:[]}}；写入ppt_com_toolkit.py并在ppt_lab/验证 | 验收：add_chart函数存在，生成含4种图表的test_charts.pptx，文件>30KB
-
-2. [x] 产出 | ppt_com_toolkit扩展：更多AutoShape支持 | 用win32com AddShape封装add_shape(slide,shape_type,l,t,w,h,fill,text)，覆盖三角形(13)/右箭头(20)/五角星(12)/流程图过程框(109)等常用类型；支持形状内文字；更新ability_map.md | 验收：add_shape函数存在，生成含6种AutoShape的test_shapes.pptx
-
-3. [x] 产出 | local_skills新增图片搜索SKILL | 实现local_skills/image_search.py：用Unsplash免费API(无需key的source.unsplash.com)或Pixabay按关键词下载图片到本地缓存，返回本地路径；支持指定尺寸；与add_picture联动 | 验收：image_search.py存在，search("graph neural network")能返回>=1张本地缓存图片路径
-
-4. [x] 产出 | GNN完整教案PPT自动生成器 | 基于lesson_plan.md + ppt_com_toolkit + add_chart，生成L01_GNN导论.pptx：封面/目录/教学目标/核心概念(含图表)/论文精读/课堂练习/总结共8张以上幻灯片；图表展示GNN模型对比数据 | 验收：lesson2ppt.py存在，生成L01_GNN导论.pptx>50KB，含>=8张幻灯片
-
-5. [ ] 产出 | arXiv批量抓取：2025年GNN新论文入库 | 用arxiv2kb.py批量抓取2025年GNN相关最新论文>=5篇(Graph Transformer/GraphMamba/分子图等方向)；更新PAPERS.md；生成入库摘要报告 | 验收：PAPERS.md新增>=5篇2025年论文，kb_cli search GNN输出>=20篇
-
-6. [ ] 自身演进 | ppt_com_sop深化：完整PPT制作流程文档 | 结合本批次PPT实战经验，将ppt_com_sop.md扩展为完整制作指南：布局规范/配色方案/字体规则/动画最佳实践/图表选型指南；为未来PPT任务提供决策依据 | 验收：ppt_com_sop.md>100行，含完整制作流程章节
+[x] data_analysis | 粉丝画像分析工具 | 产出：fan_analytics.py + fan_analytics_sop.md | 验收：支持粉丝增长曲线/活跃时段/地域分布/兴趣标签4维度分析
+[x] content_creation | 内容A/B测试框架 | 产出：ab_testing.py + ab_testing_sop.md | 验收：支持标题/封面/发布时间3类测试+效果对比报告
+[ ] content_creation | 品牌合作CRM增强 | 产出：增强monetization_toolkit.py | 验收：新增合作方管理/合作历史/报价记录3函数
+[ ] media_processing | 内容版权水印保护 | 产出：增强image_toolkit.py | 验收：新增隐形水印/批量水印/水印检测3函数
+[ ] data_analysis | 数据日报自动推送 | 产出：增强media_dashboard_workflow.py | 验收：新增定时生成+微信推送功能

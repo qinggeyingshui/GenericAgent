@@ -88,3 +88,6 @@ L4: ../memory/L4_raw_sessions/ (历史会话层 - scheduler反射自动收集，
             │
             └─ NO → 判定为『通用常识』或『冗余信息』: 严禁存储，直接丢弃
 ```
+
+---
+knowledge_management.knowledge_organization

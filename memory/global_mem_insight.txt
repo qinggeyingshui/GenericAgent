@@ -1,29 +1,27 @@
 # [Global Memory Insight]
-浏览器自动化: web_scan/web_execute_js直接调用 | 特殊:tmwebdriver_sop(文件上传/图搜/PDF blob/元素物理坐标/Cookie提取含HttpOnly/跨域iframe操控/CDP/跨tab/后台tab操作)
-键鼠模拟: ljqCtrl_sop+.py(仅win，禁pyautogui/先activate窗口)
-定时任务: scheduled_task_sop(报告→sche_tasks/done/) | 与自主任务完全独立
-自主探索任务: autonomous_operation_sop(报告→temp/autonomous_reports/history.txt，不在memory下) | 与定时任务完全独立
-教案知识库: teaching_kb_sop+temp/autonomous_reports/R06_教案助手知识库结构规划.md
-GNN论文库: gnn_papers/PAPERS.md | 接口: local_skills/research_paper_kb_like.py(list/search/add/fetch)
-图片搜索: local_skills/image_search.py(loremflickr无需key,search(kw,w,h,count)->路径列表,缓存temp/image_cache/,坑:unsplash已503)
-任务设计: task_design_sop
-手机操控: adb_ui.py | 文件同步: temp/phone_sync.py(list/pull/push)
-Word文档: temp/word_toolkit.py(win32com,新建/编辑/表格/图片) | 坑:中文Word下add_bullet_list()报错(List Bullet样式不存在)，改用Paragraphs.Add()+LeftIndent+前缀
-PDF入库: temp/pdf2kb.py(PDF→gnn_papers/PAPERS.md,需venv pdfplumber)
-PPT制作: ppt_com_toolkit.py(win32com,坑→ppt_com_sop) | ppt_chart_toolkit.py(add_chart/4种类型COLUMN/BAR/LINE/PIE,python-pptx,data={categories,series}) | Marp(npm CLI,md→pptx) | Canva Connect API(需OAuth+Enterprise,canva.dev)
-能力树索引: temp/ability_map.md(12文件75函数,按论文/PPT/Word/系统/自主分类)
-微信Bot发送: frontends/wechatapp.py(send_text/send_file) | 凭证+to_user_id→L2 WECHAT_BOT
+浏览器自动化: web_scan/web_execute_js直接调用 | 特殊→tmwebdriver_sop(上传/图搜/Cookie/iframe/CDP/跨tab)
+键鼠模拟: ljqCtrl_sop+.py(仅win，禁pyautogui，先activate窗口)
+定时任务: scheduled_task_sop(→sche_tasks/done/) | 自主探索: autonomous_operation_sop(→temp/autonomous_reports/)
+异步反思: reflection_sop(失败时spawn后台subagent→self_improvement.md抽象规律)
+GNN论文库: gnn_papers/PAPERS.md | 接口: local_skills/research_paper_kb_like.py(list/search/add/fetch) | 对比: temp/comparison_toolkit.py+paper_comparison_sop | 引用格式: citation_formatter.py(APA/MLA/GB-T7714)
+并行搜索: temp/parallel_search.py(多引擎) | 图片: local_skills/image_search.py(loremflickr)
+手机: adb_ui.py | 文件同步: temp/phone_sync.py | Word: temp/word_toolkit.py | PDF入库: temp/pdf2kb.py | Excel: temp/excel_toolkit.py+excel_processing_sop
+PPT: ppt_com_toolkit.py(win32com,坑→ppt_com_sop) | ppt_chart_toolkit.py(4种图表) | ppt_template_manager.py(模板管理) | ppt_auto_layout.py(智能排版:图文/纯文字/图表) | ppt_data_viz.py(Excel/CSV→图表) | ppt_master_toolkit.py(母版编辑/主题色提取/批量应用) | Marp(md→pptx)
+视频: temp/video_toolkit.py+video_processing_sop(剪辑/合并/提取帧/字幕，moviepy2.x用subclipped) | video_effects.py(转场:fade/slide/zoom/rotate/wipe) | video_templates.py(模板库+一键应用) | subtitle_proofreader.py(字幕校对SRT/VTT)
+音频: temp/tools/audio_toolkit.py+audio_processing_sop(剪辑/格式转换/音量/合并，pydub) | audio_enhance.py(降噪/混音/音量均衡)
+能力树: temp/ability_map.md(12文件75函数) | 微信Bot: frontends/wechatapp.py(凭证→L2 WECHAT_BOT)
+内容创作: platform_adapter.py(微信/知乎/小红书适配) | ai_copywriter.py(标题/摘要/正文生成) | media_analytics.py(数据分析+可视化) | trend_tracker.py(热点追踪+选题推荐) | account_manager.py(多平台账号管理+数据同步+account_management_sop) | monetization_toolkit.py(广告收益/品牌报价/会员定价)+monetization_sop | content_calendar.py(发布排期/最佳时间/日历视图)+content_calendar_sop | competitor_analyzer.py(账号对比/策略分析)+competitor_analysis_sop
+Skill_tree: 日常SOP使用后调record_skill_usage('xxx_sop.md')更新usage_count；autonomous任务收尾时complete_task(sop_files=[...])自动同步skill_tree
 
-需要时read L2 或 ls ../memory/ 查L3
-L0(META-SOP): memory_management_sop
-L2: USER_PROFILE(研究方向/长期目标/GNN论文库路径) | WECHAT_BOT | SYSTEM/STORAGE/DEVELOPMENT等环境事实
-L3: web_setup_sop | autonomous_operation_sop | scheduled_task_sop | ljqCtrl_sop+.py | tmwebdriver_sop | subagent_sop | plan_sop | mem_scanner.py | mem_scanner_sop | task_design_sop | teaching_kb_sop | adb_ui.py
+L0: memory_management_sop | L2: USER_PROFILE/WECHAT_BOT/SYSTEM | 需要时read L2或ls ../memory/查L3
+L3: web_setup_sop|autonomous_operation_sop|scheduled_task_sop|ljqCtrl_sop|tmwebdriver_sop|subagent_sop|plan_sop|mem_scanner_sop|task_design_sop|teaching_kb_sop|paper_comparison_sop|excel_processing_sop|video_processing_sop|audio_processing_sop|adb_ui.py|web_search_reflection_sop|reflection_sop|platform_adaptation_sop|ai_copywriting_sop|media_analytics_sop|subtitle_proofreading_sop|trend_tracking_sop|data_analysis_sop|automation_sop|learning_sop|account_management_sop
+L4: L4_raw_sessions/
 
 [RULES]
 1. 搜索先行: 信息尽量用google（必须web）, 项目内os.listdir, 禁猜路径
 2. 交叉验证: 禁信搜索摘要, 数值必进详情页核实
 3. 编码安全: 改前必读源码; import memory用sys.path.append
-4. 闭环: 物理模拟后必确认; 3次失败请求干预; 
+4. 闭环: 物理模拟后必确认; 3次失败请求干预
 5. 进程: 禁无条件杀python(会杀自己), 精确PID, 禁os.kill判活
 6. 窗口: GUI状态优先枚举窗口, 比OCR快
 7. 物理红线: cwd用./; cwd指定后代码内禁用../向上切换，改用绝对路径
@@ -33,3 +31,6 @@ L3: web_setup_sop | autonomous_operation_sop | scheduled_task_sop | ljqCtrl_sop+
 11. file_write上限约649B，长文件必须用code_run list-of-lines分段append写入
 12. code_run字符串含中文引号时用单引号包裹，三引号内禁嵌markdown代码块（改用4空格缩进）
 13. 系统红线: 严禁自主修改注册表/系统PATH/系统环境变量/C盘系统文件，必须先明确询问用户授权
+14. 工具开发: 函数名必须符合实际功能；依赖外部服务前验证可用性+fallback；搜索引擎抓取必须用浏览器(web_execute_js)禁requests
+15. Reflection: 失败≥2次先读self_improvement.md抽象规律对照；遇错定位根因链，更新抽象规律表，从根本消除坑的生成机制
+16. SOP计数: 读取含

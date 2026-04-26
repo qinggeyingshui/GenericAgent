@@ -25,3 +25,4 @@ max_delay_hours（可选，默认6）：超过schedule多少小时后不再触�
 - once类型：执行一次后冷却100年（实际效果为永久跳过）
 - 任务文件只管"干什么"，报告路径由scheduler自动生成注入prompt
 - sche_tasks目录在../，即code root下
+

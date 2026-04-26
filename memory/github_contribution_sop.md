@@ -115,3 +115,6 @@ code_run('bash', 'gh pr status')
 code_run('bash', 'gh pr checks PR_NUMBER')
 code_run('bash', 'gh pr view PR_NUMBER --comments')
 ```
+
+---
+automation.autonomous_operation
