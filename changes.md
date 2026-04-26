@@ -1,12 +1,15 @@
 #changes
 
-assets\sys_prompt.txt 靠提示词让模型记得更新SOP使用usage_count、last_used
-agentmain.py、ga.py 增加标记是否犯错以及如果犯错调用spawn_reflection_agent
-memory\autonomous_operation_sop skill拓展任务规划
-memory\reflection  工具函数+记录的反思结果
-temp\reflection_xxxx  反思subagent示例
-sche_tasks\sop_auto_sync.json  自动扫描用户日常任务中产生的SOP加入到skill_tree
-sche_tasks\skill_lifecycle_management.json  skill生命周期管理，只给出建议具体执行需要用户同意
+| 模块 / 文件路径                                    | 修改内容                                          |
+| -------------------------------------------- | --------------------------------------------- |
+| `assets/sys_prompt.txt`                      | 通过提示词让模型记住更新 SOP 的`usage_count`、`last_used` |
+| `agentmain.py`、`ga.py`                       | 增加是否犯错的标记；若犯错则调用 `spawn_reflection_agent`     |
+| `memory/autonomous_operation_sop`            | skill 拓展任务规划                                  |
+| `memory/reflection`                          | 工具函数 + 记录反思结果                                 |
+| `temp/reflection_xxxx`                       | 反思 subagent 示例                                |
+| `sche_tasks/sop_auto_sync.json`              | 自动扫描用户日常任务中产生的 SOP，并加入到 `skill_tree`          |
+| `sche_tasks/skill_lifecycle_management.json` | skill 生命周期管理（仅给建议，具体执行需用户同意）                  |
+
 
 # 技能树演化
 
