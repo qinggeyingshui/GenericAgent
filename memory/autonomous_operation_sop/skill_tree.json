@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-04-26",
   "skill_categories": {
     "knowledge_management": {
       "research_paper_kb_sop": {
@@ -16,6 +16,7 @@
           "web2md.py"
         ],
         "functions": [
+          "_parse_papers",
           "add",
           "build_index",
           "cmd_fetch",
@@ -39,12 +40,19 @@
           "tables"
         ],
         "usage_count": 9,
-        "last_used": "2026-04-20"
+        "last_used": "2026-04-24"
       },
       "paper_comparison_sop": {
         "sop": "paper_comparison_sop.md",
-        "tools": [],
-        "functions": [],
+        "tools": [
+          "comparison_toolkit.py"
+        ],
+        "functions": [
+          "compare_papers",
+          "get_paper_by_id",
+          "list_papers",
+          "parse_papers"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
@@ -84,21 +92,6 @@
         ],
         "usage_count": 1,
         "last_used": "2026-04-20"
-      },
-      "paper_acquisition": {
-        "sop": "research_paper_kb_sop.md",
-        "tools": [
-          "research_paper_kb_like.py"
-        ],
-        "functions": [
-          "_parse_papers",
-          "add",
-          "fetch",
-          "list_papers",
-          "search"
-        ],
-        "usage_count": 2,
-        "last_used": "2026-04-24"
       }
     },
     "document_generation": {
@@ -113,6 +106,7 @@
           "ppt_chart_styles.py",
           "ppt_chart_toolkit.py",
           "ppt_com_toolkit.py",
+          "ppt_export_toolkit.py",
           "ppt_smartart.py",
           "ppt_template_manager.py",
           "ppt_theme_manager.py",
@@ -127,6 +121,7 @@
           "add_blank_slide",
           "add_chart",
           "add_chart_layout",
+          "add_comparison_layout",
           "add_image_text_layout",
           "add_line_shape",
           "add_mixed_content_layout",
@@ -141,6 +136,7 @@
           "add_text",
           "add_text_layout",
           "add_text_lines",
+          "add_timeline_layout",
           "apply_bg",
           "apply_body",
           "apply_theme_colors",
@@ -148,10 +144,12 @@
           "auto_select_layout",
           "batch_convert",
           "batch_replace_text",
+          "calc_beauty_score",
           "cm",
           "convert_to_marp",
           "create_content_slide",
           "create_title_slide",
+          "detect_content_type",
           "export_market_template",
           "extract_content_from_ppt",
           "extract_key_points",
@@ -185,11 +183,12 @@
           "set_master_logo",
           "set_transition",
           "shape_text",
+          "smart_layout",
           "start",
           "update_materials_index"
         ],
         "usage_count": 15,
-        "last_used": "2026-04-21"
+        "last_used": "2026-04-24"
       },
       "ppt_template_manager_sop": {
         "sop": "ppt_template_manager_sop.md",
@@ -283,86 +282,6 @@
         ],
         "usage_count": 0,
         "last_used": "2026-04-20"
-      },
-      "ppt_creation": {
-        "sop": "ppt_com_sop.md",
-        "tools": [
-          "ppt_com_toolkit.py",
-          "ppt_chart_toolkit.py",
-          "ppt_template_manager.py",
-          "ppt_auto_layout.py",
-          "ppt_export_toolkit.py",
-          "speech_helper.py"
-        ],
-        "functions": [
-          "__init__",
-          "add_anim_appear",
-          "add_anim_sequence",
-          "add_animation",
-          "add_blank_slide",
-          "add_chart",
-          "add_chart_layout",
-          "add_comparison_layout",
-          "add_image_text_layout",
-          "add_line_shape",
-          "add_mixed_content_layout",
-          "add_multi_column_layout",
-          "add_oval",
-          "add_picture",
-          "add_rect",
-          "add_rrect",
-          "add_shape",
-          "add_slide",
-          "add_table",
-          "add_text",
-          "add_text_layout",
-          "add_text_lines",
-          "add_timeline_layout",
-          "apply_bg",
-          "apply_body",
-          "apply_theme_colors",
-          "apply_title",
-          "auto_select_layout",
-          "batch_replace_text",
-          "calc_beauty_score",
-          "cm",
-          "create_content_slide",
-          "create_title_slide",
-          "detect_content_type",
-          "export_market_template",
-          "extract_content_from_ppt",
-          "extract_key_points",
-          "format_prompts",
-          "generate_speech",
-          "get_elapsed",
-          "get_market_manager",
-          "get_status",
-          "init_templates",
-          "list_templates",
-          "load_template",
-          "new_prs",
-          "open_ppt",
-          "optimize_speech",
-          "pause",
-          "quick_generate_speech",
-          "quick_rehearsal",
-          "resume",
-          "rgb",
-          "save_and_quit",
-          "save_prompts",
-          "save_prs",
-          "save_template",
-          "search_market_templates",
-          "set_bg_gradient",
-          "set_bg_solid",
-          "set_master_logo",
-          "set_transition",
-          "shape_text",
-          "smart_layout",
-          "start"
-        ],
-        "usage_count": 5,
-        "last_used": "2026-04-24"
       }
     },
     "media_processing": {
@@ -494,8 +413,21 @@
       },
       "image_processing_sop": {
         "sop": "image_processing_sop.md",
-        "tools": [],
-        "functions": [],
+        "tools": [
+          "image_toolkit.py"
+        ],
+        "functions": [
+          "add_watermark",
+          "compress_batch",
+          "convert_format",
+          "create_cover",
+          "create_thumbnail",
+          "crop",
+          "demo_image_toolkit",
+          "image_to_ppt_slide",
+          "ocr",
+          "resize"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
@@ -504,35 +436,22 @@
         "tools": [
           "subtitle_proofreader.py"
         ],
-        "functions": [],
+        "functions": [
+          "add_emotion_tags",
+          "check_punctuation",
+          "check_text_length",
+          "check_timeline",
+          "detect_language",
+          "enhance_subtitles",
+          "format_time",
+          "optimize_timeline",
+          "parse_srt",
+          "parse_vtt",
+          "polish_subtitle",
+          "proofread_subtitle"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
-      },
-      "video_workflow": {
-        "sop": "video_processing_sop.md",
-        "tools": [
-          "video_toolkit.py",
-          "video_templates.py"
-        ],
-        "functions": [
-          "__init__",
-          "add_subtitles",
-          "apply_template",
-          "clip_video",
-          "create_standard_ending",
-          "create_standard_opening",
-          "delete_template",
-          "ending_template",
-          "extract_frames",
-          "list_templates",
-          "load_template",
-          "merge_videos",
-          "opening_template",
-          "quick_apply_template",
-          "save_template"
-        ],
-        "usage_count": 1,
-        "last_used": "2026-04-21"
       }
     },
     "content_creation": {
@@ -556,7 +475,12 @@
         "tools": [
           "ai_copywriter.py"
         ],
-        "functions": [],
+        "functions": [
+          "generate_content",
+          "generate_full_copy",
+          "generate_summary",
+          "generate_title"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
@@ -565,7 +489,11 @@
         "tools": [
           "platform_adapter.py"
         ],
-        "functions": [],
+        "functions": [
+          "adapt_content",
+          "batch_adapt",
+          "resize_image"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
@@ -641,24 +569,42 @@
       },
       "community_management_sop": {
         "sop": "community_management_sop.md",
-        "tools": [],
-        "functions": [],
+        "tools": [
+          "comment_assistant.py",
+          "wechat_group_toolkit.py"
+        ],
+        "functions": [
+          "analyze_comments",
+          "analyze_sentiment",
+          "classify_fan",
+          "demo_usage",
+          "extract_group_info",
+          "generate_fan_report",
+          "generate_reply",
+          "get_group_id",
+          "get_sender_in_group",
+          "is_group_message",
+          "is_mentioned",
+          "load_comments",
+          "save_analysis",
+          "send_group_file",
+          "send_group_text"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
       "live_streaming_sop": {
         "sop": "live_streaming_sop.md",
-        "tools": [],
-        "functions": [],
-        "usage_count": 0,
-        "last_used": "2026-04-20"
-      },
-      "trend_tracking_sop": {
-        "sop": "trend_tracking_sop.md",
         "tools": [
-          "trend_tracker.py"
+          "live_script_generator.py"
         ],
-        "functions": [],
+        "functions": [
+          "create_full_script",
+          "generate_script_outline",
+          "generate_teleprompter",
+          "get_interaction_phrase",
+          "save_script"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
@@ -750,13 +696,44 @@
         ],
         "usage_count": 1,
         "last_used": "2026-04-24"
+      },
+      "content_calendar_sop": {
+        "sop": "content_calendar_sop.md",
+        "tools": [
+          "content_calendar.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-26"
+      },
+      "monetization_sop": {
+        "sop": "monetization_sop.md",
+        "tools": [
+          "monetization_toolkit.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-26"
       }
     },
     "data_analysis": {
       "data_analysis_sop": {
         "sop": "data_analysis_sop.md",
-        "tools": [],
-        "functions": [],
+        "tools": [
+          "data_storytelling.py",
+          "data_visualization.py"
+        ],
+        "functions": [
+          "bar_chart",
+          "comparison_story",
+          "composition_story",
+          "distribution_story",
+          "line_chart",
+          "multi_series_bar",
+          "pie_chart",
+          "scatter_plot",
+          "trend_story"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
@@ -835,13 +812,44 @@
         ],
         "usage_count": 1,
         "last_used": "2026-04-24"
+      },
+      "fan_analytics_sop": {
+        "sop": "fan_analytics_sop.md",
+        "tools": [
+          "fan_analytics.py"
+        ],
+        "functions": [],
+        "usage_count": 0,
+        "last_used": "2026-04-26"
       }
     },
     "web_automation": {
       "web_automation_sop": {
         "sop": "web_automation_sop.md",
-        "tools": [],
-        "functions": [],
+        "tools": [
+          "anti_scraping_toolkit.py",
+          "form_autofill.py"
+        ],
+        "functions": [
+          "acquire",
+          "batch_scrape",
+          "clear_cookies",
+          "fill_form_config",
+          "fill_form_js",
+          "generate_form_config_template",
+          "get_cookies",
+          "get_next",
+          "get_random",
+          "prepare_request",
+          "random_delay",
+          "safe_navigate",
+          "set_cookie",
+          "set_ua_via_cdp",
+          "wait",
+          "wait_for_element",
+          "wait_for_network_idle",
+          "wait_if_needed"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
@@ -867,9 +875,20 @@
       "seo_optimization_sop": {
         "sop": "seo_optimization_sop.md",
         "tools": [
+          "seo_toolkit.py",
           "temp/tools/seo_toolkit.py"
         ],
-        "functions": [],
+        "functions": [
+          "analyze_keyword_density",
+          "estimate_competition",
+          "extract_keywords",
+          "generate_descriptions",
+          "generate_meta_description",
+          "optimize_title",
+          "quick_seo_analysis",
+          "score_title",
+          "suggest_related_keywords"
+        ],
         "usage_count": 1,
         "last_used": "2026-04-21"
       }
@@ -877,15 +896,50 @@
     "system_monitoring": {
       "system_monitoring_sop": {
         "sop": "system_monitoring_sop.md",
-        "tools": [],
-        "functions": [],
+        "tools": [
+          "process_manager.py",
+          "system_monitor.py"
+        ],
+        "functions": [
+          "auto_restart_daemon",
+          "check_thresholds",
+          "clear_alerts",
+          "collect_metrics",
+          "get_alerts",
+          "get_cpu_usage",
+          "get_dashboard",
+          "get_disk_usage",
+          "get_history",
+          "get_memory_usage",
+          "list_processes",
+          "monitor_once",
+          "monitor_process",
+          "restart_process",
+          "save_history",
+          "set_threshold",
+          "start_process",
+          "stop_process"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       },
       "log_analysis_sop": {
         "sop": "log_analysis_sop.md",
-        "tools": [],
-        "functions": [],
+        "tools": [
+          "log_analyzer.py"
+        ],
+        "functions": [
+          "analyze_log",
+          "detect_patterns",
+          "export_json",
+          "generate_report",
+          "get_error_messages",
+          "get_error_stats",
+          "get_hourly_stats",
+          "get_visualization_data",
+          "parse_line",
+          "parse_log_file"
+        ],
         "usage_count": 0,
         "last_used": "2026-04-20"
       }
@@ -993,8 +1047,8 @@
         "sop": "scheduled_task_sop.md",
         "tools": [],
         "functions": [],
-        "usage_count": 0,
-        "last_used": "2026-04-20"
+        "usage_count": 2,
+        "last_used": "2026-04-26"
       },
       "subagent": {
         "sop": "subagent.md",

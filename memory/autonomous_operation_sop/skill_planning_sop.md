@@ -8,7 +8,7 @@ import sys; sys.path.append('../memory/autonomous_operation_sop')
 from helper import get_skill_stats
 stats = get_skill_stats()  # {total, categories, high_usage, all_skills}
 ```
-# 另必须完整读: ../memory/global_mem.txt(USER_PROFILE) + temp/autonomous_reports/history.txt
+另必须完整读: ../memory/global_mem.txt(USER_PROFILE) + temp/autonomous_reports/history.txt
 
 ## 2. 去重验证（🚫阻断性，必须先做）
 **未输出对比表 = 规划无效**
