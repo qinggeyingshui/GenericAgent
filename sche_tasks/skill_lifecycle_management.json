@@ -1,0 +1,7 @@
+{
+  "schedule": "10:00",
+  "repeat": "weekly",
+  "enabled": true,
+  "max_delay_hours": 48,
+  "prompt": "执行skill_tree.json生命周期检查任务，报告写入{report_path}\n\n【重要】本任务仅生成检查报告供用户确认，禁止自动删除或修改任何内容！\n【排除】meta_capability类别不参与检查（核心能力，不可删除）\n\n检查项：\n1. 重复SOP检测（同一sop文件被多个skill引用）\n2. 工具文件验证（tools列表中的.py文件是否存在）\n3. 孤儿函数检测（functions中的函数是否在对应tools文件中存在）\n4. 空skill检测（tools和functions都为空的条目）\n\n删除建议分级：\n- 【强烈建议删除】usage=0 + last_used超过90天 + (工具缺失或空skill)\n- 【建议删除】usage=0 + last_used超过60天\n- 【可考虑删除】usage=0 + last_used超过30天\n- 【观察中】usage=0但创建不足30天\n\nskill_tree路径：memory/autonomous_operation_sop/skill_tree.json\ntools目录：temp/tools/, local_skills/\n\n报告格式：\n- 统计摘要（总skill数、各类别数量、健康率）\n- 删除建议列表（按严重程度分级）\n- 其他问题列表\n- 建议的清理操作\n\n【禁止】自动删除、合并、修改skill_tree.json，所有操作需用户确认后手动执行"
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>磁盘分析报告 — ./autonomous_reports</title>
+<style>* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; background:#f0f2f5; color:#333; padding:20px; }
+.container { max-width:1200px; margin:0 auto; }
+h1 { color:#1a1a2e; margin-bottom:5px; }
+.subtitle { color:#666; margin-bottom:20px; font-size:14px; }
+.card { background:white; border-radius:12px; padding:24px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+.card h3 { color:#2c3e50; margin-bottom:16px; border-bottom:2px solid #eee; padding-bottom:8px; }
+.card.warn { border-left:4px solid #f39c12; }
+.stats { display:flex; gap:30px; flex-wrap:wrap; }
+.stats div { text-align:center; }
+.big { font-size:28px; font-weight:bold; color:#2c3e50; }
+.pie-section { display:flex; gap:30px; align-items:flex-start; flex-wrap:wrap; }
+.pie-section svg { flex-shrink:0; }
+.legend { font-size:13px; }
+.legend table { border-collapse:collapse; }
+.legend td { padding:3px 10px; }
+.dot { display:inline-block; width:12px; height:12px; border-radius:3px; }
+table.data { width:100%; border-collapse:collapse; font-size:13px; }
+table.data th { background:#f8f9fa; padding:10px 12px; text-align:left; border-bottom:2px solid #dee2e6; position:sticky; top:0; }
+table.data td { padding:8px 12px; border-bottom:1px solid #eee; }
+table.data tr:hover { background:#f8f9fa; }
+.r { text-align:right; }
+.path { max-width:600px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-family:Consolas,monospace; font-size:12px; }
+.scroll { max-height:600px; overflow-y:auto; }
+.summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:20px; }
+.summary-item { background:white; border-radius:10px; padding:20px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
+.summary-item .num { font-size:32px; font-weight:bold; }
+.summary-item .label { color:#888; font-size:13px; margin-top:4px; }
+.c-blue { color:#4E79A7; } .c-orange { color:#F28E2B; } .c-red { color:#E15759; } .c-green { color:#59A14F; }
+footer { text-align:center; color:#aaa; font-size:12px; margin-top:30px; padding:20px; }</style></head>
+<body><div class="container">
+<h1>📊 磁盘空间分析报告</h1>
+<p class="subtitle">扫描路径: ./autonomous_reports | 生成时间: 2026-03-25 14:16:06 | 扫描耗时: 0.0s</p>
+
+<div class="summary-grid">
+<div class="summary-item"><div class="num c-blue">36</div><div class="label">文件总数</div></div>
+<div class="summary-item"><div class="num c-orange">280.7 KB</div><div class="label">扫描总大小</div></div>
+<div class="summary-item"><div class="num c-red">0</div><div class="label">重复文件组</div></div>
+<div class="summary-item"><div class="num c-green">280.7 KB</div><div class="label">可清理临时文件</div></div>
+</div>
+
+
+
+<div class="card"><h3>📁 目录空间占用分布</h3><div class="pie-section"><svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="max-width:500px; font-family:sans-serif;">
+<circle cx="250" cy="250" r="190" fill="#4E79A7" stroke="white" stroke-width="1"/>
+<circle cx="250" cy="250" r="66" fill="white"/>
+<text x="250" y="242" text-anchor="middle" font-size="14" font-weight="bold">总计</text>
+<text x="250" y="264" text-anchor="middle" font-size="13">280.7 KB</text>
+</svg><div class="legend"><table><tr><td><span class="dot" style="background:#4E79A7"></span></td><td>&lt;根目录文件&gt;</td><td class="r">280.7 KB</td><td class="r">100.0%</td></tr></table></div></div></div>
+
+<div class="card"><h3>🏆 最大的 10 个文件</h3>
+<div class="scroll"><table class="data">
+<tr><th>#</th><th>文件路径</th><th>大小</th><th>类型</th><th>修改日期</th></tr>
+<tr><td>1</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R18_自主任务设计复盘与改进框架.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R18_自主任务设计复盘与改进框架.md</td><td class="r">24.2 KB</td><td>.md</td><td>2026-03-25</td></tr>
+<tr><td>2</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\software_raw.txt">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\software_raw.txt</td><td class="r">20.4 KB</td><td>.txt</td><td>2026-03-25</td></tr>
+<tr><td>3</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R16_教案知识库与PPT联动构想草案.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R16_教案知识库与PPT联动构想草案.md</td><td class="r">14.7 KB</td><td>.md</td><td>2026-03-24</td></tr>
+<tr><td>4</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R15_GNN追踪表与arXiv解析脚本打通.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R15_GNN追踪表与arXiv解析脚本打通.md</td><td class="r">12.7 KB</td><td>.md</td><td>2026-03-24</td></tr>
+<tr><td>5</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R06_教案助手知识库结构规划.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R06_教案助手知识库结构规划.md</td><td class="r">12.3 KB</td><td>.md</td><td>2026-03-24</td></tr>
+<tr><td>6</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R11_适合自动抓取的学术站点调研.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R11_适合自动抓取的学术站点调研.md</td><td class="r">11.7 KB</td><td>.md</td><td>2026-03-24</td></tr>
+<tr><td>7</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R03_通用教案模板.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R03_通用教案模板.md</td><td class="r">11.7 KB</td><td>.md</td><td>2026-03-24</td></tr>
+<tr><td>8</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R14_中文学术PPT案例本地分析.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R14_中文学术PPT案例本地分析.md</td><td class="r">11.5 KB</td><td>.md</td><td>2026-03-24</td></tr>
+<tr><td>9</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R02_程序设计课样例教案.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R02_程序设计课样例教案.md</td><td class="r">10.9 KB</td><td>.md</td><td>2026-03-24</td></tr>
+<tr><td>10</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R09_arXIV_GNN新文手工样本标注.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R09_arXIV_GNN新文手工样本标注.md</td><td class="r">10.8 KB</td><td>.md</td><td>2026-03-24</td></tr></table></div></div>
+
+<div class="card"><h3>🔁 重复文件 (前30组, 共浪费 0.0 B)</h3>
+<div class="scroll"><table class="data">
+<tr><th>#</th><th>文件路径</th><th>单文件大小</th><th>副本数</th><th>浪费空间</th></tr>
+<tr><td colspan="5">未发现重复文件</td></tr></table></div></div>
+
+<div class="card"><h3>🧹 临时/缓存文件清理建议 (共 36 个, 280.7 KB)</h3>
+<h4 style="margin:12px 0 8px;color:#555;">按类型统计</h4>
+<table class="data"><tr><th>文件类型</th><th>数量</th><th>总大小</th></tr><tr><td>.md</td><td class="r">34</td><td class="r">254.1 KB</td></tr>
+<tr><td>.txt</td><td class="r">2</td><td class="r">26.5 KB</td></tr></table>
+<h4 style="margin:16px 0 8px;color:#555;">最大的临时文件 (Top 20)</h4>
+<div class="scroll" style="max-height:400px;"><table class="data">
+<tr><th>#</th><th>文件路径</th><th>大小</th></tr><tr><td>1</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R18_自主任务设计复盘与改进框架.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R18_自主任务设计复盘与改进框架.md</td><td class="r">24.2 KB</td></tr>
+<tr><td>2</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\software_raw.txt">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\software_raw.txt</td><td class="r">20.4 KB</td></tr>
+<tr><td>3</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R16_教案知识库与PPT联动构想草案.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R16_教案知识库与PPT联动构想草案.md</td><td class="r">14.7 KB</td></tr>
+<tr><td>4</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R15_GNN追踪表与arXiv解析脚本打通.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R15_GNN追踪表与arXiv解析脚本打通.md</td><td class="r">12.7 KB</td></tr>
+<tr><td>5</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R06_教案助手知识库结构规划.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R06_教案助手知识库结构规划.md</td><td class="r">12.3 KB</td></tr>
+<tr><td>6</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R11_适合自动抓取的学术站点调研.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R11_适合自动抓取的学术站点调研.md</td><td class="r">11.7 KB</td></tr>
+<tr><td>7</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R03_通用教案模板.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R03_通用教案模板.md</td><td class="r">11.7 KB</td></tr>
+<tr><td>8</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R14_中文学术PPT案例本地分析.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R14_中文学术PPT案例本地分析.md</td><td class="r">11.5 KB</td></tr>
+<tr><td>9</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R02_程序设计课样例教案.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R02_程序设计课样例教案.md</td><td class="r">10.9 KB</td></tr>
+<tr><td>10</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R09_arXIV_GNN新文手工样本标注.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R09_arXIV_GNN新文手工样本标注.md</td><td class="r">10.8 KB</td></tr>
+<tr><td>11</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R22_无TODO场景AUTO运行小复盘与提示策略.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R22_无TODO场景AUTO运行小复盘与提示策略.md</td><td class="r">10.4 KB</td></tr>
+<tr><td>12</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R19_候选TODO方向轻量规划草案.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R19_候选TODO方向轻量规划草案.md</td><td class="r">10.2 KB</td></tr>
+<tr><td>13</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R21_候选任务分级与执行建议.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R21_候选任务分级与执行建议.md</td><td class="r">10.1 KB</td></tr>
+<tr><td>14</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R12_中文学术PPT基础模板自动生成.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R12_中文学术PPT基础模板自动生成.md</td><td class="r">9.6 KB</td></tr>
+<tr><td>15</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R13_PPT_Office环境工具枚举.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R13_PPT_Office环境工具枚举.md</td><td class="r">8.4 KB</td></tr>
+<tr><td>16</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R20_无TODO场景task_planning机制补齐报告.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R20_无TODO场景task_planning机制补齐报告.md</td><td class="r">8.3 KB</td></tr>
+<tr><td>17</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R10_自主任务与定时任务协同规则草案.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R10_自主任务与定时任务协同规则草案.md</td><td class="r">8.1 KB</td></tr>
+<tr><td>18</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R25_GitHub_PPT项目调研.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R25_GitHub_PPT项目调研.md</td><td class="r">7.9 KB</td></tr>
+<tr><td>19</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\environment_profile.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\environment_profile.md</td><td class="r">7.3 KB</td></tr>
+<tr><td>20</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R08_GNN论文阅读纪要模板.md">E:\2026\x-fudan\new\GenericAgent\temp\autonomous_reports\R08_GNN论文阅读纪要模板.md</td><td class="r">7.0 KB</td></tr></table></div></div>
+
+
+<footer>Generated by disk_analyzer.py | 2026-03-25 14:16:06</footer>
+</div></body></html>

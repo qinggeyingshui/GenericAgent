@@ -1,0 +1,274 @@
+[
+  {
+    "num": 155,
+    "title": "素材库管理SOP开发",
+    "type": "新建",
+    "sops": [
+      "asset_management_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 156,
+    "title": "内容发布自动化工具",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 157,
+    "title": "自媒体脚本生成器",
+    "type": "新建",
+    "sops": [
+      "content_creation_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 158,
+    "title": "Batch 16自媒体创作能力深化规划",
+    "type": "规划",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 159,
+    "title": "PPT数据可视化增强",
+    "type": "增强",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 160,
+    "title": "多平台内容适配工具",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 161,
+    "title": "AI文案生成助手",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 162,
+    "title": "自媒体数据分析工具",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 163,
+    "title": "视频字幕智能校对",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 164,
+    "title": "热点追踪与选题推荐",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 165,
+    "title": "Batch17任务规划",
+    "type": "规划",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 166,
+    "title": "内容创作数据看板",
+    "type": "新建",
+    "sops": [
+      "data_analysis_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 167,
+    "title": "批量文件处理工作流",
+    "type": "新建",
+    "sops": [
+      "automation_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 168,
+    "title": "笔记管理与知识图谱",
+    "type": "新建",
+    "sops": [
+      "learning_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 169,
+    "title": "社交媒体数据爬取",
+    "type": "新建",
+    "sops": [
+      "web_automation_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 170,
+    "title": "视频剪辑工作流编排",
+    "type": "新建",
+    "sops": [
+      "video_processing_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 171,
+    "title": "音频降噪与增强",
+    "type": "增强",
+    "sops": [
+      "audio_processing_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 172,
+    "title": "技能拓展规划",
+    "type": "规划",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 173,
+    "title": "知识库语义检索增强",
+    "type": "增强",
+    "sops": [
+      "teaching_kb_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 175,
+    "title": "PPT智能排版增强",
+    "type": "增强",
+    "sops": [
+      "ppt_com_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 178,
+    "title": "测试complete_task",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 179,
+    "title": "测试tools更新",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 180,
+    "title": "视频高级特效工具",
+    "type": "新建",
+    "sops": [
+      "video_effects_advanced_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 181,
+    "title": "播客制作流程",
+    "type": "新建",
+    "sops": [
+      "podcast_production_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 182,
+    "title": "数据可视化故事化",
+    "type": "新建",
+    "sops": [
+      "data_storytelling_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 183,
+    "title": "自媒体内容生产流水线",
+    "type": "新建",
+    "sops": [
+      "content_production_workflow_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 184,
+    "title": "Batch16技能规划",
+    "type": "规划",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 186,
+    "title": "自媒体运营看板Workflow",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 187,
+    "title": "直播脚本生成与提词器",
+    "type": "新建",
+    "sops": [
+      "live_streaming_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 188,
+    "title": "评论区互动助手",
+    "type": "新建",
+    "sops": [
+      "community_management_sop.md"
+    ],
+    "new_skills": 1
+  },
+  {
+    "num": 189,
+    "title": "知识库多模态检索",
+    "type": "新建",
+    "sops": [
+      "teaching_kb_sop.md"
+    ],
+    "new_skills": 0
+  },
+  {
+    "num": 190,
+    "title": "PPT模板市场爬取与管理",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 191,
+    "title": "短视频批量发布工具",
+    "type": "新建",
+    "sops": [],
+    "new_skills": 0
+  },
+  {
+    "num": 192,
+    "title": "Batch 17任务规划",
+    "type": "规划",
+    "sops": [],
+    "new_skills": 0
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "name": "商务蓝",
+  "colors": {
+    "primary": [
+      0,
+      51,
+      102
+    ],
+    "secondary": [
+      102,
+      102,
+      102
+    ],
+    "accent": [
+      255,
+      107,
+      53
+    ],
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "text": [
+      51,
+      51,
+      51
+    ]
+  },
+  "fonts": {
+    "title": {
+      "name": "微软雅黑",
+      "size": 32,
+      "bold": true
+    },
+    "subtitle": {
+      "name": "微软雅黑",
+      "size": 24,
+      "bold": false
+    },
+    "body": {
+      "name": "微软雅黑",
+      "size": 20,
+      "bold": false
+    },
+    "note": {
+      "name": "微软雅黑",
+      "size": 14,
+      "bold": false
+    }
+  },
+  "bg_style": "solid"
+}

@@ -1,0 +1,20 @@
+{
+  "query": "data",
+  "images": [
+    {
+      "path": "./test_kb\\images\\data_visualization_chart.jpg",
+      "name": "data_visualization_chart.jpg",
+      "type": "image",
+      "ext": ".jpg"
+    }
+  ],
+  "tables": [
+    {
+      "path": "./test_kb\\tables\\sales_data.xlsx",
+      "name": "sales_data.xlsx",
+      "type": "table",
+      "ext": ".xlsx"
+    }
+  ],
+  "formulas": []
+}

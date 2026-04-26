@@ -1,0 +1,15 @@
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_0.png'
+duration 4
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_1.png'
+duration 6
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_2.png'
+duration 6
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_3.png'
+duration 6
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_4.png'
+duration 6
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_5.png'
+duration 6
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_6.png'
+duration 4
+file 'E:/2026/x-fudan/new/GenericAgent/temp/bilibili_content/slide_6.png'

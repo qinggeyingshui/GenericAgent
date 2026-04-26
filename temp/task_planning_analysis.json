@@ -1,0 +1,74 @@
+[
+  {
+    "name": "PPT模板市场爬取与管理",
+    "category": "document_generation",
+    "type": "B类",
+    "desc": "增强ppt_template_manager，支持从办公资源网站批量下载/分类/预览模板",
+    "reason": "presentation最高频(8次)，补齐模板资源获取",
+    "B": 0,
+    "D": 18.88888888888889,
+    "U": 8,
+    "I": 4,
+    "score": 6.977777777777778
+  },
+  {
+    "name": "评论区互动助手",
+    "category": "community_management",
+    "type": "A类",
+    "desc": "community_management_sop.md + comment_assistant.py，支持评论抓取/情感分析/智能回复/粉丝分层",
+    "reason": "新领域，自媒体运营核心能力",
+    "B": 10,
+    "D": 0,
+    "U": 8,
+    "I": 7,
+    "score": 6.800000000000001
+  },
+  {
+    "name": "知识库多模态检索",
+    "category": "knowledge_management",
+    "type": "B类",
+    "desc": "增强teaching_kb_sop，支持图片/表格/公式检索，OCR+向量化",
+    "reason": "knowledge_search高频(4次)，补齐多模态能力",
+    "B": 0,
+    "D": 12.222222222222221,
+    "U": 7,
+    "I": 8,
+    "score": 6.144444444444444
+  },
+  {
+    "name": "短视频批量发布工具",
+    "category": "web_automation",
+    "type": "B类",
+    "desc": "增强web_automation，支持抖音/快手/B站批量上传+定时发布+数据回传",
+    "reason": "browser_control高频(5次)，补齐发布自动化",
+    "B": 0,
+    "D": 7.777777777777778,
+    "U": 10,
+    "I": 5,
+    "score": 5.555555555555555
+  },
+  {
+    "name": "直播脚本生成与提词器",
+    "category": "content_creation",
+    "type": "A类",
+    "desc": "live_streaming_sop.md + live_script_generator.py，支持直播脚本生成/分段提词/互动话术库",
+    "reason": "自媒体创作核心场景，补齐直播能力",
+    "B": 0.0,
+    "D": 1.1111111111111112,
+    "U": 9,
+    "I": 6,
+    "score": 4.122222222222222
+  },
+  {
+    "name": "自媒体运营看板Workflow",
+    "category": "content_creation",
+    "type": "C类",
+    "desc": "串联media_analytics + trend_tracker + platform_adapter，生成运营日报/周报",
+    "reason": "Workflow任务，串联已有工具成端到端流程",
+    "B": 0.0,
+    "D": 1.1111111111111112,
+    "U": 9,
+    "I": 5,
+    "score": 3.922222222222222
+  }
+]

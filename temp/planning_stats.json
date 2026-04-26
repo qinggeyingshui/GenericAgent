@@ -1,0 +1,40 @@
+{
+  "total_skills": 22,
+  "total_categories": 5,
+  "avg_skills_per_category": 4.4,
+  "max_usage": 8,
+  "category_stats": {
+    "knowledge_management": {
+      "count": 6,
+      "total_usage": 11,
+      "avg_usage": 1.8333333333333333,
+      "high_freq": []
+    },
+    "document_generation": {
+      "count": 6,
+      "total_usage": 14,
+      "avg_usage": 2.3333333333333335,
+      "high_freq": [
+        "presentation"
+      ]
+    },
+    "media_processing": {
+      "count": 4,
+      "total_usage": 8,
+      "avg_usage": 2.0,
+      "high_freq": []
+    },
+    "web_automation": {
+      "count": 4,
+      "total_usage": 7,
+      "avg_usage": 1.75,
+      "high_freq": []
+    },
+    "web": {
+      "count": 2,
+      "total_usage": 3,
+      "avg_usage": 1.5,
+      "high_freq": []
+    }
+  }
+}

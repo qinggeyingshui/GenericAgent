@@ -1,0 +1,78 @@
+[Agent] Batch8规划完成：6条TODO经subagent评审修订(条目2/4替换，执行顺序确定)，TODO.txt已更新，下轮进入执行模式。[R43] 2026-03-25 | 产出 | GNN论文→teaching_kb联动 | 基于MASPOB论文(arXiv:2603.02630)生成完整教案草稿，写入teaching_kb/courses/图神经网络与大语言模型/L01，格式对齐现有编译原理教案模板 | Batch7全部完成(R38-R43)# R42 — gnn_papers 目录深度分析与联动方案
+
+**日期**: 2026-03-25
+**类型**: 探测+分析
+**编号**: R42
+
+## 摘要
+
+完整探测 `./gnn_papers/` 目录结构与内容，评估与 `research_paper_kb` / `teaching_kb` 的联动潜力，设计三层数据流架构。
+
+## 产出
+
+- **分析报告**: `./gnn_papers/gnn_papers_analysis.md`
+
+## 数据盘点
+
+- **论文数量**: 5 篇（GNN+LLM 交叉研究，2025–2026）
+- **检索式**: `ti:"graph neural network" AND all:"large language model"`
+- **主题**: Prompt优化 / 文本分类 / 内容审核 / 化学反应预测 / 因果医疗
+- **Notes 状态**: 全部待填
+
+## 联动评估
+
+| 目标系统 | 可行性 | 优先级 | 方案 |
+|---------|--------|--------|------|
+| `research_paper_kb_like.py` | 高 | 高 | 批量 add 导入5篇论文 |
+| `teaching_kb`（编译原理） | 低 | 低 | 待AI课程模块建立后再联动 |
+
+## 数据流设计
+
+```
+[采集层] arXiv → gnn_papers/PAPERS.md
+[处理层] 批量导入脚本 → research_paper_kb_like.py
+[应用层] search / list / export
+```
+
+## 待执行
+
+1. 编写批量导入脚本（TODO#6 gnn_kb联动任务的核心内容）
+2. 填写 PAPERS.md 中 5 篇论文的 Notes
+
+## 验收
+
+- 生成 gnn_papers_analysis.md ✔
+- 数据盘点完成 ✔
+- 联动方案设计完成 ✔[R41] 2026-03-25 | 产出 | PATH异常自动修复脚本 | path_cleaner.py实测扫描66条PATH条目，发现22条异常(16不存在+6重复)，生成path_report.txt分析报告+fix_path.ps1修复脚本(含备份机制，需管理员手动执行) | path_cleaner.py + fix_path.ps1 + path_report.txt + R41报告[R40] 2026-03-25 | 探测 | local_skills目录深度探测 | 仅1个脚本research_paper_kb_like.py(arXiv论文知识库，含fetch/search/list，实测list返回5篇GNN论文，可用)，能力树早期占位状态，建议后续扩充 | R40_local_skills深度探测.md[R39] 2026-03-25 | 产出 | 临时文件清理执行器 | cleanup_executor.py实测删除160个.pyc文件+19个空__pycache__目录，释放2.6MB，0失败，生成188行清理日志 | cleanup_executor.py + cleanup_log_20260325_165814.txt + R39报告[R38] 2026-03-25 | 产出 | model_responses对话日志分析器 | 解析19文件/846轮对话→HTML可视化报告(任务类型分布/Token分布/文件明细)，最高频:自主规划428次，74%轮次在500-2k token | model_responses_analysis.html + autonomous_reports/R38_model_responses分析器.md[R37] 2026-03-25 | 规划 | Batch7任务规划 | subagent评审6条候选→全部≥6分保留，执行顺序 model_responses(8)→cleanup(8)→local_skills(7)→PATH(7)→gnn_papers→gnn_kb联动(6) | autonomous_reports/R37_Batch7任务规划.md[R35] 2026-03-25 14:28 | 知识库填充+模板配色提取 | global_mem 41条(10分类), design_tokens新增4套配色(共9套) | TODO#2完成
+R34 | 2025-07-12 | 产出 | 磁盘空间分析器 | disk_analyzer.py(16KB/450行)：零依赖扫描目录→HTML报告(Top50大文件+SVG饼图+MD5重复检测+临时清理建议)，GenericAgent实测9028文件/368MB/165重复组/1574临时(78MB)→30KB报告，1.9s完成 | autonomous_reports/R34_磁盘空间分析器.md
+R33 | 2025-07-12 | 规划 | Batch6任务规划 | subagent评审5条候选→删2项(渐变4分/模板库3分)→保留3条(磁盘9/mem8/kb6)，执行顺序确定 | autonomous_reports/history.txt
+R32 | 2025-07-11 | 产出 | 参考PPT深度解析 | 4份夏令营答辩PPT(参考1/2/南开/汇丰)XML级解析：提取4套配色+4种版式原型+密度光谱→advanced_design_patterns.json(10K)+design_tokens.json新增3套配色(teal_gold/huifeng_indigo/nankai_blue)共5套 | autonomous_reports/R32_参考PPT深度解析.md[Agent] ✅R31完成：defense_ppt_builder.py(16860B)生成16页PPT，CLI+API双入口，报告已写。[R30] research_paper_kb增强：新增parse_papers_md解析器+search_papers搜索引擎(keyword/year/author)+format输出，CLI重构为fetch/search/list子命令，SKILL.md文档更新，6项测试全通过。R29 | ppt_utils图表功能 | add_chart_slide()支持bar/column/line/pie四种原生图表，demo验证通过 | R29_ppt_utils图表功能.md
+R28 | 2025-07-11 | 环境探测 | PC环境深度扫描 | PowerShell+注册表+文件系统全面扫描：395软件/73PATH/74书签/8conda环境/45VSCode扩展→environment_profile.md(104条20分类) | 发现C/D盘空间告急(<12%)、7条PATH异常 | autonomous_reports/environment_profile.md, autonomous_reports/R28_PC环境深度扫描.md[Agent] 规划模式完成Batch5：自评审删除冲浪项(避浅层枚举)，最终5条TODO(R28-R32)：PC环境扫描/参考PPT解析/图表功能/论文KB激活/答辩PPT生成器。[R26] Markdown→PPT端到端Pipeline完成 | md2ppt.py(329行)+sample_outline.md→gnn_recommender.pptx(19页56KB) | 支持6种幻灯片类型(章节/内容/对比/时间线/图文/致谢)+自动TOC+argparse CLI | 修复: GBK emoji→ASCII, sys.argv→argparse[2026-03-25 11:33] R25 — TODO#4: GitHub高星PPT自动生成项目调研 ✅
+  报告: autonomous_reports/R25_GitHub_PPT项目调研.md
+  方法: GitHub REST API搜索(浏览器TM不可用)
+  核心发现: 9个项目对比(reveal.js 70k★/Slidev 45k★/Marp 10.7k★/md2pptx 485★等)
+  3个对比表(架构技术栈/内容分页策略/与ppt_utils契合度)
+  3个设计模式(Markdown管道转换/Theme+Layout可组合/LLM→JSON→Template)
+  建议: 增加Markdown输入层+布局注册表+LLM集成接口
+R24 | 学术PPT模板v2升级 | 用PPTBuilder生成35页完整学术报告模板(GNN推荐系统主题)，含封面+6章节页+5目录页+8内容页+3图文页+4对比页+2时间线+致谢页，双配色方案交替，装饰元素(角标/圆点/条纹/页码/水印)，102.6KB达标 | ppt_lab/academic_template_v2.pptx
+R23 | 2025-07-11 | 产出 | 封装PPT生成工具函数库ppt_utils.py | 基于design_tokens.json封装PPTBuilder类+8个幻灯片函数(title/section/content/image_content/comparison/timeline/ending/toc)+2套配色方案切换，demo生成8页39KB验证通过 | ppt_lab/ppt_utils.py, ppt_lab/ppt_demo.py, autonomous_reports/R23_ppt_utils工具库.mdR22 | 2025-07-11 | 产出 | 逆向提取本地优秀模板设计参数体系 | 解析夏令营答辩参考3+模板4，提取2套配色(学术蓝紫/莫兰迪暖色)+字体+布局+装饰模式→design_tokens.json(7271B) | ppt_lab/design_tokens.json, autonomous_reports/R22_设计参数提取.mdR21 | 2026-03-25 | 规划 | 候选任务分级与执行建议 | 在不改TODO与memory前提下对T1–T7按时间优先级与执行模式分级供用户选择
+R20 | 2026-03-25 | 机制 | 无TODO场景task_planning机制补齐 | 在不改TODO与memory前提下创建task_planning.md为无TODO场景提供规划入口
+R19 | 2026-03-25 | 规划 | 候选TODO方向轻量规划草案 | 在不修改TODO与memory前提下基于SOP为教案/学术/PPT/自身演进主线设计候选任务清单，供用户审阅
+R18 | 2026-03-25 | 自身演进 | 自主任务设计复盘与改进清单 | 复盘R01-R11任务价值/成本并提炼可复用任务设计检查表
+R17 | 2026-03-25 | 环境 | 学术文献与PPT命名习惯探测 | 扫描本地学术相关文件命名模式并提出课程课件与模板PPT的命名规范建议
+R16 | 2026-03-24 | 规划 | 教案知识库与PPT模板联动构想 | 设计从lesson_plan教案到授课PPT的页级映射规则与示例，形成自动生成流程草案
+R15 | 2026-03-24 | 产出 | GNN追踪表与arXiv解析脚本打通 | 在线抓取受限情况下，通过本地HTML快照实现arXiv风格结果解析并自动写入GNN论文追踪表，验证了抓取→结构化→追踪表的完整链路
+R14 | 2026-03-24 | 案例 | 中文学术PPT案例本地分析 | 基于本地夏令营/论坛与通用模板选取3个代表案例，总结结构与蓝色系稍活泼风格设计要点，并给出对academic_chinese_template_v1的升级建议
+R13 | 2026-03-24 | 环境 | PPT_Office环境工具枚举 | 枚举ppt_lab与示例PPT等本地资源并确认python-pptx 1.0.2可用，pip list暂不可用
+R12 | 2026-03-24 | 产出 | 中文学术PPT基础模板自动生成 | 使用python-pptx在ppt_lab生成academic_chinese_template_v1.pptx并撰写使用说明
+R11 | 2026-03-24 | 冲浪 | 适合自动抓取的学术站点调研 | 评估OpenReview与arXiv抓取友好度并建议以arXiv为主源
+R10 | 2026-03-24 | 产出 | 自主任务与定时任务协同规则草案 | 给出定时任务与自主任务的角色分工与优先级协同建议
+R09 | 2026-03-24 | 冲浪 | arXiv GNN 新文样本标注 | 从arXiv手工筛选2026年GNN论文样本并写入本地追踪表验证结构可用性
+R08 | 2026-03-24 | 设计 | GNN论文阅读纪要模板 | 设计单篇GNN论文精读纪要markdown模板并与追踪表结构对齐
+R07 | 2026-03-24 | 探测 | 学术脚本与工具清单 | 枚举项目与上层学术/教案相关脚本配置并整理可复用工具
+R06 | 2026-03-24 | 规划 | 教案助手知识库结构 | 规划teaching_kb课程/课次/文件结构并落地示例目录与R06报告
+R05 | 2026-03-24 | 设计 | GNN论文追踪表结构 | 完成markdown模板与JSON schema用于长期GNN论文管理
+R04 | 2026-03-24 | 探测 | 浏览器链路与GNN检索边界 | 修复TMWebDriver依赖并验证GNN检索触发Scholar风控
+R03 | 2026-03-24 | 规划 | 教案模板 | 生成大学计算机课程通用教案模板结构并完成对应TODO
+R02 | 2026-03-24 | 设计 | 程序设计课样例教案 | 生成C语言分支结构样例教案并完成对应TODO
+R01 | 2026-03-24 | 规划 | 教案助手TODO初始化 | 已生成首批教案相关TODO，等待后续轮次或用户在线时逐条执行

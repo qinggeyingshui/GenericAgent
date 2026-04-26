@@ -1,0 +1,146 @@
+{
+  "academic_blue": {
+    "name": "学术蓝",
+    "description": "经典学术风格，适合正式教学",
+    "colors": {
+      "primary": "#1E3A8A",
+      "secondary": "#3B82F6",
+      "accent": "#60A5FA",
+      "text": "#1F2937",
+      "background": "#FFFFFF"
+    },
+    "fonts": {
+      "title": "微软雅黑",
+      "body": "微软雅黑",
+      "code": "Consolas"
+    },
+    "icons": [
+      "🎯",
+      "📚",
+      "🔬",
+      "💡",
+      "🧠",
+      "⚡"
+    ]
+  },
+  "tech_dark": {
+    "name": "科技黑",
+    "description": "现代科技风格，适合编程/AI课程",
+    "colors": {
+      "primary": "#0F172A",
+      "secondary": "#1E293B",
+      "accent": "#06B6D4",
+      "text": "#F1F5F9",
+      "background": "#0F172A"
+    },
+    "fonts": {
+      "title": "微软雅黑",
+      "body": "微软雅黑",
+      "code": "Consolas"
+    },
+    "icons": [
+      "💻",
+      "🚀",
+      "⚡",
+      "🔧",
+      "🎮",
+      "🌐"
+    ]
+  },
+  "fresh_green": {
+    "name": "清新绿",
+    "description": "自然清新风格，适合生物/环境课程",
+    "colors": {
+      "primary": "#065F46",
+      "secondary": "#10B981",
+      "accent": "#6EE7B7",
+      "text": "#1F2937",
+      "background": "#FFFFFF"
+    },
+    "fonts": {
+      "title": "微软雅黑",
+      "body": "微软雅黑",
+      "code": "Consolas"
+    },
+    "icons": [
+      "🌱",
+      "🌿",
+      "🍃",
+      "🌳",
+      "🌍",
+      "♻️"
+    ]
+  },
+  "warm_orange": {
+    "name": "温暖橙",
+    "description": "活力温暖风格，适合创意/设计课程",
+    "colors": {
+      "primary": "#C2410C",
+      "secondary": "#F97316",
+      "accent": "#FDBA74",
+      "text": "#1F2937",
+      "background": "#FFFFFF"
+    },
+    "fonts": {
+      "title": "微软雅黑",
+      "body": "微软雅黑",
+      "code": "Consolas"
+    },
+    "icons": [
+      "🎨",
+      "✨",
+      "🔥",
+      "💫",
+      "🌟",
+      "🎭"
+    ]
+  },
+  "elegant_purple": {
+    "name": "优雅紫",
+    "description": "高雅神秘风格，适合人文/艺术课程",
+    "colors": {
+      "primary": "#581C87",
+      "secondary": "#9333EA",
+      "accent": "#C084FC",
+      "text": "#1F2937",
+      "background": "#FFFFFF"
+    },
+    "fonts": {
+      "title": "微软雅黑",
+      "body": "微软雅黑",
+      "code": "Consolas"
+    },
+    "icons": [
+      "📖",
+      "🎭",
+      "🎼",
+      "🖼️",
+      "✍️",
+      "🎪"
+    ]
+  },
+  "business_gray": {
+    "name": "商务灰",
+    "description": "专业商务风格，适合管理/经济课程",
+    "colors": {
+      "primary": "#374151",
+      "secondary": "#6B7280",
+      "accent": "#9CA3AF",
+      "text": "#1F2937",
+      "background": "#FFFFFF"
+    },
+    "fonts": {
+      "title": "微软雅黑",
+      "body": "微软雅黑",
+      "code": "Consolas"
+    },
+    "icons": [
+      "📊",
+      "💼",
+      "📈",
+      "💰",
+      "🏢",
+      "📋"
+    ]
+  }
+}

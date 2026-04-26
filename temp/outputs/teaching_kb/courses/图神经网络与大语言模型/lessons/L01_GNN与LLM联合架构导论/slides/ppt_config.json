@@ -1,0 +1,243 @@
+{
+  "scheme": "academic_blue",
+  "slides": [
+    {
+      "type": "title",
+      "title": "GNN与LLM联合架构导论",
+      "subtitle": "图神经网络与大语言模型 | L01 | 2 学时"
+    },
+    {
+      "type": "toc",
+      "title": "教学大纲",
+      "sections": [
+        "教学内容概述",
+        "重点与难点",
+        "导入（10分钟）",
+        "背景知识（20分钟）",
+        "论文精读：MASPOB框架（30分钟）",
+        "讨论与延伸（20分钟）",
+        "课堂小结（10分钟）"
+      ],
+      "current": -1
+    },
+    {
+      "type": "timeline",
+      "title": "📋 教学流程总览",
+      "events": [
+        [
+          "🚀 环节1",
+          "导入（10分钟）（3 个要点）"
+        ],
+        [
+          "📖 环节2",
+          "背景知识（20分钟）（6 个要点）"
+        ],
+        [
+          "✏️ 环节3",
+          "论文精读：MASPOB框架（30分钟）（8 个要点）"
+        ],
+        [
+          "💬 环节4",
+          "讨论与延伸（20分钟）（2 个要点）"
+        ],
+        [
+          "📋 环节5",
+          "课堂小结（10分钟）（3 个要点）"
+        ]
+      ]
+    },
+    {
+      "type": "icon_cards",
+      "title": "教学目标",
+      "cards": [
+        {
+          "icon": "🎯",
+          "title": "目标 1",
+          "desc": "理解图神经网络（GNN）的基本概念与信息传播机制"
+        },
+        {
+          "icon": "📚",
+          "title": "目标 2",
+          "desc": "了解大语言模型（LLM）在多智能体系统（MAS）中的角色"
+        },
+        {
+          "icon": "🔬",
+          "title": "目标 3",
+          "desc": "掌握GNN与LLM结合的核心动机：结构化关系建模 + 语言理解能力"
+        },
+        {
+          "icon": "💡",
+          "title": "目标 4",
+          "desc": "能够描述基于Bandit的Prompt优化框架（MASPOB）的工作流程"
+        }
+      ]
+    },
+    {
+      "type": "stats",
+      "title": "📊 课程数据概览",
+      "stats": [
+        {
+          "number": "4",
+          "label": "教学目标"
+        },
+        {
+          "number": "5",
+          "label": "教学环节"
+        },
+        {
+          "number": "22",
+          "label": "知识要点"
+        },
+        {
+          "number": "27",
+          "label": "教学重点"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "教学内容概述",
+      "bullets": [
+        "图神经网络回顾：节点/边/图结构，消息传递机制",
+        "大语言模型在多智能体系统中的部署模式",
+        "Prompt优化的必要性：MAS工作流不可改、性能对prompt高度敏感",
+        "MASPOB框架：Bandit算法 + GNN依赖建模 + 无标注黑盒优化",
+        "GNN+LLM联合架构的应用前景"
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "comparison",
+      "title": "教学重点与难点",
+      "left_title": "🔑 重点",
+      "left_items": [
+        "GNN消息传递机制 vs LLM上下文理解机制的互补性"
+      ],
+      "right_title": "⚠️ 难点",
+      "right_items": [
+        "Bandit优化在无标注场景下的探索-利用权衡；GNN如何建模Agent间依赖关系"
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 导入（10分钟）",
+      "subtitle": "第 1 环节 · 共 3 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 导入（10分钟）",
+      "bullets": [
+        "💡 提问：如果有一个由多个LLM组成的AI团队（多智能体），如何在不修改代码的情况下提升其性能？",
+        "🌟 展示：一个MAS工作流示意图（Planner → Researcher → Writer → Reviewer）",
+        "❓ 引入：Prompt是唯一可调旋钮，但Agent间存在依赖——GNN能建模这种依赖"
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 背景知识（20分钟）",
+      "subtitle": "第 2 环节 · 共 6 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 背景知识（20分钟）",
+      "bullets": [
+        "▸ 图的定义：节点（Agents/概念）、边（依赖/关系）、属性",
+        "◆ 消息传递：$h_v^{(l+1)} = \\text{UPDATE}(h_v^{(l)}, \\text{AGG}(\\{h_u^{(l)} : u \\in \\mathcal{N}(v)\\}))$",
+        "● 典型架构：GCN / GAT / GraphSAGE 一句话对比",
+        "★ LLM的能力边界：推理、规划、生成",
+        "► MAS中的角色分工：每个Agent = LLM + System Prompt + 工具集",
+        "▸ 关键瓶颈：工作流固定，Prompt是唯一优化变量"
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 论文精读：MASPOB框架（30分钟）",
+      "subtitle": "第 3 环节 · 共 8 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 论文精读：MASPOB框架（30分钟）",
+      "bullets": [
+        "▸ 输入：MAS工作流图 G = (V, E)，每个节点 v 有当前 prompt p_v",
+        "◆ 目标：最大化整体系统输出质量 f(p_1,...,p_n)",
+        "● 挑战：",
+        "★ **GNN模块**：对MAS工作流图进行编码，捕获Agent间依赖，生成每个节点的上下文向量",
+        "► **Bandit模块**：将Prompt优化建模为多臂赌博机问题，用UCB/Thompson Sampling平衡探索-利用",
+        "▸ **优化循环**：GNN预测 → Bandit选择候选prompt → 评估 → 更新",
+        "◆ 在多个MAS基准任务上优于基线（固定prompt / 随机搜索 / 贪心优化）",
+        "● 样本效率是关键优势：相同评估次数下，MASPOB效果更好"
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 讨论与延伸（20分钟）",
+      "subtitle": "第 4 环节 · 共 2 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 讨论与延伸（20分钟）",
+      "bullets": [
+        "▸ GNN+LLM联合架构的三种范式：",
+        "◆ 思考题：如果MAS工作流是动态变化的（边会增删），如何修改MASPOB？"
+      ],
+      "highlights": []
+    },
+    {
+      "type": "section",
+      "title": "📌 课堂小结（10分钟）",
+      "subtitle": "第 5 环节 · 共 3 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 课堂小结（10分钟）",
+      "bullets": [
+        "⭐ GNN建模关系 + LLM处理语言 → 互补优势",
+        "🔑 MASPOB = 依赖感知 + 样本高效 + 黑盒友好的Prompt优化框架",
+        "💎 预告：下节课探讨GNN用于文本分类（论文#4：多尺度特征融合）"
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "chart",
+      "title": "📊 教学内容分布",
+      "chart_type": "pie",
+      "categories": [
+        "导入（10分钟）",
+        "背景知识（20分钟）",
+        "论文精读：MASPOB框架（30分钟）",
+        "讨论与延伸（20分钟）",
+        "课堂小结（10分钟）"
+      ],
+      "series": [
+        {
+          "name": "知识点数量",
+          "values": [
+            3,
+            6,
+            8,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ending",
+      "title": "谢谢！",
+      "contact": "图神经网络与大语言模型 - GNN与LLM联合架构导论"
+    }
+  ]
+}

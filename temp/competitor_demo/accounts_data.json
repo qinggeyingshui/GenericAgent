@@ -1,0 +1,47 @@
+[
+  {
+    "name": "我的账号",
+    "platform": "xiaohongshu",
+    "followers": 5000,
+    "posts_count": 120,
+    "avg_likes": 150,
+    "avg_comments": 20,
+    "avg_shares": 10,
+    "engagement_rate": 0.036,
+    "post_frequency": 3,
+    "top_categories": [
+      "教程",
+      "测评"
+    ]
+  },
+  {
+    "name": "竞品A",
+    "platform": "xiaohongshu",
+    "followers": 50000,
+    "posts_count": 300,
+    "avg_likes": 800,
+    "avg_comments": 100,
+    "avg_shares": 50,
+    "engagement_rate": 0.019,
+    "post_frequency": 7,
+    "top_categories": [
+      "种草",
+      "日常"
+    ]
+  },
+  {
+    "name": "竞品B",
+    "platform": "xiaohongshu",
+    "followers": 20000,
+    "posts_count": 200,
+    "avg_likes": 600,
+    "avg_comments": 80,
+    "avg_shares": 30,
+    "engagement_rate": 0.036,
+    "post_frequency": 5,
+    "top_categories": [
+      "教程",
+      "好物"
+    ]
+  }
+]

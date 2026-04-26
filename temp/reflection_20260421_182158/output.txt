@@ -1,0 +1,21 @@
+# Reflection分析摘要
+
+## 错误概述
+complete_task()调用失败2次：
+1. Turn 6: `report_file`参数不存在
+2. Turn 7: `history_line`应为`historyline`（无下划线）
+
+## 根因分析
+- 错误类型：使用方式错误（参数名拼写错误）
+- 根本原因：Agent未遵守已有规律（第20行"helper函数参数签名必验证"）
+- 虽然Turn 7打印了签名`(taskname, historyline, report_path, sop_files)`，但仍用错`history_line`
+
+## 结论
+- 规律已存在且足够详细，无需新增
+- 这是"执行纪律"问题，不是"知识缺失"问题
+- 关键教训：参数名下划线敏感（historyline ≠ history_line）
+
+## 建议
+Agent在调用helper函数时应严格执行：
+1. 先file_read helper.py
+2. 复制粘贴参数名，禁止手打

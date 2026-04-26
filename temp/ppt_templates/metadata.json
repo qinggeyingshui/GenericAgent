@@ -1,0 +1,405 @@
+{
+  "templates": {
+    "template_001": {
+      "filename": "template_001.pptx",
+      "path": "./ppt_templates\\files\\template_001.pptx",
+      "size_mb": 2.6,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_002": {
+      "filename": "template_002.pptx",
+      "path": "./ppt_templates\\files\\template_002.pptx",
+      "size_mb": 10.37,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_003": {
+      "filename": "template_003.pptx",
+      "path": "./ppt_templates\\files\\template_003.pptx",
+      "size_mb": 1.95,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_004": {
+      "filename": "template_004.pptx",
+      "path": "./ppt_templates\\files\\template_004.pptx",
+      "size_mb": 2.73,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_005": {
+      "filename": "template_005.pptx",
+      "path": "./ppt_templates\\files\\template_005.pptx",
+      "size_mb": 7.63,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_006": {
+      "filename": "template_006.pptx",
+      "path": "./ppt_templates\\files\\template_006.pptx",
+      "size_mb": 12.68,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_007": {
+      "filename": "template_007.pptx",
+      "path": "./ppt_templates\\files\\template_007.pptx",
+      "size_mb": 0.6,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_008": {
+      "filename": "template_008.pptx",
+      "path": "./ppt_templates\\files\\template_008.pptx",
+      "size_mb": 4.83,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_009": {
+      "filename": "template_009.pptx",
+      "path": "./ppt_templates\\files\\template_009.pptx",
+      "size_mb": 4.39,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_010": {
+      "filename": "template_010.pptx",
+      "path": "./ppt_templates\\files\\template_010.pptx",
+      "size_mb": 3.75,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_011": {
+      "filename": "template_011.pptx",
+      "path": "./ppt_templates\\files\\template_011.pptx",
+      "size_mb": 1.26,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_012": {
+      "filename": "template_012.pptx",
+      "path": "./ppt_templates\\files\\template_012.pptx",
+      "size_mb": 2.25,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_013": {
+      "filename": "template_013.pptx",
+      "path": "./ppt_templates\\files\\template_013.pptx",
+      "size_mb": 2.87,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_014": {
+      "filename": "template_014.pptx",
+      "path": "./ppt_templates\\files\\template_014.pptx",
+      "size_mb": 4.89,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_015": {
+      "filename": "template_015.pptx",
+      "path": "./ppt_templates\\files\\template_015.pptx",
+      "size_mb": 8.1,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_016": {
+      "filename": "template_016.pptx",
+      "path": "./ppt_templates\\files\\template_016.pptx",
+      "size_mb": 1.75,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_017": {
+      "filename": "template_017.pptx",
+      "path": "./ppt_templates\\files\\template_017.pptx",
+      "size_mb": 0.0,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_018": {
+      "filename": "template_018.pptx",
+      "path": "./ppt_templates\\files\\template_018.pptx",
+      "size_mb": 7.35,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_019": {
+      "filename": "template_019.pptx",
+      "path": "./ppt_templates\\files\\template_019.pptx",
+      "size_mb": 4.99,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_020": {
+      "filename": "template_020.pptx",
+      "path": "./ppt_templates\\files\\template_020.pptx",
+      "size_mb": 5.0,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_021": {
+      "filename": "template_021.pptx",
+      "path": "./ppt_templates\\files\\template_021.pptx",
+      "size_mb": 3.05,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_022": {
+      "filename": "template_022.pptx",
+      "path": "./ppt_templates\\files\\template_022.pptx",
+      "size_mb": 1.89,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_023": {
+      "filename": "template_023.pptx",
+      "path": "./ppt_templates\\files\\template_023.pptx",
+      "size_mb": 9.02,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_024": {
+      "filename": "template_024.pptx",
+      "path": "./ppt_templates\\files\\template_024.pptx",
+      "size_mb": 7.51,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_025": {
+      "filename": "template_025.pptx",
+      "path": "./ppt_templates\\files\\template_025.pptx",
+      "size_mb": 2.63,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_026": {
+      "filename": "template_026.pptx",
+      "path": "./ppt_templates\\files\\template_026.pptx",
+      "size_mb": 4.27,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_027": {
+      "filename": "template_027.pptx",
+      "path": "./ppt_templates\\files\\template_027.pptx",
+      "size_mb": 2.59,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_028": {
+      "filename": "template_028.pptx",
+      "path": "./ppt_templates\\files\\template_028.pptx",
+      "size_mb": 3.67,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_029": {
+      "filename": "template_029.pptx",
+      "path": "./ppt_templates\\files\\template_029.pptx",
+      "size_mb": 1.52,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_030": {
+      "filename": "template_030.pptx",
+      "path": "./ppt_templates\\files\\template_030.pptx",
+      "size_mb": 1.88,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_031": {
+      "filename": "template_031.pptx",
+      "path": "./ppt_templates\\files\\template_031.pptx",
+      "size_mb": 1.66,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_032": {
+      "filename": "template_032.pptx",
+      "path": "./ppt_templates\\files\\template_032.pptx",
+      "size_mb": 6.54,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_033": {
+      "filename": "template_033.pptx",
+      "path": "./ppt_templates\\files\\template_033.pptx",
+      "size_mb": 0.0,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_034": {
+      "filename": "template_034.pptx",
+      "path": "./ppt_templates\\files\\template_034.pptx",
+      "size_mb": 5.33,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_035": {
+      "filename": "template_035.pptx",
+      "path": "./ppt_templates\\files\\template_035.pptx",
+      "size_mb": 8.13,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_036": {
+      "filename": "template_036.pptx",
+      "path": "./ppt_templates\\files\\template_036.pptx",
+      "size_mb": 5.77,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_037": {
+      "filename": "template_037.pptx",
+      "path": "./ppt_templates\\files\\template_037.pptx",
+      "size_mb": 8.68,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_038": {
+      "filename": "template_038.pptx",
+      "path": "./ppt_templates\\files\\template_038.pptx",
+      "size_mb": 5.92,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_039": {
+      "filename": "template_039.pptx",
+      "path": "./ppt_templates\\files\\template_039.pptx",
+      "size_mb": 6.2,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_040": {
+      "filename": "template_040.pptx",
+      "path": "./ppt_templates\\files\\template_040.pptx",
+      "size_mb": 8.64,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_041": {
+      "filename": "template_041.pptx",
+      "path": "./ppt_templates\\files\\template_041.pptx",
+      "size_mb": 1.02,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_042": {
+      "filename": "template_042.pptx",
+      "path": "./ppt_templates\\files\\template_042.pptx",
+      "size_mb": 4.48,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_043": {
+      "filename": "template_043.pptx",
+      "path": "./ppt_templates\\files\\template_043.pptx",
+      "size_mb": 19.91,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_044": {
+      "filename": "template_044.pptx",
+      "path": "./ppt_templates\\files\\template_044.pptx",
+      "size_mb": 12.64,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_045": {
+      "filename": "template_045.pptx",
+      "path": "./ppt_templates\\files\\template_045.pptx",
+      "size_mb": 0.0,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_046": {
+      "filename": "template_046.pptx",
+      "path": "./ppt_templates\\files\\template_046.pptx",
+      "size_mb": 2.16,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_047": {
+      "filename": "template_047.pptx",
+      "path": "./ppt_templates\\files\\template_047.pptx",
+      "size_mb": 6.46,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_048": {
+      "filename": "template_048.pptx",
+      "path": "./ppt_templates\\files\\template_048.pptx",
+      "size_mb": 6.91,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_049": {
+      "filename": "template_049.pptx",
+      "path": "./ppt_templates\\files\\template_049.pptx",
+      "size_mb": 5.63,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    },
+    "template_050": {
+      "filename": "template_050.pptx",
+      "path": "./ppt_templates\\files\\template_050.pptx",
+      "size_mb": 4.67,
+      "category": "未分类",
+      "tags": [],
+      "description": ""
+    }
+  },
+  "categories": {}
+}

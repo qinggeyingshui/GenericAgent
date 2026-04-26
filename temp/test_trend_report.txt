@@ -1,0 +1,35 @@
+# Trend Tracking Report
+
+Time: 2026-04-20 20:14:48
+
+## Top Keywords
+
+- AI技术发展迅速: 1
+- 人工智能应用广泛: 1
+- AI助手越来越智能: 1
+- AI技术持续进步: 1
+- 机器学习算法优化: 1
+- AI应用场景增多: 1
+- AI技术突破创新: 1
+- 深度学习模型升级: 1
+- AI产品体验提升: 1
+
+## Trend Analysis
+
+- AI技术发展迅速: falling (-100.0%)
+- 人工智能应用广泛: falling (-100.0%)
+- AI助手越来越智能: falling (-100.0%)
+- AI技术持续进步: stable (0%)
+- 机器学习算法优化: stable (0%)
+- AI应用场景增多: stable (0%)
+- AI技术突破创新: rising (100%)
+- 深度学习模型升级: rising (100%)
+- AI产品体验提升: rising (100%)
+
+## Topic Recommendations
+
+1. AI技术持续进步 (Score: 1, Trend: stable)
+2. 机器学习算法优化 (Score: 1, Trend: stable)
+3. AI技术发展迅速 (Score: 0.7, Trend: falling)
+4. 人工智能应用广泛 (Score: 0.7, Trend: falling)
+5. AI助手越来越智能 (Score: 0.7, Trend: falling)

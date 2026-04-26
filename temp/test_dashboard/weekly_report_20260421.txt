@@ -1,0 +1,25 @@
+# 运营周报 20260421
+
+## 数据概览
+### total
+- views: 9970.00
+- likes: 688.00
+- comments: 113.00
+### average
+- views: 1424.29
+- likes: 98.29
+- comments: 16.14
+### max
+- views: 1680.00
+- likes: 118.00
+- comments: 22.00
+### min
+- views: 1180.00
+- likes: 78.00
+- comments: 10.00
+
+## 可视化图表
+- 趋势图: ./test_dashboard\charts\trend_20260421.png
+
+## 趋势分析
+热点关键词: {'keywords': [('今天分享一个Python自动化技巧', 1), ('可以大幅提升工作效率', 1), ('数据分析在自媒体运营中的重要性越来越高', 1), ('如何用AI工具辅助内容创作', 1), ('提升产出质量', 1)], 'trends': {'今天分享一个Python自动化技巧': {'trend': 'falling', 'growth_rate': -100.0}, '可以大幅提升工作效率': {'trend': 'falling', 'growth_rate': -100.0}, '数据分析在自媒体运营中的重要性越来越高': {'trend': 'stable', 'growth_rate': 0}, '如何用AI工具辅助内容创作': {'trend': 'rising', 'growth_rate': 100}, '提升产出质量': {'trend': 'rising', 'growth_rate': 100}}, 'recommendations': [{'keyword': '如何用AI工具辅助内容创作', 'score': 1.5, 'frequency': 1, 'trend': 'rising'}, {'keyword': '提升产出质量', 'score': 1.5, 'frequency': 1, 'trend': 'rising'}, {'keyword': '数据分析在自媒体运营中的重要性越来越高', 'score': 1, 'frequency': 1, 'trend': 'stable'}, {'keyword': '今天分享一个Python自动化技巧', 'score': 0.7, 'frequency': 1, 'trend': 'falling'}, {'keyword': '可以大幅提升工作效率', 'score': 0.7, 'frequency': 1, 'trend': 'falling'}], 'report': None}

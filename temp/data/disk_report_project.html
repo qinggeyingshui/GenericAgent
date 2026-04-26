@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>磁盘分析报告 — ..</title>
+<style>* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; background:#f0f2f5; color:#333; padding:20px; }
+.container { max-width:1200px; margin:0 auto; }
+h1 { color:#1a1a2e; margin-bottom:5px; }
+.subtitle { color:#666; margin-bottom:20px; font-size:14px; }
+.card { background:white; border-radius:12px; padding:24px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+.card h3 { color:#2c3e50; margin-bottom:16px; border-bottom:2px solid #eee; padding-bottom:8px; }
+.card.warn { border-left:4px solid #f39c12; }
+.stats { display:flex; gap:30px; flex-wrap:wrap; }
+.stats div { text-align:center; }
+.big { font-size:28px; font-weight:bold; color:#2c3e50; }
+.pie-section { display:flex; gap:30px; align-items:flex-start; flex-wrap:wrap; }
+.pie-section svg { flex-shrink:0; }
+.legend { font-size:13px; }
+.legend table { border-collapse:collapse; }
+.legend td { padding:3px 10px; }
+.dot { display:inline-block; width:12px; height:12px; border-radius:3px; }
+table.data { width:100%; border-collapse:collapse; font-size:13px; }
+table.data th { background:#f8f9fa; padding:10px 12px; text-align:left; border-bottom:2px solid #dee2e6; position:sticky; top:0; }
+table.data td { padding:8px 12px; border-bottom:1px solid #eee; }
+table.data tr:hover { background:#f8f9fa; }
+.r { text-align:right; }
+.path { max-width:600px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-family:Consolas,monospace; font-size:12px; }
+.scroll { max-height:600px; overflow-y:auto; }
+.summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:20px; }
+.summary-item { background:white; border-radius:10px; padding:20px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
+.summary-item .num { font-size:32px; font-weight:bold; }
+.summary-item .label { color:#888; font-size:13px; margin-top:4px; }
+.c-blue { color:#4E79A7; } .c-orange { color:#F28E2B; } .c-red { color:#E15759; } .c-green { color:#59A14F; }
+footer { text-align:center; color:#aaa; font-size:12px; margin-top:30px; padding:20px; }</style></head>
+<body><div class="container">
+<h1>📊 磁盘空间分析报告</h1>
+<p class="subtitle">扫描路径: .. | 生成时间: 2026-03-25 14:20:09 | 扫描耗时: 1.9s</p>
+
+<div class="summary-grid">
+<div class="summary-item"><div class="num c-blue">9,028</div><div class="label">文件总数</div></div>
+<div class="summary-item"><div class="num c-orange">367.9 MB</div><div class="label">扫描总大小</div></div>
+<div class="summary-item"><div class="num c-red">100</div><div class="label">重复文件组</div></div>
+<div class="summary-item"><div class="num c-green">77.6 MB</div><div class="label">可清理临时文件</div></div>
+</div>
+
+<div class="card warn">
+<h3>💾 磁盘概况 (..)</h3>
+<div class="stats">
+<div><span class="big">801.5 GB</span><br>总容量</div>
+<div><span class="big">461.9 GB</span><br>已使用</div>
+<div><span class="big">339.6 GB</span><br>可用</div>
+<div><span class="big">57.6%</span><br>使用率</div>
+</div></div>
+
+<div class="card"><h3>📁 目录空间占用分布</h3><div class="pie-section"><svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="max-width:500px; font-family:sans-serif;">
+<path d="M 250,250 L 250.00,60.00 A 190,190 0 1,1 60.59,264.97 Z" fill="#4E79A7" stroke="white" stroke-width="1.5"><title>.venv: 271.3 MB (73.7%)</title></path>
+<path d="M 250,250 L 60.59,264.97 A 190,190 0 0,1 153.92,86.09 Z" fill="#F28E2B" stroke="white" stroke-width="1.5"><title>temp: 65.5 MB (17.8%)</title></path>
+<path d="M 250,250 L 153.92,86.09 A 190,190 0 0,1 203.08,65.89 Z" fill="#E15759" stroke="white" stroke-width="1.5"><title>.git: 16.4 MB (4.5%)</title></path>
+<path d="M 250,250 L 203.08,65.89 A 190,190 0 0,1 234.75,60.61 Z" fill="#76B7B2" stroke="white" stroke-width="1.5"><title>assets: 9.9 MB (2.7%)</title></path>
+<path d="M 250,250 L 234.75,60.61 A 190,190 0 0,1 243.53,60.11 Z" fill="#59A14F" stroke="white" stroke-width="1.5"><title>log_324_why: 2.7 MB (0.7%)</title></path>
+<path d="M 250,250 L 243.53,60.11 A 190,190 0 0,1 248.21,60.01 Z" fill="#EDC948" stroke="white" stroke-width="1.5"><title>&lt;根目录文件&gt;: 1.4 MB (0.4%)</title></path>
+<path d="M 250,250 L 248.21,60.01 A 190,190 0 0,1 249.47,60.00 Z" fill="#B07AA1" stroke="white" stroke-width="1.5"><title>__pycache__: 398.0 KB (0.1%)</title></path>
+<circle cx="250" cy="250" r="66" fill="white"/>
+<text x="250" y="242" text-anchor="middle" font-size="14" font-weight="bold">总计</text>
+<text x="250" y="264" text-anchor="middle" font-size="13">367.9 MB</text>
+</svg><div class="legend"><table><tr><td><span class="dot" style="background:#4E79A7"></span></td><td>.venv</td><td class="r">271.3 MB</td><td class="r">73.7%</td></tr><tr><td><span class="dot" style="background:#F28E2B"></span></td><td>temp</td><td class="r">65.5 MB</td><td class="r">17.8%</td></tr><tr><td><span class="dot" style="background:#E15759"></span></td><td>.git</td><td class="r">16.4 MB</td><td class="r">4.5%</td></tr><tr><td><span class="dot" style="background:#76B7B2"></span></td><td>assets</td><td class="r">9.9 MB</td><td class="r">2.7%</td></tr><tr><td><span class="dot" style="background:#59A14F"></span></td><td>log_324_why</td><td class="r">2.7 MB</td><td class="r">0.7%</td></tr><tr><td><span class="dot" style="background:#EDC948"></span></td><td>&lt;根目录文件&gt;</td><td class="r">1.4 MB</td><td class="r">0.4%</td></tr><tr><td><span class="dot" style="background:#B07AA1"></span></td><td>__pycache__</td><td class="r">398.0 KB</td><td class="r">0.1%</td></tr><tr><td><span class="dot" style="background:#FF9DA7"></span></td><td>memory</td><td class="r">87.1 KB</td><td class="r">0.0%</td></tr><tr><td><span class="dot" style="background:#9C755F"></span></td><td>frontends</td><td class="r">71.8 KB</td><td class="r">0.0%</td></tr><tr><td><span class="dot" style="background:#BAB0AC"></span></td><td>reflect</td><td class="r">7.4 KB</td><td class="r">0.0%</td></tr></table></div></div></div>
+
+<div class="card"><h3>🏆 最大的 30 个文件</h3>
+<div class="scroll"><table class="data">
+<tr><th>#</th><th>文件路径</th><th>大小</th><th>类型</th><th>修改日期</th></tr>
+<tr><td>1</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow.dll">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow.dll</td><td class="r">21.4 MB</td><td>.dll</td><td>2026-03-14</td></tr>
+<tr><td>2</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\numpy.libs\libscipy_openblas64_-4bb64bb73b19ae7523581172b5c4a821.dll">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\numpy.libs\libscipy_openblas64_-4bb64bb73b19ae7523581172b5c4a821.dll</td><td class="r">19.5 MB</td><td>.dll</td><td>2026-03-14</td></tr>
+<tr><td>3</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.git\objects\pack\pack-c0f9b3ac3768a9cd10e83139b47b4c9559215c3b.pack">E:\2026\x-fudan\new\GenericAgent\.git\objects\pack\pack-c0f9b3ac3768a9cd10e83139b47b4c9559215c3b.pack</td><td class="r">15.9 MB</td><td>.pack</td><td>2026-03-23</td></tr>
+<tr><td>4</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow_flight.dll">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow_flight.dll</td><td class="r">12.8 MB</td><td>.dll</td><td>2026-03-14</td></tr>
+<tr><td>5</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pydeck\nbextension\static\index.js.map">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pydeck\nbextension\static\index.js.map</td><td class="r">11.2 MB</td><td>.map</td><td>2026-03-14</td></tr>
+<tr><td>6</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\share\jupyter\nbextensions\pydeck\index.js.map">E:\2026\x-fudan\new\GenericAgent\.venv\share\jupyter\nbextensions\pydeck\index.js.map</td><td class="r">11.2 MB</td><td>.map</td><td>2026-03-14</td></tr>
+<tr><td>7</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow_compute.dll">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow_compute.dll</td><td class="r">8.8 MB</td><td>.dll</td><td>2026-03-14</td></tr>
+<tr><td>8</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考：南开经济.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考：南开经济.pptx</td><td class="r">8.8 MB</td><td>.pptx</td><td>2026-02-01</td></tr>
+<tr><td>9</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd</td><td class="r">7.5 MB</td><td>.pyd</td><td>2026-03-14</td></tr>
+<tr><td>10</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd</td><td class="r">7.5 MB</td><td>.pyd</td><td>2026-03-14</td></tr>
+<tr><td>11</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\parquet.dll">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\parquet.dll</td><td class="r">6.4 MB</td><td>.dll</td><td>2026-03-14</td></tr>
+<tr><td>12</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考2.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考2.pptx</td><td class="r">5.5 MB</td><td>.pptx</td><td>2026-02-01</td></tr>
+<tr><td>13</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\assets\demo\selectstock.gif">E:\2026\x-fudan\new\GenericAgent\assets\demo\selectstock.gif</td><td class="r">5.3 MB</td><td>.gif</td><td>2026-03-23</td></tr>
+<tr><td>14</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\streamlit\static\static\js\index.CFT5eRxg.js">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\streamlit\static\static\js\index.CFT5eRxg.js</td><td class="r">4.7 MB</td><td>.js</td><td>2026-03-14</td></tr>
+<tr><td>15</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\model_responses_26408.txt">E:\2026\x-fudan\new\GenericAgent\temp\model_responses_26408.txt</td><td class="r">4.2 MB</td><td>.txt</td><td>2026-03-25</td></tr>
+<tr><td>16</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd</td><td class="r">3.9 MB</td><td>.pyd</td><td>2026-03-23</td></tr>
+<tr><td>17</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd</td><td class="r">3.9 MB</td><td>.pyd</td><td>2026-03-25</td></tr>
+<tr><td>18</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow.lib">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow.lib</td><td class="r">3.9 MB</td><td>.lib</td><td>2026-03-14</td></tr>
+<tr><td>19</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考3.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考3.pptx</td><td class="r">3.6 MB</td><td>.pptx</td><td>2026-02-01</td></tr>
+<tr><td>20</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\numpy\_core\_multiarray_umath.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\numpy\_core\_multiarray_umath.cp311-win_amd64.pyd</td><td class="r">3.5 MB</td><td>.pyd</td><td>2026-03-14</td></tr>
+<tr><td>21</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\lib.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\lib.cp311-win_amd64.pyd</td><td class="r">3.1 MB</td><td>.pyd</td><td>2026-03-14</td></tr>
+<tr><td>22</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\assets\demo\order_tea.gif">E:\2026\x-fudan\new\GenericAgent\assets\demo\order_tea.gif</td><td class="r">3.0 MB</td><td>.gif</td><td>2026-03-23</td></tr>
+<tr><td>23</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow_substrait.dll">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pyarrow\arrow_substrait.dll</td><td class="r">2.6 MB</td><td>.dll</td><td>2026-03-14</td></tr>
+<tr><td>24</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\streamlit\static\static\js\index.DB3cirPN.js">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\streamlit\static\static\js\index.DB3cirPN.js</td><td class="r">2.5 MB</td><td>.js</td><td>2026-03-14</td></tr>
+<tr><td>25</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pydeck\nbextension\static\index.js">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pydeck\nbextension\static\index.js</td><td class="r">2.5 MB</td><td>.js</td><td>2026-03-14</td></tr>
+<tr><td>26</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\share\jupyter\nbextensions\pydeck\index.js">E:\2026\x-fudan\new\GenericAgent\.venv\share\jupyter\nbextensions\pydeck\index.js</td><td class="r">2.5 MB</td><td>.js</td><td>2026-03-14</td></tr>
+<tr><td>27</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd</td><td class="r">2.5 MB</td><td>.pyd</td><td>2026-03-14</td></tr>
+<tr><td>28</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd</td><td class="r">2.5 MB</td><td>.pyd</td><td>2026-03-14</td></tr>
+<tr><td>29</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\log_324_why\model_responses_21808.txt">E:\2026\x-fudan\new\GenericAgent\log_324_why\model_responses_21808.txt</td><td class="r">2.3 MB</td><td>.txt</td><td>2026-03-24</td></tr>
+<tr><td>30</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_imagingft.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_imagingft.cp311-win_amd64.pyd</td><td class="r">2.1 MB</td><td>.pyd</td><td>2026-03-14</td></tr></table></div></div>
+
+<div class="card"><h3>🔁 重复文件 (前30组, 共浪费 35.5 MB)</h3>
+<div class="scroll"><table class="data">
+<tr><th>#</th><th>文件路径</th><th>单文件大小</th><th>副本数</th><th>浪费空间</th></tr>
+<tr><td>1</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pydeck\nbextension\static\index.js.map<br>E:\2026\x-fudan\new\GenericAgent\.venv\share\jupyter\nbextensions\pydeck\index.js.map</td><td class="r">11.2 MB</td><td>2</td><td class="r">11.2 MB</td></tr>
+<tr><td>2</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd</td><td class="r">7.5 MB</td><td>2</td><td class="r">7.5 MB</td></tr>
+<tr><td>3</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd</td><td class="r">3.9 MB</td><td>2</td><td class="r">3.9 MB</td></tr>
+<tr><td>4</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pydeck\nbextension\static\index.js<br>E:\2026\x-fudan\new\GenericAgent\.venv\share\jupyter\nbextensions\pydeck\index.js</td><td class="r">2.5 MB</td><td>2</td><td class="r">2.5 MB</td></tr>
+<tr><td>5</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd</td><td class="r">2.5 MB</td><td>2</td><td class="r">2.5 MB</td></tr>
+<tr><td>6</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_imagingft.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imagingft.cp311-win_amd64.pyd</td><td class="r">2.1 MB</td><td>2</td><td class="r">2.1 MB</td></tr>
+<tr><td>7</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\objectify.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\objectify.cp311-win_amd64.pyd</td><td class="r">1.7 MB</td><td>2</td><td class="r">1.7 MB</td></tr>
+<tr><td>8</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\numpy.libs\msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll<br>E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pandas.libs\msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll</td><td class="r">561.6 KB</td><td>2</td><td class="r">561.6 KB</td></tr>
+<tr><td>9</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_webp.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_webp.cp311-win_amd64.pyd</td><td class="r">400.5 KB</td><td>2</td><td class="r">400.5 KB</td></tr>
+<tr><td>10</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\html\_difflib.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\html\_difflib.cp311-win_amd64.pyd</td><td class="r">362.0 KB</td><td>2</td><td class="r">362.0 KB</td></tr>
+<tr><td>11</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\xlsxwriter\worksheet.py<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\xlsxwriter\worksheet.py</td><td class="r">278.7 KB</td><td>2</td><td class="r">278.7 KB</td></tr>
+<tr><td>12</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\_imagingcms.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imagingcms.cp311-win_amd64.pyd</td><td class="r">264.0 KB</td><td>2</td><td class="r">264.0 KB</td></tr>
+<tr><td>13</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Scripts\python.exe<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Scripts\python.exe</td><td class="r">251.5 KB</td><td>2</td><td class="r">251.5 KB</td></tr>
+<tr><td>14</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Scripts\pythonw.exe<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Scripts\pythonw.exe</td><td class="r">239.5 KB</td><td>2</td><td class="r">239.5 KB</td></tr>
+<tr><td>15</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\html\diff.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\html\diff.cp311-win_amd64.pyd</td><td class="r">231.5 KB</td><td>2</td><td class="r">231.5 KB</td></tr>
+<tr><td>16</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\typing_extensions.py<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\typing_extensions.py</td><td class="r">156.7 KB</td><td>2</td><td class="r">156.7 KB</td></tr>
+<tr><td>17</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\Image.py<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\Image.py</td><td class="r">149.6 KB</td><td>2</td><td class="r">149.6 KB</td></tr>
+<tr><td>18</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\_elementpath.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\_elementpath.cp311-win_amd64.pyd</td><td class="r">141.0 KB</td><td>2</td><td class="r">141.0 KB</td></tr>
+<tr><td>19</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\etree.pyx<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\etree.pyx</td><td class="r">138.5 KB</td><td>2</td><td class="r">138.5 KB</td></tr>
+<tr><td>20</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\xlsxwriter\chart.py<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\xlsxwriter\chart.py</td><td class="r">128.9 KB</td><td>2</td><td class="r">128.9 KB</td></tr>
+<tr><td>21</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pptx\templates\xlsx-icon.emf<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\pptx\templates\xlsx-icon.emf</td><td class="r">127.3 KB</td><td>2</td><td class="r">127.3 KB</td></tr>
+<tr><td>22</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pptx\templates\docx-icon.emf<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\pptx\templates\docx-icon.emf</td><td class="r">124.2 KB</td><td>2</td><td class="r">124.2 KB</td></tr>
+<tr><td>23</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\sax.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\sax.cp311-win_amd64.pyd</td><td class="r">117.0 KB</td><td>2</td><td class="r">117.0 KB</td></tr>
+<tr><td>24</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\includes\extlibs\zlib.h<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\includes\extlibs\zlib.h</td><td class="r">96.5 KB</td><td>2</td><td class="r">96.5 KB</td></tr>
+<tr><td>25</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\builder.cp311-win_amd64.pyd<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\builder.cp311-win_amd64.pyd</td><td class="r">88.0 KB</td><td>2</td><td class="r">88.0 KB</td></tr>
+<tr><td>26</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\parser.pxi<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\parser.pxi</td><td class="r">85.4 KB</td><td>2</td><td class="r">85.4 KB</td></tr>
+<tr><td>27</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\PIL\TiffImagePlugin.py<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\TiffImagePlugin.py</td><td class="r">85.3 KB</td><td>2</td><td class="r">85.3 KB</td></tr>
+<tr><td>28</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\html\_difflib.py<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\html\_difflib.py</td><td class="r">85.0 KB</td><td>2</td><td class="r">85.0 KB</td></tr>
+<tr><td>29</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\pillow-12.1.1.dist-info\licenses\LICENSE<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\pillow-12.1.1.dist-info\licenses\LICENSE</td><td class="r">76.2 KB</td><td>2</td><td class="r">76.2 KB</td></tr>
+<tr><td>30</td><td class="path">E:\2026\x-fudan\new\GenericAgent\.venv\Lib\site-packages\lxml\objectify.pyx<br>E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\objectify.pyx</td><td class="r">76.1 KB</td><td>2</td><td class="r">76.1 KB</td></tr></table></div></div>
+
+<div class="card"><h3>🧹 临时/缓存文件清理建议 (共 1,574 个, 77.6 MB)</h3>
+<h4 style="margin:12px 0 8px;color:#555;">按类型统计</h4>
+<table class="data"><tr><th>文件类型</th><th>数量</th><th>总大小</th></tr><tr><td>.pptx</td><td class="r">29</td><td class="r">30.5 MB</td></tr>
+<tr><td>.pyd</td><td class="r">15</td><td class="r">19.2 MB</td></tr>
+<tr><td>.pyc</td><td class="r">963</td><td class="r">14.6 MB</td></tr>
+<tr><td>.txt</td><td class="r">26</td><td class="r">6.4 MB</td></tr>
+<tr><td>.py</td><td class="r">283</td><td class="r">3.4 MB</td></tr>
+<tr><td>.h</td><td class="r">82</td><td class="r">732.1 KB</td></tr>
+<tr><td>.pxi</td><td class="r">26</td><td class="r">576.8 KB</td></tr>
+<tr><td>.exe</td><td class="r">2</td><td class="r">491.0 KB</td></tr>
+<tr><td>.json</td><td class="r">6</td><td class="r">427.8 KB</td></tr>
+<tr><td>.md</td><td class="r">45</td><td class="r">288.2 KB</td></tr>
+<tr><td>.emf</td><td class="r">4</td><td class="r">262.2 KB</td></tr>
+<tr><td>.pyx</td><td class="r">2</td><td class="r">214.7 KB</td></tr>
+<tr><td>(无扩展名)</td><td class="r">36</td><td class="r">154.8 KB</td></tr>
+<tr><td>.xsl</td><td class="r">7</td><td class="r">153.8 KB</td></tr>
+<tr><td>.pxd</td><td class="r">16</td><td class="r">127.8 KB</td></tr>
+<tr><td>.lock</td><td class="r">1</td><td class="r">57.4 KB</td></tr>
+<tr><td>.xml</td><td class="r">3</td><td class="r">22.3 KB</td></tr>
+<tr><td>.log</td><td class="r">4</td><td class="r">19.6 KB</td></tr>
+<tr><td>.rng</td><td class="r">1</td><td class="r">18.6 KB</td></tr>
+<tr><td>.html</td><td class="r">2</td><td class="r">14.3 KB</td></tr></table>
+<h4 style="margin:16px 0 8px;color:#555;">最大的临时文件 (Top 20)</h4>
+<div class="scroll" style="max-height:400px;"><table class="data">
+<tr><th>#</th><th>文件路径</th><th>大小</th></tr><tr><td>1</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考：南开经济.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考：南开经济.pptx</td><td class="r">8.8 MB</td></tr>
+<tr><td>2</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_avif.cp311-win_amd64.pyd</td><td class="r">7.5 MB</td></tr>
+<tr><td>3</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考2.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考2.pptx</td><td class="r">5.5 MB</td></tr>
+<tr><td>4</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\model_responses_26408.txt">E:\2026\x-fudan\new\GenericAgent\temp\model_responses_26408.txt</td><td class="r">4.2 MB</td></tr>
+<tr><td>5</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\etree.cp311-win_amd64.pyd</td><td class="r">3.9 MB</td></tr>
+<tr><td>6</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考3.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考3.pptx</td><td class="r">3.6 MB</td></tr>
+<tr><td>7</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imaging.cp311-win_amd64.pyd</td><td class="r">2.5 MB</td></tr>
+<tr><td>8</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imagingft.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\PIL\_imagingft.cp311-win_amd64.pyd</td><td class="r">2.1 MB</td></tr>
+<tr><td>9</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\model_responses_24428.txt">E:\2026\x-fudan\new\GenericAgent\temp\model_responses_24428.txt</td><td class="r">1.9 MB</td></tr>
+<tr><td>10</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板6.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板6.pptx</td><td class="r">1.9 MB</td></tr>
+<tr><td>11</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板2.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板2.pptx</td><td class="r">1.7 MB</td></tr>
+<tr><td>12</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\objectify.cp311-win_amd64.pyd">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\.venv\Lib\site-packages\lxml\objectify.cp311-win_amd64.pyd</td><td class="r">1.7 MB</td></tr>
+<tr><td>13</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板7.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板7.pptx</td><td class="r">1.5 MB</td></tr>
+<tr><td>14</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板5.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板5.pptx</td><td class="r">1.4 MB</td></tr>
+<tr><td>15</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板3.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板3.pptx</td><td class="r">1.2 MB</td></tr>
+<tr><td>16</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考：汇丰.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\夏令营答辩参考：汇丰.pptx</td><td class="r">1.1 MB</td></tr>
+<tr><td>17</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\论坛答辩参考.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\论坛答辩参考.pptx</td><td class="r">1.0 MB</td></tr>
+<tr><td>18</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板1.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板1.pptx</td><td class="r">904.1 KB</td></tr>
+<tr><td>19</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板8.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板8.pptx</td><td class="r">427.1 KB</td></tr>
+<tr><td>20</td><td class="path" title="E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板4.pptx">E:\2026\x-fudan\new\GenericAgent\temp\ppt_lab\模板4.pptx</td><td class="r">421.4 KB</td></tr></table></div></div>
+
+
+<footer>Generated by disk_analyzer.py | 2026-03-25 14:20:09</footer>
+</div></body></html>

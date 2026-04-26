@@ -1,0 +1,6 @@
+{
+  "schedule": "23:20",
+  "repeat": "daily",
+  "enabled": true,
+  "prompt": "执行每日日志备份任务：\n运行脚本 E:\\2026\\x-fudan\\new\\GenericAgent\\daily_log_backup.py\n该脚本会：\n1. 新建 log_{月日}_why 文件夹\n2. 复制当日 temp/model_responses_*.txt 到该文件夹\n3. 打包成zip\n4. 通过微信发送给用户（WX_TO_USER_ID需已配置）\n执行方式：import subprocess; subprocess.run(['pythonw', r'E:\\2026\\x-fudan\\new\\GenericAgent\\daily_log_backup.py'], check=True)\n执行后确认zip文件存在即视为成功，将结果写入报告路径。"
+}

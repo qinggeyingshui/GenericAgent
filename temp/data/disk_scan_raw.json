@@ -1,0 +1,356 @@
+[
+  {
+    "path": "C:\\Users\\qgys\\Downloads\\aTrustInstaller.exe",
+    "size_mb": 194.56,
+    "size_gb": 0.19,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\Downloads\\FIRE-SMOKE-DATASET.zip",
+    "size_mb": 306.09,
+    "size_gb": 0.3,
+    "extension": ".zip"
+  },
+  {
+    "path": "C:\\Users\\qgys\\Downloads\\Open Food Facts_datasets.zip",
+    "size_mb": 108.77,
+    "size_gb": 0.11,
+    "extension": ".zip"
+  },
+  {
+    "path": "C:\\Users\\qgys\\Downloads\\openvpn-connect-3.8.0.4528_signed.msi",
+    "size_mb": 110.57,
+    "size_gb": 0.11,
+    "extension": ".msi"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\adrive-desktop-updater\\pending\\aDrive-6.8.7.exe",
+    "size_mb": 139.07,
+    "size_gb": 0.14,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\arduino-ide-updater\\installer.exe",
+    "size_mb": 143.56,
+    "size_gb": 0.14,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\bitbrowser-updater\\installer.exe",
+    "size_mb": 145.57,
+    "size_gb": 0.14,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\electron\\Cache\\b572749526e1f71770047ac3f8620e31c721405fe0b9ebee1bc247cb8bd73491\\electron-v29.4.6-win32-x64.zip",
+    "size_mb": 103.17,
+    "size_gb": 0.1,
+    "extension": ".zip"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Google\\GoogleUpdater\\crx_cache\\1349373bf5ed2fae3fe0bc10bd1def893b9c0c3130f79512e6546c6cc2e51c73",
+    "size_mb": 446.87,
+    "size_gb": 0.44,
+    "extension": ""
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\javasharedresources\\C290M4F1A64P_sharedcc_吴寒雨_G41L00",
+    "size_mb": 300.0,
+    "size_gb": 0.29,
+    "extension": ""
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\JetBrains\\IntelliJIdea2024.3\\caches\\content.dat",
+    "size_mb": 192.0,
+    "size_gb": 0.19,
+    "extension": ".dat"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\JetBrains\\PyCharmCE2024.2\\caches\\content.dat",
+    "size_mb": 128.0,
+    "size_gb": 0.12,
+    "extension": ".dat"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Microsoft\\vscode-cpptools\\e09149135374ef906448e0deff3dfea1\\.BROWSE.VC.DB",
+    "size_mb": 337.74,
+    "size_gb": 0.33,
+    "extension": ".DB"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\mqttx-updater\\installer.exe",
+    "size_mb": 173.59,
+    "size_gb": 0.17,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.dll",
+    "size_mb": 260.38,
+    "size_gb": 0.25,
+    "extension": ".dll"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+    "size_mb": 183.18,
+    "size_gb": 0.18,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\ms-playwright\\firefox-1509\\firefox\\xul.dll",
+    "size_mb": 156.9,
+    "size_gb": 0.15,
+    "extension": ".dll"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Postman\\app-11.74.4\\Postman.exe",
+    "size_mb": 183.75,
+    "size_gb": 0.18,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Postman\\app-11.74.4\\resources\\app.asar",
+    "size_mb": 118.11,
+    "size_gb": 0.12,
+    "extension": ".asar"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Postman\\app-11.81.0\\Postman.exe",
+    "size_mb": 183.75,
+    "size_gb": 0.18,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Postman\\app-11.81.0\\resources\\app.asar",
+    "size_mb": 112.45,
+    "size_gb": 0.11,
+    "extension": ".asar"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Postman\\app-11.81.4\\Postman.exe",
+    "size_mb": 183.75,
+    "size_gb": 0.18,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Postman\\app-11.81.4\\resources\\app.asar",
+    "size_mb": 112.25,
+    "size_gb": 0.11,
+    "extension": ".asar"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Postman\\packages\\Postman-x64-11.81.4-full.nupkg",
+    "size_mb": 139.52,
+    "size_gb": 0.14,
+    "extension": ".nupkg"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Programs\\Quark\\6.4.5.737\\quark.dll",
+    "size_mb": 259.68,
+    "size_gb": 0.25,
+    "extension": ".dll"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Programs\\Quark\\6.6.0.776\\quark.dll",
+    "size_mb": 260.23,
+    "size_gb": 0.25,
+    "extension": ".dll"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Programs\\Quark\\6.6.2.781\\quark.dll",
+    "size_mb": 260.32,
+    "size_gb": 0.25,
+    "extension": ".dll"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\qq-chat-updater\\installer.exe",
+    "size_mb": 115.96,
+    "size_gb": 0.11,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Quark\\User Data\\updates\\70b3aced88d1eba2f1b8a5a53fc34de9.exe",
+    "size_mb": 248.52,
+    "size_gb": 0.24,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Tencent\\QQGuild\\9.7.22-513\\QQGuild.exe",
+    "size_mb": 133.87,
+    "size_gb": 0.13,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\tts\\tts_models--en--ljspeech--tacotron2-DDC\\model_file.pth",
+    "size_mb": 107.45,
+    "size_gb": 0.1,
+    "extension": ".pth"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\tts\\tts_models--zh-CN--baker--tacotron2-DDC-GST\\model_file.pth",
+    "size_mb": 478.0,
+    "size_gb": 0.47,
+    "extension": ".pth"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\tts\\tts_models--zh-CN--baker--tacotron2-DDC-GST\\tts_models--zh-CN--baker--tacotron2-DDC-GST\\model_file.pth",
+    "size_mb": 654.11,
+    "size_gb": 0.64,
+    "extension": ".pth"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\tuanjiehub-updater\\installer.exe",
+    "size_mb": 123.48,
+    "size_gb": 0.12,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\Unity\\Editor\\Editor-prev.log",
+    "size_mb": 981.71,
+    "size_gb": 0.96,
+    "extension": ".log"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\unityhub-updater\\installer.exe",
+    "size_mb": 128.51,
+    "size_gb": 0.13,
+    "extension": ".exe"
+  },
+  {
+    "path": "C:\\Users\\qgys\\AppData\\Local\\xljsci\\pending\\xiaolvjing_downloader_setup_2.5.3.exe",
+    "size_mb": 144.73,
+    "size_gb": 0.14,
+    "extension": ".exe"
+  },
+  {
+    "path": "E:\\Anaconda_envs\\envs\\xiaozhi-esp32-server.rar",
+    "size_mb": 456.25,
+    "size_gb": 0.45,
+    "extension": ".rar"
+  },
+  {
+    "path": "E:\\Anaconda_envs\\pkgs\\mkl-2023.1.0-h6b88ed4_46358.conda",
+    "size_mb": 155.87,
+    "size_gb": 0.15,
+    "extension": ".conda"
+  },
+  {
+    "path": "E:\\Anaconda_envs\\pkgs\\mkl-2023.2.0-h6a75c08_49573.conda",
+    "size_mb": 138.0,
+    "size_gb": 0.13,
+    "extension": ".conda"
+  },
+  {
+    "path": "E:\\Anaconda_envs\\pkgs\\cache\\09cdf8bf.json",
+    "size_mb": 147.76,
+    "size_gb": 0.14,
+    "extension": ".json"
+  },
+  {
+    "path": "E:\\Anaconda_envs\\pkgs\\cache\\0eb84403.json",
+    "size_mb": 238.3,
+    "size_gb": 0.23,
+    "extension": ".json"
+  },
+  {
+    "path": "E:\\Anaconda_envs\\pkgs\\cache\\5afe41e9.json",
+    "size_mb": 230.73,
+    "size_gb": 0.23,
+    "extension": ".json"
+  },
+  {
+    "path": "E:\\Anaconda_envs\\pkgs\\cache\\e5e4a514.json",
+    "size_mb": 153.99,
+    "size_gb": 0.15,
+    "extension": ".json"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\code\\code_3.22.rar",
+    "size_mb": 202.43,
+    "size_gb": 0.2,
+    "extension": ".rar"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\code\\3.22\\datasets\\dgraph\\dgraphfin.npz",
+    "size_mb": 648.8,
+    "size_gb": 0.63,
+    "extension": ".npz"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\code\\3.22\\datasets\\elliptic\\elliptic_txs_features.csv",
+    "size_mb": 657.73,
+    "size_gb": 0.64,
+    "extension": ".csv"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\code\\datasets\\dgraph\\dgraphfin.npz",
+    "size_mb": 648.8,
+    "size_gb": 0.63,
+    "extension": ".npz"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\code\\datasets\\elliptic\\elliptic_txs_features.csv",
+    "size_mb": 657.73,
+    "size_gb": 0.64,
+    "extension": ".csv"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\KDD\\IEEE-CIS\\graph-ieee.bin",
+    "size_mb": 207.47,
+    "size_gb": 0.2,
+    "extension": ".bin"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\KDD\\IEEE-CIS\\ieee_features_extracted.csv",
+    "size_mb": 245.2,
+    "size_gb": 0.24,
+    "extension": ".csv"
+  },
+  {
+    "path": "E:\\2026\\何-科研\\KDD\\IEEE-CIS\\ieee_features_processed.csv",
+    "size_mb": 241.35,
+    "size_gb": 0.24,
+    "extension": ".csv"
+  },
+  {
+    "path": "E:\\2026\\段-大创\\datasets\\中日胃癌-74例-CT图像.zip",
+    "size_mb": 1337.33,
+    "size_gb": 1.31,
+    "extension": ".zip"
+  },
+  {
+    "path": "E:\\2026\\段-大创\\datasets\\中日胃癌-89例-CT及病理图像.zip.baiduyun.p.downloading",
+    "size_mb": 38051.22,
+    "size_gb": 37.16,
+    "extension": ".downloading"
+  },
+  {
+    "path": "E:\\2026\\段-大创\\SITP 前置学习\\1.大创分工教学\\大创申请书分工录屏-20241210.mp4",
+    "size_mb": 208.18,
+    "size_gb": 0.2,
+    "extension": ".mp4"
+  },
+  {
+    "path": "E:\\2026\\段-大创\\SITP 前置学习\\3.各项目指导资料\\总体-人工智能科学与技术实践-指导会议1-录屏.mp4",
+    "size_mb": 344.49,
+    "size_gb": 0.34,
+    "extension": ".mp4"
+  },
+  {
+    "path": "D:\\anaconda3\\Library\\bin\\Qt5WebEngineCore_conda.dll",
+    "size_mb": 106.79,
+    "size_gb": 0.1,
+    "extension": ".dll"
+  },
+  {
+    "path": "D:\\vmware\\VMware-workstation-full-16.2.4-20089737.exe",
+    "size_mb": 615.58,
+    "size_gb": 0.6,
+    "extension": ".exe"
+  },
+  {
+    "path": "D:\\vmware\\windows.iso",
+    "size_mb": 140.61,
+    "size_gb": 0.14,
+    "extension": ".iso"
+  }
+]

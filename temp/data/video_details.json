@@ -1,0 +1,42 @@
+[
+  {
+    "bvid": "BV14rzQB9EJj",
+    "title": "Claude Code 从 0 到 1 全攻略：MCP / SubAgent / Agent Skill / Hook / 图片 / 上下文处理/ 后台任务",
+    "desc": "时间戳如下，方便大家跳转观看：\n \n第一部分：环境搭建与基础交互\n- 01:09 安装 Claude Code\n- 01:43 登录与授权\n- 02:55 第一个实战问题\n- 03:12 三种模式详解 (默认/自动/规划)\n \n第二部分：复杂任务处理与终端控制\n- 06:00 执行终端命令 (Bash)\n- 06:49 使用规划模式 (Plan Mode)\n- 11:06 跳过所有权限检测 (dangerously-skip-permissions)\n- 13:53 后台任务管理 (Background Tasks)\n \n第三部分：多模态与上下文管理\n- 15:35 版本回滚 (Rewind)\n- 19:42 图片处理\n- 21:09 安装 MCP Server (以 Figma 为例)\n- 21:39 恢复历史会话 (Resume)\n- 23:06 使用 MCP 工具还原设计稿\n- 24:49 上下文压缩与清除\n- 26:30 项目记忆文件 (CLAUDE.md)\n \n第四部分：高级功能扩展与定制\n- 29:46 Hook\n- 33:16 Agent Skill\n- 36:00 SubAgent\n- 39:17 Skill 与 SubAgent 的区别\n- 40:38 Plugin",
+    "duration": 2685,
+    "view": 763598,
+    "like": 29954,
+    "author": "马克的技术工作坊",
+    "tags": []
+  },
+  {
+    "bvid": "BV1ojfDBSEPv",
+    "title": "【闪客】一口气拆穿Skill/MCP/RAG/Agent/OpenClaw底层逻辑",
+    "desc": "被人负责造词，我负责帮大家吃词",
+    "duration": 886,
+    "view": 666645,
+    "like": 50279,
+    "author": "飞天闪客",
+    "tags": []
+  },
+  {
+    "bvid": "BV1E7wtzaEdq",
+    "title": "从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！",
+    "desc": "AI 核心概念大串联：LLM, Token, Context, Context Window, Prompt, User Prompt, System Prompt, Tool, MCP, Agent, Agent Skill，一期视频带你打通 AI 底层逻辑！",
+    "duration": 1951,
+    "view": 577757,
+    "like": 27443,
+    "author": "马克的技术工作坊",
+    "tags": []
+  },
+  {
+    "bvid": "BV1cGigBQE6n",
+    "title": "Agent Skill 从使用到原理，一次讲清",
+    "desc": "Agent Skill 从使用到原理，一次讲清 #agent #skills #anthropic #llm #modelcontextprotocol \n \n本视频带你彻底搞懂 Agent Skill 的方方面面，具体包括：\nAgent Skill 本质是什么\nAgent Skill 的使用方法\nAgent Skill 背后所使用的渐进式披露机制是什么\nAgent Skill 与 MCP 的区别，到底应该选择哪一个",
+    "duration": 1062,
+    "view": 438398,
+    "like": 14216,
+    "author": "马克的技术工作坊",
+    "tags": []
+  }
+]

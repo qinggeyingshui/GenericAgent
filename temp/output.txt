@@ -1,0 +1,1059 @@
+
+=== Reflection任务摘要 ===
+
+## 错误分析
+
+**任务**: R195 PPT演讲稿生成与排练助手
+**错误位置**: 创建speech_helper.py时第一次尝试
+**错误类型**: SyntaxError - 字符串转义问题
+
+## 根本原因
+
+**分类**: 使用方式错误（非工具缺陷，非环境问题）
+
+**具体原因**:
+1. 使用list-of-lines方式构建代码
+2. 在字符串列表中嵌入复杂f-string
+3. 多层引号和转义导致语法错误
+
+## 验证结果
+
+**假设1**: 三引号字符串比list-of-lines更适合复杂代码 ✓
+- 验证方法: 对比两种方式的转义层级
+- 结论: 三引号字符串转义层级更少，更不容易出错
+
+**假设2**: Agent的修复方案是最佳实践 ✓
+- 第一次: list-of-lines → 失败
+- 第二次: 三引号字符串 → 成功
+- 结论: 修复方案正确
+
+**假设3**: 现有规律已覆盖此类问题 ✓
+- self_improvement.md第17行已有相关规律
+- 规律内容: code_run文档生成转义的正确做法
+- 结论: 无需新增规律，仅需补充案例引用
+
+## 改进建议
+
+**已有规律**: self_improvement.md第17行
+- ①避免在字符串列表中嵌入复杂f-string和多层引号
+- ②代码示例应简化，避免字典访问和格式化的组合
+- ③如遇转义错误，简化示例代码而非增加转义层数
+
+**补充建议**: 
+- ④推荐使用三引号字符串而非list-of-lines，减少转义层级
+
+## 任务结果
+
+- ✓ Agent自行发现问题并修复
+- ✓ 第二次尝试成功
+- ✓ 任务R195最终完成
+- ✓ 现有规律已覆盖此类问题
+
+## 结论
+
+这是一次**成功的自我修复**案例：
+1. 错误类型明确（使用方式错误）
+2. 修复方案正确（三引号字符串）
+3. 现有规律已覆盖（无需重复记录）
+4. 任务最终成功完成
+
+**无需更新self_improvement.md**，现有规律已足够指导未来类似情况。
+
+=== Reflection任务摘要 (2026-04-21) ===
+
+## 错误根因
+用户指出R183统计错误，实际只产出1个SOP但被统计为多个。根本原因：正则表达式`##\s*产出(.*?)(?=##|$)`在遇到三级标题`###`时提前终止匹配，导致产出章节内容不完整。
+
+## 解决方案
+1. **修复正则表达式**：改用`##\s*产出(.*?)(?=\n##\s+\w|$)`，明确要求下一章节必须是换行+二级标题+单词字符
+2. **验证策略**：提取后检查内容长度，过短说明匹配失败
+3. **去重逻辑**：同一SOP文件只计数一次（如teaching_kb_sop.md在R173和R189都出现）
+
+## 验证结果
+- R155-R192共34个报告
+- 新增SOP：16个（去重后）
+  - 规划报告：5个（不增加技能）
+  - 增强报告：4个（3个新SOP）
+  - 新建报告：25个（13个新SOP）
+- R183验证通过：只产出1个content_production_workflow_sop.md ✓
+
+## 经验更新
+已添加到self_improvement.md抽象规律表：
+- **Markdown章节提取**：使用`\n##\s+\w`作为边界，避免匹配三级标题
+- 错误模式会在`###`处提前终止
+- 提取后必须验证内容长度
+
+## 产出文件
+- ./final_corrected_sops.json - 完整统计数据
+- ../memory/self_improvement.md - 已更新规律表
+
+
+=== REFLECTION SUMMARY ===
+时间: 2026-04-21 20:25
+任务: R155-R195技能树演化图生成
+
+## 错误分析
+1. **数据结构假设错误** (KeyError: 'name')
+   - 原因: 未读取实际JSON结构，凭印象假设字段存在
+   - 影响: 导致程序崩溃
+
+2. **表格解析脆弱** (ValueError: invalid literal for int())
+   - 原因: 未过滤Markdown表格分隔线 `|------|`
+   - 影响: 解析中断
+
+3. **跨数据源映射缺失**
+   - 原因: history.txt的category字段≠skill_tree.json的真实类别名
+   - 影响: 生成的图表类别数量错误(1-2个 vs 实际8-13个)
+
+## 解决方案
+1. 读取真实skill_tree.json结构
+2. 建立SOP名称→类别的映射关系
+3. 使用关键词推断无法映射的技能类别
+4. 验证结果: 成功生成6个快照的演化图
+
+## 抽象规律(已更新到self_improvement.md)
+- **JSON数据结构验证**: 处理前必须先读取实际结构，禁止假设字段名
+- **表格解析健壮性**: 必须过滤分隔线和空行，验证字段数量
+- **跨数据源映射**: 识别字段语义差异，建立显式映射关系
+
+## 成果
+✓ 生成skill_tree_evolution_final.png
+✓ 6个时间点快照: R158(3技能)→R165(9)→R172(15)→R184(26)→R192(31)→R195(31)
+✓ 类别演化: 3→5→8→8→8→8
+
+=== Reflection摘要 (2026-04-21) ===
+
+## 错误分析
+- **错误类型**: Python语法错误 (SyntaxError: invalid decimal literal)
+- **触发场景**: 使用code_run生成包含CSS样式的HTML文件
+- **直接原因**: 三引号字符串中的CSS `body {{ font-family: Arial; }}` 被Python解析器误认为数字字面量
+- **根本原因**: 使用方式错误（非工具缺陷或环境问题）
+
+## 假设验证
+1. ✓ 使用list-of-lines方式可以避免转义问题 - 验证通过
+2. ✓ 将HTML内容拆分为独立字符串可以绕过语法解析 - 验证通过
+3. 备选方案：原始字符串r"""或手动转义（未测试但理论可行）
+
+## 解决方案
+- **立即方案**: 改用 `lines = [...]; '\n'.join(lines)` 方式构建长文本
+- **预防措施**: 避免在三引号字符串中直接嵌入CSS、Jinja2模板等含双大括号的内容
+- **规则更新**: 已在self_improvement.md添加"code_run特殊字符转义"规律
+
+## 关键教训
+- Python三引号字符串不会自动转义特殊字符序列
+- 生成包含特殊语法的文本时，优先使用list-of-lines方式
+- 规则12"三引号内禁嵌markdown代码块"应扩展到所有特殊语法内容
+
+## 影响范围
+- 错误已在第二次尝试中修复
+- 任务R198成功完成，未影响最终交付
+- 已更新知识库，避免未来重复此类错误
+
+
+=== Reflection摘要 (2026-04-21 20:32) ===
+
+**错误分析**:
+- 连续2次调用file_write工具但未提供content
+- 错误信息: "No content found. Put content inside <file_content>...</file_content> tags"
+- 第3次改用code_run成功生成文件
+
+**根本原因**:
+- 忘记file_write工具的正确使用方式
+- 需要在回复正文中用<file_content path="...">标签包裹内容
+
+**解决方案**:
+1. 在self_improvement.md的抽象规律表中添加"file_write工具使用"规范
+2. 明确两种文件写入方式:
+   - 短文件(<649B): file_write + <file_content>标签
+   - 长文件(>649B): code_run的list-of-lines方式
+3. 验证通过: 成功使用<file_content>标签创建测试文件
+
+**预防措施**:
+- 使用file_write前检查是否提供了<file_content>标签
+- 长文件优先使用code_run避免超限
+- 参考self_improvement.md第23行的新规则
+
+**状态**: ✓ 已修复并验证
+
+================================================================================
+[Reflection摘要] 2026-04-21 20:40:32
+================================================================================
+
+## 错误分析
+
+**错误位置**: 2026-04-21 20:35:31，自主任务Batch 18规划
+**错误操作**: 调用file_write覆盖TODO.txt但未提供<file_content>标签
+**错误信息**: 'No content found. Put content inside <file_content>...</file_content> tags'
+
+## 根本原因
+
+**错误类型**: 使用方式错误（非工具缺陷或环境问题）
+
+1. **已知规则未遵循**: self_improvement.md第23行已明确记录file_write必须用标签
+2. **工具选择不当**: 修改现有文件应优先使用file_patch而非file_write
+3. **缺少选择指导**: 原规则未明确说明何时用file_write vs file_patch
+
+## 假设验证
+
+### 假设1: 工具本身无缺陷，错误提示清晰
+✓ **验证通过** - 错误信息明确指出正确用法，工具设计合理
+
+### 假设2: file_patch更适合修改现有文件
+✓ **验证通过** - 后续使用file_patch成功修改5行，精确、安全、原子操作
+
+### 假设3: 现有规则不够完整
+✓ **验证通过** - 缺少工具选择场景指导
+
+## 改进措施
+
+✓ **已更新self_improvement.md**
+  - 新增规则: 文件修改工具选择
+  - 明确场景: 创建/覆盖用file_write，修改用file_patch
+  - 强调优势: file_patch精确定位、原子操作，修改多行更安全
+
+## 经验总结
+
+1. **工具选择原则**: 修改现有文件优先file_patch，创建新文件用file_write
+2. **file_write要求**: 必须在回复正文中用<file_content>标签包裹内容
+3. **file_patch优势**: 精确替换、不影响其他行、支持并行修改
+4. **规则遵循**: 已知规则必须严格遵循，避免重复错误
+
+## 结论
+
+本次错误为**使用方式错误**，非工具缺陷或环境问题。通过补充工具选择规则，
+已建立完整的文件操作指导体系，避免未来重复此类错误。
+
+================================================================================
+
+=== Reflection摘要 (2026-04-21) ===
+
+**错误类型**: Python语法错误 - f-string表达式内反斜杠转义引号
+
+**根本原因**: 工具本身缺陷
+- 使用code_run的list-of-lines方式生成audio_transcription.py时
+- 在f-string的`{}`表达式内部使用了`\"`转义引号
+- Python不允许f-string表达式部分包含反斜杠
+
+**错误信号**: 
+```
+f-string expression part cannot include a backslash (audio_transcription.py, line 114)
+```
+
+**问题代码**:
+```python
+f.write(f"{r.get(\"text\", \"\")}")  # ✗ 错误
+```
+
+**修复方案**:
+```python
+f.write(f'{r.get("text", "")}')  # ✓ 正确：外层单引号，内层双引号
+```
+
+**验证结果**: 
+- 修复后模块导入成功
+- 所有方法检查通过
+- 时间格式化测试通过
+- 代码结构测试通过
+
+**抽象规律**: 已添加到self_improvement.md第18行
+- 触发条件：生成包含f-string的Python代码时
+- 正确做法：使用不同类型的引号（外层单引号+内层双引号，或反之）
+- 预防措施：生成代码时检查f-string内的引号类型
+
+**分类**: 工具本身缺陷（代码生成逻辑问题）
+
+============================================================
+[Reflection Report] 2026-04-21 21:44:54
+============================================================
+
+## 错误分析
+任务: R201 内容创作一键发布工作流
+错误: ImportError: cannot import name 'AICopywriter' from 'ai_copywriter'
+
+## 根本原因
+**失败类型**: 使用方式错误（接口假设错误）
+
+content_workflow.py假设依赖工具是类接口：
+```python
+from ai_copywriter import AICopywriter  # ✗ 错误假设
+self.copywriter = AICopywriter()
+```
+
+实际情况：
+- ai_copywriter.py: 函数式接口（0类，4函数：generate_title/summary/content/full_copy）
+- platform_adapter.py: 函数式接口（0类，6函数）
+- account_manager.py: 类式接口（3类，2函数）
+
+## 验证假设
+✓ 假设1: ai_copywriter.py是函数式接口（验证通过）
+✓ 假设2: 主要函数是generate_*系列（验证通过）
+✓ 假设3: 其他工具也需验证接口类型（部分正确，account_manager是类式）
+
+## 解决方案
+1. **集成前验证**: 读取源码，用正则`^class\s+`和`^def\s+`统计类/函数数量
+2. **适配调用方式**: 函数式直接导入函数，类式需实例化
+3. **避免假设**: 禁止凭印象假设接口类型
+
+## 更新记录
+✓ 抽象规律表: 添加"工具集成接口验证"规律
+✓ 错误案例表: 添加R201具体案例和解决方案
+
+## 预防措施
+- 创建workflow前必须扫描依赖工具接口
+- 使用正则表达式自动检测类/函数数量
+- 优先查看工具文档或源码前30行
+
+============================================================
+
+=== Reflection摘要 ===
+时间: 2026-04-21 21:48:13
+任务: 分析file_write工具调用失败
+
+## 错误分析
+
+**错误现象**:
+- 调用file_write(mode='overwrite', path='./tools/content_workflow.py')
+- 工具返回: "No content found. Put content inside <file_content>...</file_content> tags"
+
+**根本原因**: 使用方式错误
+- ✗ 不是工具本身缺陷（工具设计正常）
+- ✗ 不是环境配置问题（工具运行正常）
+- ✓ 是使用方式错误（未按规范提供内容）
+
+## 假设验证
+
+**假设1**: file_write要求内容必须在<file_content>标签中
+- 验证方法: 检查工具错误信息
+- 结果: ✓ 正确，工具明确指出需要标签
+- 结论: 这是工具的设计规范
+
+**假设2**: code_run是可靠的替代方案
+- 验证方法: 使用code_run重写文件
+- 结果: ✓ 成功写入54行文件
+- 结论: code_run适合程序化生成的多行内容
+
+**假设3**: 长文件更适合用code_run
+- 验证方法: 对比file_write限制(649B)和实际需求(54行)
+- 结果: ✓ 正确，list-of-lines方式更灵活
+- 结论: 长文件/代码生成优先用code_run
+
+## 改进措施
+
+**已更新self_improvement.md第24行**:
+- 补充说明: file_write不能只传参数，必须用标签
+- 添加fallback策略: file_write失败时立即切换code_run
+- 明确适用场景: 短文件用file_write，长文件/代码生成用code_run
+
+**规律强化**:
+- 工具调用前必须确认使用规范（参数 vs 标签）
+- 程序化生成内容优先考虑code_run
+- 失败后快速切换方案，避免重复尝试
+
+## 结论
+
+**失败类型**: 使用方式错误（非工具缺陷）
+**解决方案**: 已通过code_run成功完成任务
+**预防措施**: 已更新规律表，明确工具选择策略
+**影响范围**: 局部错误，未影响任务完成
+
+---
+
+============================================================
+## Reflection Summary (2026-04-21 22:05)
+============================================================
+
+### 错误场景
+R204任务收尾时，尝试导入`from autonomous_operation_sop import complete_task`
+连续失败4轮（第9-12轮），提示ImportError: cannot import name (unknown location)
+
+### 根本原因
+**失败类型**: 使用方式错误（路径假设错误）
+
+**根因分析**:
+1. 假设模块名=文件名，认为存在`../memory/autonomous_operation_sop.py`
+2. 实际结构是`../memory/autonomous_operation_sop/helper.py`（子目录）
+3. 违反了RULES第1条"搜索先行：禁猜路径"
+4. 未在导入前用os.path.exists()探测路径
+
+### 验证结果
+✓ 假设1: SOP的helper函数都在子目录下（已验证1个案例）
+✓ 假设2: 直接导入模块名会失败（已证实）
+✓ 假设3: 需要先探测路径（第13轮探测后第15轮成功）
+
+### 正确做法
+```python
+# 错误方式
+from autonomous_operation_sop import complete_task  # ImportError
+
+# 正确方式
+import os
+import sys
+
+# 1. 探测路径
+helper_path = "../memory/autonomous_operation_sop/helper.py"
+if os.path.exists(helper_path):
+    # 2. 添加到sys.path
+    sys.path.append("../memory/autonomous_operation_sop")
+    # 3. 导入
+    from helper import complete_task, set_todo
+```
+
+### 抽象规律（已更新到self_improvement.md）
+**Python导入路径验证**:
+- 触发条件: 导入项目内模块前
+- 正确做法:
+  ① 禁止假设模块名=文件名
+  ② 必须先用os.path.exists()或os.listdir()探测
+  ③ SOP的helper通常在../memory/{sop_name}/helper.py
+  ④ 先探测→添加sys.path→导入
+
+### 影响评估
+- 浪费轮次: 4轮（第9-12轮）
+- 任务影响: 无（最终成功完成R204）
+- 经验价值: 高（通用模式，避免未来重复）
+
+### 预防措施
+1. 所有项目内模块导入前必须探测路径
+2. 优先使用os.path.exists()验证文件存在性
+3. 遇到ImportError立即切换探测策略
+4. 记住SOP helper的标准路径模式
+
+### 修复状态
+✓ 已更新self_improvement.md抽象规律表
+✓ 已验证修复方案（第15轮成功）
+✓ 已完成reflection报告
+
+---
+Reflection完成时间: 2026-04-21 22:05
+Self-improvement.md已更新
+
+================================================================================
+[Reflection Report] 2026-04-21 22:14:12
+================================================================================
+
+## 错误描述
+Batch 18完成后检查剩余TODO任务时，调用get_todo()后直接使用.get()方法
+导致AttributeError: 'str' object has no attribute 'get'
+
+## 根本原因分析
+**错误类型**: 使用方式错误（API返回值假设错误）
+
+**具体问题**:
+1. 未读取helper.py源码就使用get_todo()函数
+2. 错误假设返回值是字典列表，实际返回字符串
+3. 错误假设TODO文件名是TODO.md，实际是TODO.txt
+4. 违反CONSTITUTION第2条：决策前查记忆，有SOP/utils必用
+
+## 验证结果
+**假设1**: get_todo()返回什么类型？
+→ 验证：读取helper.py源码（第46-51行）
+→ 结果：返回str（TODO.txt的完整文本内容）
+
+**假设2**: TODO文件实际在哪里？
+→ 验证：搜索文件系统 + 读取helper.py路径定义
+→ 结果：_TODO_FILE = _TEMP_DIR / 'TODO.txt' (即./TODO.txt)
+
+**假设3**: 文件是否存在？
+→ 验证：os.path.exists('./TODO.txt')
+→ 结果：存在，大小663字符，包含未完成任务列表
+
+## 解决方案
+1. 使用helper函数前必须先file_read helper.py确认接口
+2. get_todo()返回str需解析，不能直接迭代或调用.get()
+3. 文件名/路径不确定时用os.listdir()或glob探测
+
+## 预防措施
+已更新self_improvement.md:
+- 添加「Helper函数返回值验证」规律到抽象规律表
+- 添加具体错误案例到错误与纠正表
+- 明确：禁止凭印象假设返回值类型，必须先读源码确认
+
+## 影响评估
+- 影响范围: 小（仅1次工具调用失败）
+- 修复速度: 快（第2次调用即修复）
+- 数据损失: 无
+- 用户影响: 无（自主任务中发生）
+
+## 经验总结
+✓ 探测优先原则必须严格执行
+✓ 使用任何helper函数前先读取源码
+✓ 不确定的路径/文件名必须先探测
+✓ 快速验证假设比盲目重试更高效
+
+================================================================================
+
+================================================================================
+REFLECTION SUMMARY - 2026-04-21 22:23:26
+================================================================================
+
+任务：Batch 18自媒体能力拓展规划
+触发原因：系统检测到工具调用错误关键词
+
+## 错误分析
+
+检测到2个错误：
+1. Turn 2: code_run调用缺少代码块 → Turn 3立即修正
+2. Turn 14: complete_task()参数名错误(tasktitle→taskname) → Turn 16修正
+
+## 根本原因
+
+**失败类型**：使用方式错误（非真正失败）
+- 错误1：工具调用格式错误，忘记提供代码块
+- 错误2：API参数名记忆错误
+
+**实际结果**：✅ 任务成功完成
+- R206已记录到history.txt
+- TODO.txt已生成（6条任务）
+- 规划报告已保存到autonomous_reports/
+
+## 假设验证
+
+✅ 假设1：这是正常调试过程，非真正失败
+   - 证据：两次错误都在1-2轮内自我修正，最终成功
+
+✅ 假设2：错误源于API记忆不准确
+   - 证据：complete_task参数名确实记错了
+   - 改进：不确定时先读源码确认
+
+✅ 假设3：reflection触发机制对error关键词敏感
+   - 建议：区分"已修正错误"和"未解决失败"
+
+## 经验教训（已更新到self_improvement.md）
+
+新增抽象规律：
+1. **code_run调用必须提供代码**：要么用代码块，要么用script参数
+2. **API参数名必须验证**：不确定时先读源码确认函数签名
+
+## 结论
+
+本次reflection是"假阳性"触发。任务实际成功完成，错误都已自我修正。
+这反映了系统的自我纠错能力正常工作，但也暴露了reflection触发机制
+可能需要优化，以区分"过程中的错误"和"最终的失败"。
+
+================================================================================
+
+============================================================
+
+## Reflection摘要 (2026-04-21)
+
+### 错误分析
+**错误类型**: 文档-代码不一致 + 使用方式错误
+**错误信息**: `TypeError: complete_task() got an unexpected keyword argument 'tasktitle'`
+
+### 根本原因
+1. **直接原因**: autonomous_operation_sop.md第8行示例参数名错误（tasktitle vs taskname）
+2. **深层原因**: Agent依赖SOP文档示例而非源码验证API
+3. **实际函数签名**: `complete_task(taskname: str, historyline: str, report_path: str, sop_files: list = None)`
+
+### 假设验证
+✅ **假设1**: SOP文档参数名错误 → 已验证，第8行确实写错
+✅ **假设2**: 实际参数是taskname → 已确认，helper.py第154行
+✅ **假设3**: Agent未读源码验证 → 已确认，直接使用SOP示例
+
+### 改进措施
+1. **新增规律**: "SOP文档可能过时" - SOP仅作流程参考，API调用前必须读源码确认
+2. **修正文档**: 已修正autonomous_operation_sop.md第8行参数名
+3. **错误记录**: 已添加到self_improvement.md错误记录部分
+
+### 预防机制
+- 调用任何helper函数前，先`file_read helper.py`确认函数签名
+- SOP示例仅作参考，不可直接复制使用
+- 发现文档错误立即修正，避免重复踩坑
+
+### 影响范围
+- 本次错误已在第13轮修正，任务最终成功完成
+- 规划任务R206正常归档，5条TODO已生成
+
+============================================================
+
+============================================================
+Reflection任务摘要 - 2026-04-21 23:01:04
+============================================================
+
+## 错误场景
+用户指出规划中的两个问题：
+1. content_production_workflow_sop.md已存在，不应新建content_production_full_workflow_sop.md
+2. social_dashboard标记为"⚠️ 扩展"却作为A类任务新建SOP，这是矛盾的
+
+## 我的错误响应
+✓ 修改了skill_planning_sop.md的去重验证规则
+✓ 添加了质量检查清单
+✗ 没有解释为什么会出现这个矛盾
+✗ 没有提供如何修正当前TODO的具体方案
+
+## 根因分析
+**3个假设验证通过**：
+1. ✓ 响应不完整：只做了预防（更新规则），忽略了解释和修正
+2. ✓ 缺乏验证：没有验证修改后的规则是否能解决问题
+3. ✓ 理解偏差：误以为更新规则就足够了
+
+**根本原因**：
+当用户指出问题时，应该遵循完整的问题解决流程：
+① 解释根因 → ② 提供修正方案 → ③ 更新规则 → ④ 验证有效
+
+我只做了第③步，忽略了①②④步。
+
+## 改进措施
+已在 self_improvement.md 第16行添加新规律：
+
+**触发条件**：用户指出错误、矛盾或问题时
+
+**正确做法**：
+1. 解释根因：分析为什么会出现这个问题
+2. 提供方案：给出具体的修正步骤
+3. 更新规则：修改SOP/规则防止再犯
+4. 验证有效：确认方案能解决问题
+
+**错误示例**：直接修改规则不解释原因
+**正确示例**：先解释→再修正→后预防→最后验证
+
+## 验证结果
+✓ 新规律已成功添加到 ../memory/reflection/self_improvement.md
+✓ 文件总行数：57行
+✓ 规律位置：第16行（抽象规律表）
+
+## 经验教训
+1. 用户提问时，先理解问题的完整诉求
+2. 不要只关注"如何预防"，要先解决"当前问题"
+3. 响应要完整：解释→修正→预防→验证
+4. 修改规则后要验证规则的有效性
+
+============================================================
+
+================================================================================
+[Reflection摘要] 2026-04-21 23:16
+================================================================================
+
+## 错误分析
+
+**错误位置**: 2026-04-21 23:16，自主任务Batch 18规划
+**错误操作**: 
+  1. 调用SkillTree.get_statistics() → AttributeError: 'SkillTree' object has no attribute 'get_statistics'
+  2. 调用get_next_report_id() → NameError: name 'get_next_report_id' is not defined
+
+## 根本原因
+
+**错误类型**: 使用方式错误（非工具缺陷或环境问题）
+
+1. **凭记忆假设API**: 导入模块/类后未探测可用方法就直接调用
+2. **未验证方法存在性**: 假设SkillTree有get_statistics()方法（实际不存在）
+3. **未验证函数存在性**: 假设helper.py有get_next_report_id()函数（实际不存在）
+
+## 假设验证
+
+### 假设1: SkillTree实际可用方法与假设不符
+✓ **验证通过** - 探测结果：
+  - 实际方法: list_all_skills, get_tree_summary, add_skill, record_usage等
+  - 不存在: get_statistics()
+
+### 假设2: helper.py实际可用函数与假设不符
+✓ **验证通过** - 探测结果：
+  - 实际函数: get_todo, get_history, complete_task, record_skill_usage等
+  - 不存在: get_next_report_id()（有私有函数_next_report_number）
+
+### 假设3: 缺少API探测规律
+✓ **验证通过** - 现有规律未明确要求导入后探测方法
+
+## 解决方案
+
+1. **添加抽象规律**: 在self_improvement.md添加"API方法必须探测"规律
+   - 触发条件: 导入模块/类后首次调用方法前
+   - 正确做法: ①dir(obj)列出方法 或 ②file_read源码查看定义 → ③确认存在 → ④调用
+
+2. **探测方式示例**:
+   ```python
+   # 方法1: dir()探测
+   methods = [m for m in dir(obj) if not m.startswith('_')]
+   
+   # 方法2: 源码探测
+   # file_read helper.py → 搜索函数定义
+   
+   # 方法3: hasattr检查
+   if hasattr(obj, 'method_name'):
+       obj.method_name()
+   ```
+
+3. **预防措施**:
+   - 禁止凭记忆/假设调用API
+   - 首次使用新模块/类时必须探测
+   - 适用范围: 自定义类、helper模块、第三方库
+
+## 影响范围
+
+- ✓ 错误已识别并分析
+- ✓ 已添加"API方法必须探测"规律到self_improvement.md
+- ✓ 已记录具体错误案例到错误与纠正表
+- ✓ 验证探测方式有效性
+
+## 关键教训
+
+1. **导入≠可用**: 导入模块/类后不代表所有假设的方法都存在
+2. **探测成本低**: dir()或file_read只需几秒，但能避免AttributeError/NameError
+3. **私有函数注意**: helper.py有_next_report_number（私有）但无get_next_report_id（公开）
+
+**状态**: ✓ 已修复并更新知识库
+
+
+======================================================================
+[Reflection Summary] 2026-04-21 23:26:58
+======================================================================
+
+## 错误分析
+- **错误类型**: ValueError: too many values to unpack (expected 2)
+- **触发代码**: `for cat_name, skills in tree['skill_categories'].values()`
+- **根本原因**: 使用`.values()`而非`.items()`遍历字典
+
+## 假设验证
+1. ❌ 假设1: 数据结构问题 → 验证后发现是遍历方法错误
+2. ✓ 假设2: `.values()`只返回值无法解包 → 验证成功
+3. ✓ 假设3: 应使用`.items()`返回(key,value)元组 → 验证成功
+
+## 解决方案
+- **错误方法**: `dict.values()` - 只返回值，无法解包为两个变量
+- **正确方法**: `dict.items()` - 返回(key, value)元组，可解包
+- **验证结果**: 成功遍历skill_tree的8个类别
+
+## 更新记录
+- 文件: ../memory/reflection/self_improvement.md
+- 位置: 抽象规律表第34行
+- 内容: 新增"字典遍历方法选择"规律
+- 要点: 
+  ① .values()只返回值，无法解包
+  ② .items()返回元组，可解包
+  ③ 遍历前明确需要key还是value
+
+## 预防措施
+- 遍历字典需要key和value时，必须使用`.items()`
+- 只需要value时才使用`.values()`
+- 只需要key时使用`.keys()`或直接`for k in dict`
+
+======================================================================
+
+
+======================================================================
+[Reflection Summary] 2026-04-21 23:36:16
+======================================================================
+
+## 错误分析
+- **错误类型**: file_write工具使用错误
+- **触发场景**: 创建测试TODO文件时直接调用file_write不提供<file_content>标签
+- **错误信息**: "No content found. Put content inside <file_content>...</file_content> tags"
+
+## 根本原因
+1. 规则25已存在但执行时未严格遵守
+2. 误以为可以通过参数传递内容（类似code_run的script参数）
+3. 对于程序化生成的内容，应该优先使用code_run而非file_write
+
+## 验证结果
+✓ file_write正确用法: 回复正文中使用<file_content>标签 + 调用工具
+✓ code_run方式: 直接在Python代码中写文件，更适合程序化生成内容
+✓ 后续正确切换到code_run成功完成任务
+
+## 改进措施
+1. **强化规则25**: 明确file_write仅用于手动编写的短文本
+2. **添加决策树**: 
+   - 变量/循环生成 → code_run
+   - 手动编写短文本 → file_write + 标签
+3. **优先级**: 程序化生成的内容必须用code_run
+
+## 更新记录
+- 文件: ../memory/reflection/self_improvement.md
+- 规律: 第25条 "file_write工具使用"
+- 状态: 已强化并添加决策树
+
+======================================================================
+
+================================================================================
+[Reflection Summary] 2026-04-21 23:38
+================================================================================
+
+## 错误分析
+- **错误类型**: file_write工具使用错误
+- **触发时间**: 2026-04-21 23:36:42
+- **错误描述**: 调用file_write(mode='overwrite', path='./skill_planning_reviewer.py')
+  失败，提示"No content found. Put content inside <file_content>...</file_content> tags"
+
+## 根本原因
+1. **违反已有规则**: self_improvement.md第25行已明确规定file_write必须使用
+   <file_content>标签，且程序化生成的内容应该用code_run
+2. **工具选择错误**: 创建skill_planning_reviewer.py是程序化生成的代码（包含
+   变量、函数定义等），应该用code_run而非file_write
+3. **未检查规则**: Agent在选择工具前未回顾现有规则
+
+## 验证的解决方案
+- **正确做法**: Agent在失败后立即切换到code_run(script=...)，成功创建文件
+- **验证结果**: ✓ code_run方式成功，证明现有规则正确
+- **规则有效性**: 第25行规则已经完善，无需修改
+
+## 更新内容
+- ✓ 在self_improvement.md第48行添加此错误案例到错误日志
+- ✓ 强调决策树：变量/循环生成→code_run；手动短文本→file_write+标签
+- ✓ 添加fallback策略：file_write失败时立即切换code_run
+
+## 预防措施
+1. 工具选择前先判断内容类型（程序化 vs 手动编写）
+2. 程序化内容（代码、变量拼接、循环生成）→强制使用code_run
+3. file_write仅用于手动编写的配置文件、文档等短文本
+4. 使用file_write时必须检查是否提供了<file_content>标签
+
+## Meta反思
+本次reflection过程中，Agent在写入output.txt时再次犯了相同错误（调用file_write
+未提供标签），这进一步证明了该规则的重要性和容易被忽视的特点。
+
+================================================================================
+
+
+=== Reflection任务摘要 ===
+
+## 错误分析
+
+**任务**: 技能规划SOP优化 - 单层LLM评审集成
+**错误位置**: 更新skill_planning_reviewer.py时使用file_patch
+**错误类型**: file_patch全文替换失败 - "未找到匹配的旧文本块"
+
+## 根本原因
+
+**分类**: 工具使用错误（file_patch不适合全文替换）
+
+**具体原因**:
+1. 使用file_patch传入整个文件内容作为old_content
+2. old_content中的转义字符（如`\\n`）与实际文件存储的转义层级不匹配
+3. file_patch要求字节级精确匹配，全文内容极易因细微差异失败
+
+## 验证结果
+
+**假设1**: 转义层级不匹配导致精确匹配失败 ✓
+- old_content含`\\n`（四重转义），实际文件是`\n`（双重转义）
+- 结论: file_patch对转义敏感，全文替换风险高
+
+**假设2**: 全文替换不适合file_patch ✓
+- file_patch设计用于小段精确修改（<30行）
+- 全文内容作old_content极易失败
+- 结论: 全文重写应用code_run
+
+**假设3**: 切换code_run可解决 ✓
+- Agent切换到code_run(script=...)直接写文件
+- 成功创建skill_planning_reviewer.py
+- 结论: 修复方案正确
+
+## 更新内容
+
+**新增规律**: "file_patch全文替换陷阱"（self_improvement.md第28行）
+- file_patch仅适合小段精确修改（<30行）
+- 全文重写必须用code_run，不要用file_patch传整个文件
+- file_patch失败时立即切换code_run，不要反复调整old_content
+
+**新增错误记录**: 2026-04-21 file_patch全文替换失败案例
+
+## 预防措施
+
+1. **工具选择决策树**:
+   - 小段修改（<30行）→ file_patch
+   - 全文重写 → code_run
+   - 新建文件 → code_run（程序化）或 file_write（手动短文本）
+
+2. **file_patch失败响应**:
+   - 第一次失败 → 检查old_content是否过长（>30行）
+   - 如果是全文替换 → 立即切换code_run
+   - 不要尝试调整转义字符重试
+
+3. **转义字符处理**:
+   - 避免在old_content中手动构造多重转义
+   - 优先用file_read获取实际内容作为old_content
+   - 全文替换时用code_run避免转义问题
+
+[Reflection 2026-04-22] skill_tree_evolution_table任务中3类工具失败：①file_patch用截断file_read输出作old_content→匹配失败（新增规律：截断输出禁用于file_patch）；②file_write连续3次违反规则25（未提供file_content标签）；③code_run连续2次违反规则31（未提供代码块）。根因：已知规则被重复违反未及时切换策略。已更新self_improvement.md第36行(新meta规律)+第53行(新错误记录)。
+
+## Reflection 2026-04-23 23:05
+**触发原因**: 自动检测（轮次14）
+**分析结果**: 误触发，无实际错误
+**任务状态**: B站视频上传任务正常进行中，已完成标题/简介/标签填写，正在等待用户确认是否点击"立即投稿"
+**结论**: ask_user是正确行为（不可逆操作前确认），无需修复
+
+## Reflection 2026-04-23 23:06 - add_history未定义错误
+
+### 错误现象
+R208规划任务中调用`add_history()`报NameError
+
+### 根因分析
+- 分类：**使用方式错误**
+- helper.py实际只有6个公开函数：get_todo, get_history, set_todo, complete_task, update_skill_tree, record_skill_usage
+- Agent凭印象调用了不存在的add_history()
+- set_todo()只返回路径字符串，不执行写入
+
+### 正确做法
+- 规划任务：直接用文件操作追加history.txt（Agent第9轮的修复正确）
+- 执行任务：用complete_task()自动处理history
+
+### 新增规律
+| 规律 | 触发条件 | 正确做法 |
+|------|----------|----------|
+| helper模块函数必验证 | 调用helper函数前 | 先确认函数存在；set_todo只返回路径；history追加用文件操作或complete_task |
+
+## Reflection R209-fix (2026-04-23)
+**错误**: `ModuleNotFoundError: No module named 'skill_tree_api'`
+**根因**: skill_planning_sop.md第88行写错导入路径(skill_tree_api→应为helper)
+**分类**: 文档-代码不一致（使用方式错误）
+**修复**: 
+1. 修正SOP第88行: `from helper import complete_task`
+2. 新增规律: "SOP示例代码必验证 | 执行SOP中的import/API调用示例前 | 先file_read目标模块确认存在"
+
+=== Reflection R209 complete_task参数错误分析 ===
+时间: 2026-04-23
+错误: TypeError: complete_task() got an unexpected keyword argument 'task_id'
+
+根因分析:
+- 类型: 使用方式错误（非工具缺陷/环境问题）
+- 原因: Working memory记录了错误的函数签名，未验证就调用
+- 实际签名: complete_task(taskname, historyline, report_path, sop_files=None)
+- 错误调用: complete_task(task_id="R208", summary="...", sop_files=[...])
+
+假设验证:
+1. ✅ SOP示例代码与实际helper.py不一致
+2. ✅ Agent凭印象记录错误签名到working memory
+3. ✅ 调用前未用inspect.signature验证
+
+结论:
+- 已有规则"helper模块函数必验证"+"SOP示例代码必验证"完全覆盖此场景
+- 无需新增规律（当前12/15条）
+- 改进建议: 调用helper函数前必须先inspect.signature()验证签名
+
+## Reflection Report - 2026-04-24 15:12
+
+### 错误分析
+1. **file_patch失败×2**: 凭印象构造old_content，未先file_read确认精确内容
+   - 尝试匹配'|| 类型正确'但实际是'| 类型正确'（单竖线vs双竖线）
+   - 分类: 使用方式错误
+
+2. **code_run缺代码×1**: 调用时只传type参数，违反已有规律
+   - 分类: 使用方式错误（已有规律未遵守）
+
+### 根本原因
+file_patch前没有先读取文件确认精确内容，凭记忆构造old_content导致格式不匹配
+
+### 新增规律
+| file_patch前必读 | 使用file_patch修改文件前 | 必须先file_read确认精确内容，禁止凭印象构造old_content |
+
+### 结论
+两个错误均为使用方式错误，非工具缺陷或环境问题。已新增抽象规律(13/15条)。
+
+=== Reflection Summary 2026-04-24 15:18 ===
+错误: Turn 9调用complete_task(task_id=..., summary=...)失败
+类型: 使用方式错误（API参数名假设错误）
+根因: 凭印象调用，未先读helper.py确认签名；与Batch18(R206)完全相同的错误类型
+验证: 实际签名是complete_task(taskname, historyline, report_path, sop_files=[])
+措施: 新增规律"helper函数参数签名必验证"，强调参数名+类型验证，禁凭印象
+教训: task_id/tasktitle/summary都是错的，正确参数名是taskname/historyline/report_path
+
+## Reflection 2026-04-24 15:31
+
+### 错误分析
+- 错误现象: `⚠️ 部分SOP处理失败: 缺少[skill_mapping]: image_processing_sop.md/content_calendar_sop.md`
+- 错误类型: **使用方式错误**（非工具缺陷/非环境问题）
+- 根因: 创建新SOP时遗漏了[skill_mapping]标签，导致complete_task无法更新skill_tree
+
+### 假设验证
+1. ✓ 新SOP缺少[skill_mapping]标签 → 确认为根因
+2. ✗ skill_tree.json结构问题 → 结构正常
+3. ✗ complete_task函数bug → 函数逻辑正确
+
+### 修复措施
+1. 给image_processing_sop.md添加[skill_mapping]标签
+2. 给content_calendar_sop.md添加[skill_mapping]标签
+3. 新增抽象规律: "新建SOP必含skill_mapping" (15/15)
+
+### 预防机制
+创建SOP时必须在末尾添加:
+```
+[skill_mapping]
+category: xxx
+skill: xxx_sop
+tools: xxx.py
+[/skill_mapping]
+```
+
+=== Reflection 摘要 | 2026-04-24 16:28 ===
+
+【错误】AttributeError: 'list' object has no attribute 'items'
+【根因】使用方式错误 - 假设get_skill_stats()['all_skills']是dict，实际是list of tuples
+【影响】低（1轮内修复）
+
+【假设验证】
+1. ✅ Agent未先读helper.py确认返回值结构
+2. ✅ 现有规律"工具调用必验证"已覆盖（读源码确认参数和返回值）
+3. ✅ 错误可快速恢复
+
+【结论】
+- 非规律缺失，是规律未被遵守
+- 抽象规律已达上限15条，无需新增
+- 建议：调用helper函数前先读docstring确认返回值类型
+
+
+## Reflection 摘要 - 2026-04-24 16:46
+
+### 错误分析
+- 错误：`stats.get('all_skills', {}).items()` 失败，AttributeError: 'list' object has no attribute 'items'
+- 类型：使用方式错误
+- 根因：调用get_skill_stats()后假设all_skills是dict，实际是list of tuples
+
+### 假设验证
+1. ✅ Agent未读取helper.py就直接使用 → 对话历史确认
+2. ✅ 现有规律已覆盖 → 第9行"工具调用必验证...确认参数和返回值"
+
+### 结论
+- 无需新增规律：现有规律"工具调用必验证"已明确要求"确认返回值"
+- 错误已自修复：Agent在下一步正确处理list结构
+- 任务最终成功：Batch 21规划完成
+
+### 改进建议
+执行层面加强对现有规律的遵守，特别是helper函数调用前先读源码确认返回值结构。
+
+=== Reflection Summary ===
+时间: 2026-04-24 16:52
+错误: complete_task() got unexpected keyword argument 'task_title'
+
+分析:
+- 类型: 使用方式错误（重复违规）
+- 根因: 调用complete_task前未读helper.py确认参数签名
+- 错误参数: task_title/history_line
+- 正确参数: taskname/historyline
+
+结论:
+- 规律已存在(self_improvement.md第20行): "helper函数参数签名必验证"
+- 历史教训已记录: "task_id/tasktitle都是错的，正确是taskname"
+- 本次为重复违规，Agent未遵守已有规律
+
+预防措施:
+- 调用helper.py函数前必须先file_read确认完整签名
+- 特别是complete_task/get_todo等高频函数
+
+状态: 错误已在后续turn修正，任务最终完成
+
+## Reflection摘要 - 2026-04-26 16:21
+
+**错误**: code_run超时（os.walk遍历../目录）
+**类型**: 使用方式错误
+**根因**: 搜索范围过大，os.walk遍历整个GenericAgent目录导致60秒超时
+**自修正**: Agent第二次改用findstr命令+限制搜索范围到./，成功完成
+**结论**: 无需添加新规律（规律表已满15条），此为一次性错误且已自行修正
+
+## Reflection 2026-04-26 16:22 - sop_usage_tracker导入失败
+
+### 错误分析
+原对话在skill_lifecycle_management任务中调用`record_skill_usage('scheduled_task_sop.md')`失败
+
+### 根因（双重问题）
+1. **工具缺陷**：sop_usage_tracker.py硬编码错误路径`sys.path.append('../temp/skill_tree')`，但skill_tree_api.py实际位于`memory/autonomous_operation_sop/`
+2. **使用方式错误**：调用了不存在的函数`record_skill_usage`，实际函数名是`track_sop_usage`和`read_and_track`
+
+### 修复措施
+已修正sop_usage_tracker.py，改用`__file__`动态计算路径：
+```python
+_this_dir = os.path.dirname(os.path.abspath(__file__))
+_skill_tree_dir = os.path.join(_this_dir, '../../memory/autonomous_operation_sop')
+sys.path.insert(0, _skill_tree_dir)
+```
+
+### 抽象规律（已存在类似规则）
+- 工具调用必验证：调用新工具/API前，先file_read确认函数存在和参数签名
+- 工具模块禁用硬编码相对路径，应使用__file__动态计算

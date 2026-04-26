@@ -1,0 +1,67 @@
+{
+  "name": "科技灰",
+  "colors": {
+    "primary": [
+      44,
+      62,
+      80
+    ],
+    "secondary": [
+      52,
+      152,
+      219
+    ],
+    "accent": [
+      26,
+      188,
+      156
+    ],
+    "bg": [
+      248,
+      249,
+      250
+    ],
+    "text": [
+      33,
+      33,
+      33
+    ]
+  },
+  "fonts": {
+    "title": {
+      "name": "微软雅黑",
+      "size": 36,
+      "bold": true
+    },
+    "subtitle": {
+      "name": "微软雅黑",
+      "size": 26,
+      "bold": false
+    },
+    "body": {
+      "name": "微软雅黑",
+      "size": 22,
+      "bold": false
+    },
+    "note": {
+      "name": "微软雅黑",
+      "size": 16,
+      "bold": false
+    }
+  },
+  "bg_style": "gradient",
+  "gradient": {
+    "color1": [
+      44,
+      62,
+      80
+    ],
+    "color2": [
+      52,
+      73,
+      94
+    ],
+    "style": 3,
+    "variant": 1
+  }
+}

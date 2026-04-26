@@ -1,0 +1,18 @@
+# Subtitle Proofreading Report
+
+File: ./test_subtitle.srt
+Time: 2026-04-20 20:14:18
+
+Total subtitles: 4
+
+## Punctuation Issues (0)
+
+No issues
+
+## Timeline Issues (1)
+
+- #3: Timeline error - Start >= End: 00:00:06.000 >= 00:00:05.000
+
+## Length Issues (0)
+
+No issues

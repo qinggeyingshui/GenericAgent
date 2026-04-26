@@ -1,0 +1,207 @@
+{
+  "paper_comparison_sop": {
+    "tools": [
+      "comparison_toolkit.py"
+    ],
+    "functions": [
+      "compare_papers",
+      "get_paper_by_id",
+      "list_papers",
+      "parse_papers"
+    ]
+  },
+  "image_processing_sop": {
+    "tools": [
+      "image_toolkit.py"
+    ],
+    "functions": [
+      "add_watermark",
+      "compress_batch",
+      "convert_format",
+      "create_cover",
+      "create_thumbnail",
+      "crop",
+      "demo_image_toolkit",
+      "image_to_ppt_slide",
+      "ocr",
+      "resize"
+    ]
+  },
+  "subtitle_proofreading_sop": {
+    "tools": [
+      "subtitle_proofreader.py"
+    ],
+    "functions": [
+      "add_emotion_tags",
+      "check_punctuation",
+      "check_text_length",
+      "check_timeline",
+      "detect_language",
+      "enhance_subtitles",
+      "format_time",
+      "optimize_timeline",
+      "parse_srt",
+      "parse_vtt",
+      "polish_subtitle",
+      "proofread_subtitle"
+    ]
+  },
+  "ai_copywriting_sop": {
+    "tools": [
+      "ai_copywriter.py"
+    ],
+    "functions": [
+      "generate_content",
+      "generate_full_copy",
+      "generate_summary",
+      "generate_title"
+    ]
+  },
+  "platform_adaptation_sop": {
+    "tools": [
+      "platform_adapter.py"
+    ],
+    "functions": [
+      "adapt_content",
+      "batch_adapt",
+      "resize_image"
+    ]
+  },
+  "community_management_sop": {
+    "tools": [
+      "comment_assistant.py",
+      "wechat_group_toolkit.py"
+    ],
+    "functions": [
+      "analyze_comments",
+      "analyze_sentiment",
+      "classify_fan",
+      "demo_usage",
+      "extract_group_info",
+      "generate_fan_report",
+      "generate_reply",
+      "get_group_id",
+      "get_sender_in_group",
+      "is_group_message",
+      "is_mentioned",
+      "load_comments",
+      "save_analysis",
+      "send_group_file",
+      "send_group_text"
+    ]
+  },
+  "live_streaming_sop": {
+    "tools": [
+      "live_script_generator.py"
+    ],
+    "functions": [
+      "create_full_script",
+      "generate_script_outline",
+      "generate_teleprompter",
+      "get_interaction_phrase",
+      "save_script"
+    ]
+  },
+  "data_analysis_sop": {
+    "tools": [
+      "data_visualization.py",
+      "data_storytelling.py"
+    ],
+    "functions": [
+      "bar_chart",
+      "comparison_story",
+      "composition_story",
+      "distribution_story",
+      "line_chart",
+      "multi_series_bar",
+      "pie_chart",
+      "scatter_plot",
+      "trend_story"
+    ]
+  },
+  "web_automation_sop": {
+    "tools": [
+      "form_autofill.py",
+      "anti_scraping_toolkit.py"
+    ],
+    "functions": [
+      "acquire",
+      "batch_scrape",
+      "clear_cookies",
+      "fill_form_config",
+      "fill_form_js",
+      "generate_form_config_template",
+      "get_cookies",
+      "get_next",
+      "get_random",
+      "prepare_request",
+      "random_delay",
+      "safe_navigate",
+      "set_cookie",
+      "set_ua_via_cdp",
+      "wait",
+      "wait_for_element",
+      "wait_for_network_idle",
+      "wait_if_needed"
+    ]
+  },
+  "seo_optimization_sop": {
+    "tools": [
+      "seo_toolkit.py"
+    ],
+    "functions": [
+      "analyze_keyword_density",
+      "estimate_competition",
+      "extract_keywords",
+      "generate_descriptions",
+      "generate_meta_description",
+      "optimize_title",
+      "quick_seo_analysis",
+      "score_title",
+      "suggest_related_keywords"
+    ]
+  },
+  "system_monitoring_sop": {
+    "tools": [
+      "system_monitor.py",
+      "process_manager.py"
+    ],
+    "functions": [
+      "auto_restart_daemon",
+      "check_thresholds",
+      "clear_alerts",
+      "collect_metrics",
+      "get_alerts",
+      "get_cpu_usage",
+      "get_dashboard",
+      "get_disk_usage",
+      "get_history",
+      "get_memory_usage",
+      "list_processes",
+      "monitor_once",
+      "monitor_process",
+      "restart_process",
+      "save_history",
+      "set_threshold",
+      "start_process",
+      "stop_process"
+    ]
+  },
+  "log_analysis_sop": {
+    "tools": [
+      "log_analyzer.py"
+    ],
+    "functions": [
+      "analyze_log",
+      "detect_patterns",
+      "export_json",
+      "generate_report",
+      "get_error_messages",
+      "get_error_stats",
+      "get_hourly_stats",
+      "get_visualization_data",
+      "parse_line",
+      "parse_log_file"
+    ]
+  }
+}

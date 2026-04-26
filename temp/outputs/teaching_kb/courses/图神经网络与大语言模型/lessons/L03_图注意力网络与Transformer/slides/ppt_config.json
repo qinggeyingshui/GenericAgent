@@ -1,0 +1,251 @@
+{
+  "scheme": "academic_blue",
+  "slides": [
+    {
+      "type": "title",
+      "title": "图注意力网络（GAT）与Transformer注意力机制",
+      "subtitle": "图神经网络与大语言模型 | L03 | 2学时（100分钟）"
+    },
+    {
+      "type": "toc",
+      "title": "教学大纲",
+      "sections": [
+        "重点与难点",
+        "导入与回顾（10分钟）",
+        "注意力机制基础（20分钟）",
+        "图注意力网络 GAT（25分钟）",
+        "Graphormer：图上的Transformer（20分钟）",
+        "应用案例与实验（15分钟）",
+        "总结与展望（10分钟）"
+      ],
+      "current": -1
+    },
+    {
+      "type": "timeline",
+      "title": "📋 教学流程总览",
+      "events": [
+        [
+          "🚀 环节1",
+          "导入与回顾（10分钟）（4 个要点）"
+        ],
+        [
+          "📖 环节2",
+          "注意力机制基础（20分钟）（5 个要点）"
+        ],
+        [
+          "✏️ 环节3",
+          "图注意力网络 GAT（25分钟）（7 个要点）"
+        ],
+        [
+          "💬 环节4",
+          "Graphormer：图上的Transformer（20分钟）（3 个要点）"
+        ],
+        [
+          "📋 环节5",
+          "应用案例与实验（15分钟）（1 个要点）"
+        ],
+        [
+          "🔬 环节6",
+          "总结与展望（10分钟）（1 个要点）"
+        ]
+      ]
+    },
+    {
+      "type": "icon_cards",
+      "title": "教学目标",
+      "cards": [
+        {
+          "icon": "🎯",
+          "title": "目标 1",
+          "desc": "理解Scaled Dot-Product Attention的数学原理"
+        },
+        {
+          "icon": "📚",
+          "title": "目标 2",
+          "desc": "掌握GAT注意力系数计算与多头聚合机制"
+        },
+        {
+          "icon": "🔬",
+          "title": "目标 3",
+          "desc": "能够推导Self-Attention公式并与GCN传播公式对比"
+        },
+        {
+          "icon": "💡",
+          "title": "目标 4",
+          "desc": "理解Graphormer如何将Transformer迁移到图结构"
+        },
+        {
+          "icon": "🧠",
+          "title": "目标 5",
+          "desc": "关联L02：将GAT定位为MPNN框架中的可学习聚合函数"
+        }
+      ]
+    },
+    {
+      "type": "stats",
+      "title": "📊 课程数据概览",
+      "stats": [
+        {
+          "number": "5",
+          "label": "教学目标"
+        },
+        {
+          "number": "6",
+          "label": "教学环节"
+        },
+        {
+          "number": "21",
+          "label": "知识要点"
+        },
+        {
+          "number": "26",
+          "label": "教学重点"
+        }
+      ]
+    },
+    {
+      "type": "comparison",
+      "title": "教学重点与难点",
+      "left_title": "🔑 重点",
+      "left_items": [
+        "Q/K/V机制；GAT注意力系数softmax归一化"
+      ],
+      "right_title": "⚠️ 难点",
+      "right_items": [
+        "多头注意力语义解释；Graphormer如何编码图结构"
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 导入与回顾（10分钟）",
+      "subtitle": "第 1 环节 · 共 4 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 导入与回顾（10分钟）",
+      "bullets": [
+        "💡 人类阅读时会\"注意\"关键词，不均等处理每个词",
+        "🌟 推荐系统中，用户历史行为权重不应相同",
+        "❓ 分子图中，不同化学键对药效的贡献差异显著",
+        "🎬 "
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 注意力机制基础（20分钟）",
+      "subtitle": "第 2 环节 · 共 5 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 注意力机制基础（20分钟）",
+      "bullets": [
+        "▸ 除以 sqrt(d_k)：防止点积值过大导致softmax梯度消失",
+        "◆ softmax：将相似度归一化为概率分布（注意力权重和为1）",
+        "● h个头并行，每头关注不同子空间的语义关系（句法/语义/指代等）",
+        "★ 拼接后线性投影到目标维度",
+        "► "
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 图注意力网络 GAT（25分钟）",
+      "subtitle": "第 3 环节 · 共 7 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 图注意力网络 GAT（25分钟）",
+      "bullets": [
+        "▸ W ∈ R^(d'×d)：共享线性变换，将节点特征投影到新空间",
+        "◆ a ∈ R^(2d')：可学习注意力向量（参数量极小）",
+        "● ||：向量拼接（concatenation）",
+        "★ LeakyReLU：负值区域斜率0.2，防止死神经元",
+        "► α_ij 是节点对(i,j)特征的函数，随输入动态变化",
+        "▸ 无需事先知道全图结构（归纳学习友好）",
+        "◆ "
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 Graphormer：图上的Transformer（20分钟）",
+      "subtitle": "第 4 环节 · 共 3 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 Graphormer：图上的Transformer（20分钟）",
+      "bullets": [
+        "▸ OGB-LSC（分子属性预测）：Graphormer获2021年KDD Cup冠军",
+        "◆ 证明：图结构信息可通过空间/位置编码完全注入Transformer",
+        "● "
+      ],
+      "highlights": [
+        0
+      ]
+    },
+    {
+      "type": "section",
+      "title": "📌 应用案例与实验（15分钟）",
+      "subtitle": "第 5 环节 · 共 1 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 应用案例与实验（15分钟）",
+      "bullets": [
+        "▸ "
+      ],
+      "highlights": []
+    },
+    {
+      "type": "section",
+      "title": "📌 总结与展望（10分钟）",
+      "subtitle": "第 6 环节 · 共 1 个要点"
+    },
+    {
+      "type": "content",
+      "title": "📌 总结与展望（10分钟）",
+      "bullets": [
+        "▸ "
+      ],
+      "highlights": []
+    },
+    {
+      "type": "chart",
+      "title": "📊 教学内容分布",
+      "chart_type": "pie",
+      "categories": [
+        "导入与回顾（10分钟）",
+        "注意力机制基础（20分钟）",
+        "图注意力网络 GAT（25分钟）",
+        "Graphormer：图上的Transformer（20分钟）",
+        "应用案例与实验（15分钟）",
+        "总结与展望（10分钟）"
+      ],
+      "series": [
+        {
+          "name": "知识点数量",
+          "values": [
+            4,
+            5,
+            7,
+            3,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ending",
+      "title": "谢谢！",
+      "contact": "图神经网络与大语言模型 - 图注意力网络（GAT）与Transformer注意力机制"
+    }
+  ]
+}

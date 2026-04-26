@@ -1,0 +1,1 @@
+[R27] 28页73KB GNN学术汇报PPT生成成功(build_gnn_report.py→gnn_academic_report.pptx)，全8种slide类型+双配色交替，TODO全部完成。[R36] teaching_kb端到端激活：构建lesson2ppt.py管道脚本，创建L01编译原理概述教案，自动生成15页49KB教学PPT，全流程(解析→配置→生成→素材清单)验证通过。Batch6 TODO全部完成。

@@ -1,0 +1,45 @@
+{
+  "tests": [
+    {
+      "id": "title_post_001_20260424165821",
+      "type": "title",
+      "content_id": "post_001",
+      "variants": [
+        {
+          "text": "10个提升效率的神器，第5个太绝了！",
+          "metrics": {
+            "views": 5000,
+            "likes": 200,
+            "comments": 45,
+            "shares": 30,
+            "ctr": 4.2
+          }
+        },
+        {
+          "text": "效率工具推荐：这10款软件让你事半功倍",
+          "metrics": {
+            "views": 3500,
+            "likes": 150,
+            "comments": 35,
+            "shares": 20,
+            "ctr": 3.1
+          }
+        },
+        {
+          "text": "程序员必备：10款效率神器深度评测",
+          "metrics": {
+            "views": 4200,
+            "likes": 280,
+            "comments": 60,
+            "shares": 45,
+            "ctr": 5.0
+          }
+        }
+      ],
+      "status": "completed",
+      "created_at": "2026-04-24 16:58",
+      "winner": 0
+    }
+  ],
+  "platform": "demo"
+}

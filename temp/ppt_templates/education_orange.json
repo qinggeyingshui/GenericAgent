@@ -1,0 +1,53 @@
+{
+  "name": "教育橙",
+  "colors": {
+    "primary": [
+      230,
+      126,
+      34
+    ],
+    "secondary": [
+      236,
+      240,
+      241
+    ],
+    "accent": [
+      52,
+      73,
+      94
+    ],
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "text": [
+      52,
+      73,
+      94
+    ]
+  },
+  "fonts": {
+    "title": {
+      "name": "微软雅黑",
+      "size": 34,
+      "bold": true
+    },
+    "subtitle": {
+      "name": "微软雅黑",
+      "size": 24,
+      "bold": false
+    },
+    "body": {
+      "name": "微软雅黑",
+      "size": 20,
+      "bold": false
+    },
+    "note": {
+      "name": "微软雅黑",
+      "size": 14,
+      "bold": false
+    }
+  },
+  "bg_style": "solid"
+}

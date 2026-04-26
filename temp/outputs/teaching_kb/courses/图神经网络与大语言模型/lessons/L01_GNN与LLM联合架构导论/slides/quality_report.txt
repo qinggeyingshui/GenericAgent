@@ -1,0 +1,16 @@
+# 教案->PPT 质量报告
+生成时间: 2026-03-26 16:28:48
+教案文件: E:\2026\x-fudan\new\GenericAgent\temp\teaching_kb\courses\图神经网络与大语言模型\lessons\L01_GNN与LLM联合架构导论\lesson_plan.md
+PPT文件:  E:\2026\x-fudan\new\GenericAgent\temp\teaching_kb\courses\图神经网络与大语言模型\lessons\L01_GNN与LLM联合架构导论\slides\图神经网络与大语言模型_GNN与LLM联合架构导论_教学课件.pptx
+
+## 各维度得分
+教学结构完整性 : 10.0 / 10  (教学阶段数: 5)
+内容覆盖度     : 9.0 / 10  (教学目标数: 4, 作业: 无)
+幻灯片数量合理性: 10.0 / 10  (幻灯片数: 19)
+作业设计       : 4.0 / 10
+
+## 总分
+**8.2 / 10**
+
+## 建议
+- 未发现作业设计，建议添加课后作业或思考题

@@ -1,0 +1,44 @@
+[
+  {
+    "user_id": "u001",
+    "user_name": "小明",
+    "text": "内容很棒，学到了很多！",
+    "timestamp": "2026-04-21 10:00"
+  },
+  {
+    "user_id": "u002",
+    "user_name": "小红",
+    "text": "讲得太好了，支持！",
+    "timestamp": "2026-04-21 10:05"
+  },
+  {
+    "user_id": "u001",
+    "user_name": "小明",
+    "text": "期待下一期",
+    "timestamp": "2026-04-21 10:10"
+  },
+  {
+    "user_id": "u003",
+    "user_name": "小刚",
+    "text": "这个不太好理解",
+    "timestamp": "2026-04-21 10:15"
+  },
+  {
+    "user_id": "u002",
+    "user_name": "小红",
+    "text": "赞赞赞！",
+    "timestamp": "2026-04-21 10:20"
+  },
+  {
+    "user_id": "u004",
+    "user_name": "路人甲",
+    "text": "一般般吧",
+    "timestamp": "2026-04-21 10:25"
+  },
+  {
+    "user_id": "u001",
+    "user_name": "小明",
+    "text": "感谢分享，很有用",
+    "timestamp": "2026-04-21 10:30"
+  }
+]

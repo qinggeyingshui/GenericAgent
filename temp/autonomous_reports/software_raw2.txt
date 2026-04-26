@@ -1,0 +1,357 @@
+﻿360安全卫士极速2025 | 15.0.3.1004 | 360安全中心
+7-Zip 23.01 (x64) | 23.01 | Igor Pavlov
+ACA & MEP 2021 Object Enabler | 8.3.51.0 | Autodesk
+ACAD Private | 24.0.47.0 | Autodesk
+Adobe Flash Player 34 ActiveX | 34.0.0.325 | Adobe
+Adobe Flash Player 34 PPAPI | 34.0.0.325 | Adobe
+Anaconda3 2024.10-1 (Python 3.12.7 64-bit) | 2024.10-1 | Anaconda, Inc.
+Apple Mobile Device Support | 18.5.0.13 | Apple Inc.
+Application Verifier x64 External Package (DesktopEditions) | 10.1.26100.6584 | Microsoft
+Application Verifier x64 External Package (OnecoreUAP) | 10.1.26100.6584 | Microsoft
+aTrust | 2.4.10.40 | Sangfor Technologies
+Audacity 3.6.3 | 3.6.3 | Audacity Team
+AutoCAD 2021 | 24.0.47.0 | Autodesk
+AutoCAD 2021 Language Pack - Simplified Chinese | 24.0.47.0 | Autodesk
+Autodesk App Manager 2020-2021 | 3.1.0 | Autodesk
+Autodesk Genuine Service | 3.2.18 | Autodesk
+Autodesk Material Library 2021 | 19.1.22.0 | Autodesk
+Autodesk Material Library Base Resolution Image Library 2021 | 19.1.22.0 | Autodesk
+Autodesk Single Sign On Component | 11.2.0.1802 | Autodesk
+Autodesk 保存到 Web 和 Mobile | 3.0.26 | Autodesk
+Autodesk 精选应用 2020-2021 | 3.1.0 | Autodesk
+Autodesk 桌面应用程序 | 7.0.21.17 | Autodesk
+Bonjour | 3.1.0.1 | Apple Inc.
+Cisco Packet Tracer 7.3.0 64Bit |  | Cisco Systems, Inc.
+ClickOnce Bootstrapper Package for Microsoft .NET Framework | 4.8.09256 | Microsoft Corporation
+cpolar | 3.3.18 | cpolar
+CrystalDiskMark 8.0.1 | 8.0.1 | Crystal Dew World
+Cursor (User) | 0.47.8 | Anysphere
+DiagnosticsHub_CollectionService | 17.14.36412 | Microsoft Corporation
+Digilent Software | 1.4.6 | Digilent, Inc.
+DiskInternals Linux Reader | 4.24.1 | DiskInternals Research
+DLL错误修复工具 | 1.0.6.0 | 武汉网幂科技有限公司
+Docker Desktop | 4.39.0 | Docker Inc.
+Entity Framework 6.5.0 Tools  for Visual Studio 2022 | 6.5.0.0 | Microsoft Corporation
+ESP-IDF Tools Offline 5.3.2 | 5.3.2 | Espressif Systems (Shanghai) Co. Ltd.
+FlashCenter | 3.7.1.9 | Chongqing Zhongcheng Network Technology Co., Ltd
+Git | 2.47.1 | The Git Development Community
+gnuplot 6.0 patchlevel 2 | 6.0 patchlevel 2 | gnuplot development team
+Google Chrome | 146.0.7680.165 | Google LLC
+IBM SPSS Statistics 27 | 27.0.1.0 | IBM Corp
+icecap_collection_neutral | 17.14.36015 | Microsoft Corporation
+icecap_collection_x64 | 17.14.36015 | Microsoft Corporation
+icecap_collectionresources | 17.14.36015 | Microsoft Corporation
+icecap_collectionresourcesx64 | 17.14.36015 | Microsoft Corporation
+IntelliJ IDEA 2024.3.4 | 243.25659.39 | JetBrains s.r.o.
+IntelliTraceProfilerProxy | 15.0.21225.01 | Microsoft Corporation
+Java 8 Update 421 (64-bit) | 8.0.4210.9 | Oracle Corporation
+Java Auto Updater | 2.8.421.9 | Oracle Corporation
+Java(TM) SE Development Kit 17.0.14 (64-bit) | 17.0.14.0 | Oracle Corporation
+Keil μVision4 | 5.24.2.0 | ARM Ltd
+Kits Configuration Installer | 10.1.22621.5040 | Microsoft
+Lenovo Smart Appearance Components | 2.3.17.0 | Lenovo
+LenovoBaiying version 1.0.22 | 1.0.22 | LenovoBaiying
+Mentor Graphics Products | 5.4-015 | Mentor Graphics Corporation
+Microsoft .NET 8.0 Templates 8.0.415 (x64) | 32.13.57780 | Microsoft Corporation
+Microsoft .NET 9.0 Templates 9.0.306 (x64) | 36.11.57780 | Microsoft Corporation
+Microsoft .NET AppHost Pack - 8.0.21 (x64) | 64.84.40925 | Microsoft Corporation
+Microsoft .NET AppHost Pack - 8.0.21 (x64_arm64) | 64.84.40925 | Microsoft Corporation
+Microsoft .NET AppHost Pack - 8.0.21 (x64_x86) | 64.84.40925 | Microsoft Corporation
+Microsoft .NET AppHost Pack - 9.0.10 (x64) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET AppHost Pack - 9.0.10 (x64_arm64) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET AppHost Pack - 9.0.10 (x64_x86) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Framework 4.7.1 Doc Redirected Targeting Pack (ENU) | 4.7.02558 | Microsoft Corporation
+Microsoft .NET Framework 4.7.1 Targeting Pack | 4.7.02558 | Microsoft Corporation
+Microsoft .NET Framework 4.7.2 Targeting Pack | 4.7.03062 | Microsoft Corporation
+Microsoft .NET Framework 4.7.2 Targeting Pack (ENU) | 4.7.03062 | Microsoft Corporation
+Microsoft .NET Framework 4.8 SDK | 4.8.03928 | Microsoft Corporation
+Microsoft .NET Framework 4.8 Targeting Pack | 4.8.03761 | Microsoft Corporation
+Microsoft .NET Framework 4.8 Targeting Pack (ENU) | 4.8.03761 | Microsoft Corporation
+Microsoft .NET Framework Cumulative Intellisense Pack for Visual Studio (ENU) | 4.8.09037 | Microsoft Corporation
+Microsoft .NET Host - 6.0.36 (x86) | 48.144.23141 | Microsoft Corporation
+Microsoft .NET Host - 9.0.10 (x64) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Host - 9.0.10 (x86) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Host FX Resolver - 6.0.36 (x86) | 48.144.23141 | Microsoft Corporation
+Microsoft .NET Host FX Resolver - 9.0.10 (x64) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Host FX Resolver - 9.0.10 (x86) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Runtime - 6.0.36 (x86) | 48.144.23141 | Microsoft Corporation
+Microsoft .NET Runtime - 8.0.21 (x64) | 64.84.40925 | Microsoft Corporation
+Microsoft .NET Runtime - 8.0.21 (x86) | 64.84.40925 | Microsoft Corporation
+Microsoft .NET Runtime - 9.0.10 (x64) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Runtime - 9.0.10 (x86) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET SDK 9.0.306 (x64) from Visual Studio | 9.3.625.47604 | Microsoft Corporation
+Microsoft .NET Standard Targeting Pack - 2.1.0 (x64) | 24.0.28113 | Microsoft Corporation
+Microsoft .NET Targeting Pack - 8.0.21 (x64) | 64.84.40925 | Microsoft Corporation
+Microsoft .NET Targeting Pack - 8.0.21 (x86) | 64.84.40925 | Microsoft Corporation
+Microsoft .NET Targeting Pack - 9.0.10 (x64) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Targeting Pack - 9.0.10 (x86) | 72.40.40927 | Microsoft Corporation
+Microsoft .NET Toolset 9.0.306 (x64) | 36.9.57780 | Microsoft Corporation
+Microsoft 365 - zh-cn | 16.0.19725.20190 | Microsoft Corporation
+Microsoft ASP.NET Core 8.0.21 Shared Framework (x64) | 8.0.21.25475 | Microsoft Corporation
+Microsoft ASP.NET Core 8.0.21 Shared Framework (x86) | 8.0.21.25475 | Microsoft Corporation
+Microsoft ASP.NET Core 8.0.21 Targeting Pack (x64) | 8.0.21.25475 | Microsoft Corporation
+Microsoft ASP.NET Core 8.0.21 Targeting Pack (x86) | 8.0.21.25475 | Microsoft Corporation
+Microsoft ASP.NET Core 9.0.10 Shared Framework (x64) | 9.0.10.25475 | Microsoft Corporation
+Microsoft ASP.NET Core 9.0.10 Shared Framework (x86) | 9.0.10.25475 | Microsoft Corporation
+Microsoft ASP.NET Core 9.0.10 Targeting Pack (x64) | 9.0.10.25475 | Microsoft Corporation
+Microsoft ASP.NET Core 9.0.10 Targeting Pack (x86) | 9.0.10.25475 | Microsoft Corporation
+Microsoft Edge | 143.0.3650.96 | Microsoft Corporation
+Microsoft Edge WebView2 Runtime | 138.0.3351.83 | Microsoft Corporation
+Microsoft Office 家庭和学生版 2021 - zh-cn | 16.0.19725.20190 | Microsoft Corporation
+Microsoft OneDrive | 25.031.0217.0003 | Microsoft Corporation
+Microsoft OneNote - zh-cn | 16.0.19725.20190 | Microsoft Corporation
+Microsoft System CLR Types for SQL Server 2019 | 15.0.2000.5 | Microsoft Corporation
+Microsoft TestPlatform SDK Local Feed | 17.10.0.9037153 | Microsoft
+Microsoft Update Health Tools | 5.72.0.0 | Microsoft Corporation
+Microsoft Visual C++ 2005 Redistributable | 8.0.61187 | Microsoft Corporation
+Microsoft Visual C++ 2005 Redistributable (x64) | 8.0.61186 | Microsoft Corporation
+Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.17 | 9.0.30729 | Microsoft Corporation
+Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.7523 | 9.0.30729.7523 | Microsoft Corporation
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.21022 | 9.0.21022 | Microsoft Corporation
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.7523 | 9.0.30729.7523 | Microsoft Corporation
+Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219 | 10.0.40219 | Microsoft Corporation
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219 | 10.0.40219 | Microsoft Corporation
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.60610 | 11.0.60610.1 | Microsoft Corporation
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030 | 11.0.61030.0 | Microsoft Corporation
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030 | 11.0.61030.0 | Microsoft Corporation
+Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.61135 | 11.0.61135 | Microsoft Corporation
+Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.61135 | 11.0.61135 | Microsoft Corporation
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030 | 11.0.61030 | Microsoft Corporation
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030 | 11.0.61030 | Microsoft Corporation
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40664 | 12.0.40664.0 | Microsoft Corporation
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40664 | 12.0.40664.0 | Microsoft Corporation
+Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40664 | 12.0.40664 | Microsoft Corporation
+Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40664 | 12.0.40664 | Microsoft Corporation
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40664 | 12.0.40664 | Microsoft Corporation
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40664 | 12.0.40664 | Microsoft Corporation
+Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.44.35211 | 14.44.35211.0 | Microsoft Corporation
+Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.44.35211 | 14.44.35211.0 | Microsoft Corporation
+Microsoft Visual C++ 2022 X64 Additional Runtime - 14.44.35211 | 14.44.35211 | Microsoft Corporation
+Microsoft Visual C++ 2022 X64 Debug Runtime - 14.44.35211 | 14.44.35211 | Microsoft Corporation
+Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.44.35211 | 14.44.35211 | Microsoft Corporation
+Microsoft Visual C++ 2022 X86 Additional Runtime - 14.44.35211 | 14.44.35211 | Microsoft Corporation
+Microsoft Visual C++ 2022 X86 Debug Runtime - 14.44.35211 | 14.44.35211 | Microsoft Corporation
+Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.44.35211 | 14.44.35211 | Microsoft Corporation
+Microsoft Visual Studio 2010 Tools for Office Runtime (x64) | 10.0.60828 | Microsoft Corporation
+Microsoft Visual Studio Code (User) | 1.113.0 | Microsoft Corporation
+Microsoft Visual Studio Installer | 3.14.2086.54749 | Microsoft Corporation
+Microsoft Visual Studio Setup Configuration | 3.12.2140.44225 | Microsoft Corporation
+Microsoft Visual Studio Setup WMI Provider | 3.12.2140.44225 | Microsoft Corporation
+Microsoft Windows Desktop Runtime - 6.0.36 (x86) | 48.144.23186 | Microsoft Corporation
+Microsoft Windows Desktop Runtime - 8.0.21 (x64) | 64.84.40919 | Microsoft Corporation
+Microsoft Windows Desktop Runtime - 8.0.21 (x86) | 64.84.40919 | Microsoft Corporation
+Microsoft Windows Desktop Runtime - 9.0.10 (x64) | 72.40.40921 | Microsoft Corporation
+Microsoft Windows Desktop Runtime - 9.0.10 (x86) | 72.40.40921 | Microsoft Corporation
+Microsoft Windows Desktop Targeting Pack - 8.0.21 (x64) | 64.84.40919 | Microsoft Corporation
+Microsoft Windows Desktop Targeting Pack - 8.0.21 (x86) | 64.84.40919 | Microsoft Corporation
+Microsoft Windows Desktop Targeting Pack - 9.0.10 (x64) | 72.40.40921 | Microsoft Corporation
+Microsoft Windows Desktop Targeting Pack - 9.0.10 (x86) | 72.40.40921 | Microsoft Corporation
+Microsoft.NET.Sdk.Android.Manifest-9.0.100 (x64) | 35.0.78 | Microsoft Corporation
+Microsoft.NET.Sdk.Aspire.Manifest-8.0.100 (x64) | 64.136.23253 | Microsoft Corporation
+Microsoft.NET.Sdk.iOS.Manifest-9.0.100 (x64) | 26.0.9752 | Microsoft Corporation
+Microsoft.NET.Sdk.MacCatalyst.Manifest-9.0.100 (x64) | 26.0.9752 | Microsoft Corporation
+Microsoft.NET.Sdk.macOS.Manifest-9.0.100 (x64) | 26.0.9752 | Microsoft Corporation
+Microsoft.NET.Sdk.Maui.Manifest-9.0.100 (x64) | 9.0.111 | Microsoft Corporation
+Microsoft.NET.Sdk.tvOS.Manifest-9.0.100 (x64) | 26.0.9752 | Microsoft Corporation
+Microsoft.NET.Workload.Emscripten.Current.Manifest (x64) | 72.48.40820 | Microsoft Corporation
+Microsoft.NET.Workload.Emscripten.net6.Manifest (x64) | 72.48.40820 | Microsoft Corporation
+Microsoft.NET.Workload.Emscripten.net7.Manifest (x64) | 72.48.40820 | Microsoft Corporation
+Microsoft.NET.Workload.Emscripten.net8.Manifest (x64) | 72.48.40820 | Microsoft Corporation
+Microsoft.NET.Workload.Mono.Toolchain.Current.Manifest (x64) | 72.0.40927 | Microsoft Corporation
+Microsoft.NET.Workload.Mono.Toolchain.net6.Manifest (x64) | 72.0.40927 | Microsoft Corporation
+Microsoft.NET.Workload.Mono.Toolchain.net7.Manifest (x64) | 72.0.40927 | Microsoft Corporation
+Microsoft.NET.Workload.Mono.Toolchain.net8.Manifest (x64) | 72.0.40927 | Microsoft Corporation
+MiKTeX | 24.1 | MiKTeX.org
+MobaXterm | 25.2.0.5296 | Mobatek
+MotionPro | 9.4.0.0 | Array Networks
+Mozilla Firefox (x64 zh-CN) | 148.0.2 | Mozilla
+Mozilla Maintenance Service | 135.0.1 | Mozilla
+MSI Development Tools | 10.1.22621.5040 | Microsoft Corporation
+MultipleMarkPowerPointAddIn (x64) | 1.0.0 | MAXHUB
+MultipleMarkPowerPointAddIn (x86) | 1.0.0 | MAXHUB
+MySQL Installer | 1.6.13.0 | Oracle Corporation
+MySQL Server 8.0 | 8.0.41 | Oracle Corporation
+Nmap 7.97 | 7.97 | Nmap Project
+Node.js | 20.15.1 | Node.js Foundation
+Notepad++ (64-bit x64) | 8.8 | Notepad++ Team
+Npcap | 1.82 | Nmap Project
+NVM for Windows 1.2.2 | 1.2.2 | Author Software Inc.
+Office 16 Click-to-Run Extensibility Component | 16.0.19725.20190 | Microsoft Corporation
+Office 16 Click-to-Run Licensing Component | 16.0.18526.20168 | Microsoft Corporation
+Office 16 Click-to-Run Localization Component | 16.0.19725.20190 | Microsoft Corporation
+phpstudy集成环境 | 8.1.1.3 | 安徽小皮教育科技有限公司
+Postman x64 11.81.4 | 11.81.4 | Postman
+PowerShell 7.5.5.0-x64 | 7.5.5.0 | Microsoft Corporation
+PowerShell 7-x64 | 7.5.5.0 | Microsoft Corporation
+PPT插件 | 1.0.0.2893 | MAXHUB
+PremiumSoft Navicat Premium 16.3 | 16.3.7 | PremiumSoft CyberTech Ltd.
+PyCharm Community Edition 2024.2.2 | 242.22855.92 | JetBrains s.r.o.
+Python 3.13.2 (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Add to Path (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Core Interpreter (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Development Libraries (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Documentation (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Executables (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 pip Bootstrap (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Standard Library (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Tcl/Tk Support (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python 3.13.2 Test Suite (64-bit) | 3.13.2150.0 | Python Software Foundation
+Python Launcher | 3.13.2150.0 | Python Software Foundation
+QQ | 9.9.20.37625 | 腾讯科技(深圳)有限公司
+Qzone相册极速上传工具 |  | 
+Recuva | 1.53 | Piriform
+Rustup: the Rust toolchain installer | 1.26.0 | 
+S761-Bluetooth | 1.0 | 宁波丰吉双可电子有限公司
+SD Card Formatter | 5.0.3 | SD Association
+SDK ARM64 Additions | 10.1.26100.6584 | Microsoft Corporation
+SDK ARM64 Redistributables | 10.1.26100.6584 | Microsoft Corporation
+Steam | 2.10.91.91 | Valve Corporation
+ToDesk | 4.8.1.5 | Hainan YouQu Technology Co., Ltd
+Trae (User) | 3.5.32 | SPRING (SG) PTE. LTD
+Tuanjie Hub 1.3.3 | 1.3.3 | 优三缔科技（上海）有限公司
+UltraEdit 15.10 | 15.10.34 | IDM Computer Solutions, Inc.
+Unity 2022.3.62f1c1 | 2022.3.62f1c1 | Unity Technologies ApS
+Unity Hub 3.3.3-c3 | 3.3.3-c3 | Unity Technologies Inc.
+Universal CRT Extension SDK | 10.1.22621.5040 | Microsoft Corporation
+Universal CRT Headers Libraries and Sources | 10.1.26100.6584 | Microsoft Corporation
+Universal CRT Redistributable | 10.1.22621.5040 | Microsoft Corporation
+Universal CRT Tools x64 | 10.1.26100.6584 | Microsoft Corporation
+Universal CRT Tools x86 | 10.1.26100.6584 | Microsoft Corporation
+Universal General MIDI DLS Extension SDK | 10.1.26100.6584 | Microsoft Corporation
+vcpp_crt.redist.clickonce | 14.44.35211 | Microsoft Corporation
+Visual Studio Community 2022 | 17.14.19 | Microsoft Corporation
+VMware Workstation | 16.2.4 | VMware, Inc.
+VRoidStudio version 2.3.0 | 2.3.0 | pixiv Inc.
+VS Immersive Activate Helper | 17.0.157.0 | Microsoft Corporation
+VS JIT Debugger | 17.0.157.0 | Microsoft Corporation
+VS Script Debugging Common | 17.0.157.0 | Microsoft Corporation
+vs_BlendMsi | 17.14.36015 | Microsoft Corporation
+vs_clickoncebootstrappermsi | 17.14.36015 | Microsoft Corporation
+vs_clickoncebootstrappermsires | 17.14.36015 | Microsoft Corporation
+vs_clickoncesigntoolmsi | 17.14.36015 | Microsoft Corporation
+vs_communitymsires | 17.14.36015 | Microsoft Corporation
+vs_communitysharedmsi | 17.14.36025 | Microsoft Corporation
+vs_communityx64msi | 17.14.36025 | Microsoft Corporation
+vs_CoreEditorFonts | 17.7.40001 | Microsoft Corporation
+vs_devenvsharedmsi | 17.14.36015 | Microsoft Corporation
+vs_devenx64vmsi | 17.14.36015 | Microsoft Corporation
+vs_filehandler_amd64 | 17.14.36024 | Microsoft Corporation
+vs_filehandler_x86 | 17.14.36024 | Microsoft Corporation
+vs_FileTracker_Singleton | 17.14.36015 | Microsoft Corporation
+vs_githubprotocolhandlermsi | 17.14.36015 | Microsoft Corporation
+vs_Graphics_Singletonx64 | 17.14.36015 | Microsoft Corporation
+vs_Graphics_Singletonx86 | 17.14.36015 | Microsoft Corporation
+vs_minshellinteropsharedmsi | 17.14.36015 | Microsoft Corporation
+vs_minshellinteropx64msi | 17.14.36015 | Microsoft Corporation
+vs_minshellmsires | 17.14.36015 | Microsoft Corporation
+vs_minshellsharedmsi | 17.14.36024 | Microsoft Corporation
+vs_minshellx64msi | 17.14.36301 | Microsoft Corporation
+vs_SQLClickOnceBootstrappermsi | 17.14.36015 | Microsoft Corporation
+vs_tipsmsi | 17.14.36015 | Microsoft Corporation
+vs_vswebprotocolselectormsi | 17.14.36323 | Microsoft Corporation
+Win32DiskImager version 1.0.0 | 1.0.0 | ImageWriter Developers
+WinAppDeploy | 10.1.26100.6584 | Microsoft Corporation
+Windows App Certification Kit Native Components | 10.1.26100.6584 | Microsoft Corporation
+Windows App Certification Kit SupportedApiList x86 | 10.1.26100.6584 | Microsoft Corporation
+Windows App Certification Kit x64 | 10.1.26100.6584 | Microsoft Corporation
+Windows App Certification Kit x64 (OnecoreUAP) | 10.1.26100.6584 | Microsoft Corporation
+Windows Desktop Extension SDK | 10.1.26100.6584 | Microsoft Corporation
+Windows Desktop Extension SDK Contracts | 10.1.22621.5040 | Microsoft Corporation
+Windows Driver Package - STMicroelectronics (usbser) Ports  (04/01/2021 2.02) | 04/01/2021 2.02 | STMicroelectronics
+Windows Driver Package - STMicroelectronics (usbser) Ports  (06/08/2017 2.01) | 06/08/2017 2.01 | STMicroelectronics
+Windows Driver Package - STMicroelectronics (usbser) Ports  (12/10/2013 1.0) | 12/10/2013 1.0 | STMicroelectronics
+Windows Driver Package - STMicroelectronics (WinUSB) STLinkWinUSB  (01/21/2013 1.01) | 01/21/2013 1.01 | STMicroelectronics
+Windows Driver Package - STMicroelectronics (WinUSB) STLinkWinUSB  (04/01/2021 2.02) | 04/01/2021 2.02 | STMicroelectronics
+Windows Driver Package - STMicroelectronics (WinUSB) STLinkWinUSB  (06/08/2017 2.01) | 06/08/2017 2.01 | STMicroelectronics
+Windows IoT Extension SDK | 10.1.22621.5040 | Microsoft Corporation
+Windows IoT Extension SDK Contracts | 10.1.22621.5040 | Microsoft Corporation
+Windows Mobile Extension SDK | 10.1.22621.5040 | Microsoft Corporation
+Windows Mobile Extension SDK Contracts | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK AddOn | 10.1.0.0 | Microsoft Corporation
+Windows SDK ARM Desktop Tools | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK ARM64 Desktop Tools | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Desktop Headers arm | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK Desktop Headers arm64 | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK Desktop Headers x64 | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK Desktop Headers x86 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Desktop Libs arm | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK Desktop Libs arm64 | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK Desktop Libs x64 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Desktop Libs x86 | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK Desktop Tools arm64 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Desktop Tools x64 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Desktop Tools x86 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK DirectX x64 Remote | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK DirectX x86 Remote | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK EULA | 10.1.22621.5040 | Microsoft Corporations
+Windows SDK Facade Windows WinMD Versioned | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Apps | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Apps Contracts | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Apps DirectX x86 Remote | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Apps Headers | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK for Windows Store Apps Headers OnecoreUap | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Apps Libs | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Apps Metadata | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Apps Tools | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK for Windows Store Managed Apps Libs | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Modern Non-Versioned Developer Tools | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Modern Versioned Developer Tools | 10.1.22621.5040 | Microsoft Corporation
+Windows SDK OnecoreUap Headers arm64 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK OnecoreUap Headers x64 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK OnecoreUap Headers x86 | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Redistributables | 10.1.26100.6584 | Microsoft Corporation
+Windows SDK Signing Tools | 10.1.26100.6584 | Microsoft Corporation
+Windows Software Development Kit - Windows 10.0.22621.5040 | 10.1.22621.5040 | Microsoft Corporation
+Windows Software Development Kit - Windows 10.0.26100.6584 | 10.1.26100.6584 | Microsoft Corporation
+Windows Subsystem for Linux | 2.4.13.0 | Microsoft Corporation
+Windows Team Extension SDK | 10.1.26100.6584 | Microsoft Corporation
+Windows Team Extension SDK Contracts | 10.1.26100.6584 | Microsoft Corporation
+Windows 驱动程序包 - KEIL - Tools By ARM (WinUSB) USB  (08/29/2013 1.0.0.3) | 08/29/2013 1.0.0.3 | KEIL - Tools By ARM
+Windows 驱动程序包 - Silicon Laboratories Inc. Ports  (04/13/2023 11.3.0.176) | 04/13/2023 11.3.0.176 | Silicon Laboratories Inc.
+Windows 驱动程序包 - wch.cn (CH341SER_A64) Ports  (02/11/2023 3.8.2023.02) | 02/11/2023 3.8.2023.02 | wch.cn
+Windows 驱动程序包 - wch.cn (CH343SER_A64) Ports  (02/11/2023 1.7.2023.02) | 02/11/2023 1.7.2023.02 | wch.cn
+WinHex |  | 
+WinRAR 7.00 (64-位) | 7.00.0 | win.rar GmbH
+WinRT Intellisense Desktop - en-us | 10.1.22621.5040 | Microsoft Corporation
+WinRT Intellisense Desktop - Other Languages | 10.1.26100.6584 | Microsoft Corporation
+WinRT Intellisense IoT - en-us | 10.1.22621.5040 | Microsoft Corporation
+WinRT Intellisense IoT - Other Languages | 10.1.22621.5040 | Microsoft Corporation
+WinRT Intellisense Mobile - en-us | 10.1.22621.5040 | Microsoft Corporation
+WinRT Intellisense PPI - en-us | 10.1.26100.6584 | Microsoft Corporation
+WinRT Intellisense PPI - Other Languages | 10.1.22621.5040 | Microsoft Corporation
+WinRT Intellisense UAP - en-us | 10.1.26100.6584 | Microsoft Corporation
+WinRT Intellisense UAP - Other Languages | 10.1.26100.6584 | Microsoft Corporation
+Wireshark 4.4.5 x64 | 4.4.5 | The Wireshark developer community, https://www.wireshark.org
+WPT Redistributables | 10.1.26100.6584 | Microsoft
+WPTx64 (DesktopEditions) | 10.1.26100.6584 | Microsoft
+WPTx64 (OnecoreUAP) | 10.1.26100.6584 | Microsoft
+Xftp 8 | 8.0.0095 | NetSarang Computer, Inc.
+xiaozhi_mcp_client | 0.3.0 | xiaozhi
+Xilinx Design Tools Vivado HL Design Edition 2016.2 (D:\sl) | 2016.2 | Xilinx Inc.
+Xilinx DocNav (D:\sl) | 2016.2 | Xilinx Inc.
+Xilinx Information Center (D:\sl) | 2016.2 | Xilinx Inc.
+Xshell 8 | 8.0.0087 | NetSarang Computer, Inc.
+Zotero | 8.0.4 | Corporation for Digital Scholarship
+爱思助手8.0 | 8.36.016 | 深圳市为爱普信息技术有限公司
+百度网盘 | 8.2.7 | 北京度友科技有限公司
+比特浏览器 7.1.0 | 7.1.0 | BitBrowser
+传屏助手 | 6.5.1.41_6 | MAXHUB
+福昕PDF编辑器 | 13.3.632.26807 | 福建福昕软件开发股份有限公司
+激活Office | 1.5.1.5 | Beijing Yundong Zhixiao Network Technology Co. , Ltd.
+剪映专业版 | 10.1.0.13849 | Shenzhen Lianmeng Technology
+夸克 | 6.6.0.779 | 广州市动悦信息技术有限公司
+联想电脑管家（原厂驱动和官方服务） | 5.1.150.11202 | 联想(北京)有限公司
+联想浏览器(原厂认证，极速体验) | 9.0.6.8151 | 联想(北京)有限公司
+联想账号 |  | 
+联想智能引擎（原厂预装版） | 1.0.70.10091 | 联想(北京)有限公司
+模板助手桌面版 | 2.0.0.6 | Beijing Yundong Zhixiao Network Technology Co. , Ltd.
+双人成行 |  | Hazelight Studios
+腾讯会议 | 3.39.1.427 | 腾讯科技(深圳)有限公司
+天问Block 版本 V2025 夏季版 | V2025 夏季版 | 杭州天问五幺科技有限公司
+微信 | 4.1.8.67 | 腾讯科技(深圳)有限公司
+微信开发者工具 1.06.2504010 | 1.06.2504010 | 腾讯科技(广州)有限公司
+小黑课堂计算机二级MsOffice题库 版本 5.8 | 5.8 | 湖北小黑课堂教育科技有限公司
+小绿鲸英文文献阅读器 | 2.5.3.0 | 见鲸科技（南京）有限公司
+小智护眼宝 | 2.0.32.48 | 深圳市常青藤软件科技有限公司
+虚拟实验环境 | 5.1.0721 | 安徽省科大奥锐科技有限公司

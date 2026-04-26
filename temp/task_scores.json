@@ -1,0 +1,130 @@
+[
+  {
+    "name": "PPT数据可视化增强",
+    "category": "document_generation",
+    "desc": "为presentation增加动态图表和数据驱动的可视化能力",
+    "output": "ppt_data_viz.py + 更新ppt_com_sop第6节",
+    "acceptance": "支持从Excel/CSV导入数据生成动态图表，支持数据更新自动刷新图表",
+    "need_source": "高频刚需(presentation 8次使用)，补齐数据驱动演示能力",
+    "type": "B",
+    "scores": {
+      "B": 0,
+      "D": 15.56,
+      "U": 10,
+      "I": 7,
+      "S": 7.51
+    }
+  },
+  {
+    "name": "多平台内容适配工具",
+    "category": "document_generation",
+    "desc": "一键将内容适配到不同平台的格式要求",
+    "output": "platform_adapter.py + platform_adaptation_sop.md",
+    "acceptance": "支持微信公众号/知乎/小红书格式转换，自动调整图片尺寸和排版",
+    "need_source": "用户画像匹配(自媒体创作)，解决多平台发布痛点",
+    "type": "A",
+    "scores": {
+      "B": 0,
+      "D": 15.56,
+      "U": 10,
+      "I": 5,
+      "S": 7.11
+    }
+  },
+  {
+    "name": "AI文案生成助手",
+    "category": "knowledge_management",
+    "desc": "基于主题生成多种风格的自媒体文案",
+    "output": "ai_copywriting.py + 更新content_creation_sop",
+    "acceptance": "支持标题生成、正文扩写、风格转换(正式/轻松/幽默)",
+    "need_source": "用户画像匹配(自媒体创作)，提升内容生产效率",
+    "type": "B",
+    "scores": {
+      "B": 0,
+      "D": 12.22,
+      "U": 10,
+      "I": 8,
+      "S": 7.04
+    }
+  },
+  {
+    "name": "自媒体数据分析工具",
+    "category": "knowledge_management",
+    "desc": "分析自媒体内容表现，生成数据报告",
+    "output": "content_analytics.py + content_analytics_sop.md",
+    "acceptance": "支持阅读量/点赞/评论数据统计，生成趋势图和优化建议",
+    "need_source": "用户长期目标(自媒体创作大师)，需要数据驱动优化",
+    "type": "A",
+    "scores": {
+      "B": 0,
+      "D": 12.22,
+      "U": 10,
+      "I": 7,
+      "S": 6.84
+    }
+  },
+  {
+    "name": "视频字幕智能校对",
+    "category": "media_processing",
+    "desc": "自动检测字幕错误并提供修正建议",
+    "output": "subtitle_proofreader.py + 更新video_processing_sop第5节",
+    "acceptance": "支持错别字检测、标点符号优化、时间轴校验",
+    "need_source": "增强视频处理深度，提升字幕质量",
+    "type": "B",
+    "scores": {
+      "B": 2.59,
+      "D": 8.89,
+      "U": 7,
+      "I": 8,
+      "S": 6.26
+    }
+  },
+  {
+    "name": "热点追踪与选题推荐",
+    "category": "web",
+    "desc": "自动追踪热搜榜单，推荐适合的创作选题",
+    "output": "trending_tracker.py + trending_analysis_sop.md",
+    "acceptance": "支持微博/知乎/百度热搜抓取，基于用户领域匹配推荐选题",
+    "need_source": "填补web类别空白(仅2个技能)，解决选题痛点",
+    "type": "A",
+    "scores": {
+      "B": 6.3,
+      "D": 3.33,
+      "U": 8,
+      "I": 5,
+      "S": 5.96
+    }
+  },
+  {
+    "name": "Web爬虫通用框架",
+    "category": "web_automation",
+    "desc": "构建可复用的爬虫框架，支持反爬虫和数据清洗",
+    "output": "web_scraper_framework.py + web_scraping_sop.md",
+    "acceptance": "支持User-Agent轮换、代理池、速率限制、数据去重",
+    "need_source": "补齐web_automation深度，为素材采集提供基础能力",
+    "type": "A",
+    "scores": {
+      "B": 2.59,
+      "D": 7.78,
+      "U": 8,
+      "I": 6,
+      "S": 5.93
+    }
+  },
+  {
+    "name": "音频转文字与摘要",
+    "category": "media_processing",
+    "desc": "将音频/视频转为文字并生成摘要",
+    "output": "audio_transcription.py + 更新audio_processing_sop第6节",
+    "acceptance": "支持语音识别(whisper)，自动生成摘要和关键词",
+    "need_source": "增强音频处理深度，为内容创作提供素材提取能力",
+    "type": "B",
+    "scores": {
+      "B": 2.59,
+      "D": 8.89,
+      "U": 7,
+      "I": 5,
+      "S": 5.66
+    }
+  }
+]

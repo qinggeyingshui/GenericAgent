@@ -1,0 +1,7 @@
+{
+  "schedule": "00:00",
+  "repeat": "daily",
+  "enabled": true,
+  "max_delay_hours": 12,
+  "prompt": "执行SOP自动入库扫描任务，报告写入{report_path}\n\n【任务目标】扫描memory目录下所有*_sop.md文件，自动补全到skill_tree.json\n\n【执行步骤】\n1. 读取skill_tree.json，获取：\n   - 现有分类列表（排除meta_capability）\n   - 每个分类下已有的skill名称（作为分类特征参考）\n   - 已入库的sop文件名列表\n\n2. 扫描memory/及子目录下所有*_sop.md\n   - 排除：autonomous_operation_sop目录、名称含meta/memory_management的SOP\n\n3. 找出缺失的SOP文件，对于每个：\n   a. 读取SOP内容前50行，提取：标题、描述、涉及的工具/功能\n   b. 检查是否有[skill_mapping]标签\n   c. 有标签：调用helper.record_skill_usage()入库\n   d. 无标签：智能分类判断\n\n【智能分类判断（无标签时）】\n根据SOP内容与现有分类的相似度判断：\n- 对比SOP描述与各分类下已有skill的主题\n- 选择最匹配的分类\n- 如果所有分类相似度都很低（明显是新领域），可新建分类\n- 新建分类名用英文下划线格式，如：mobile_development\n\n直接写入skill_tree.json，格式：\n{\n  \"sop\": \"xxx_sop.md\",\n  \"tools\": [],\n  \"functions\": [],\n  \"usage_count\": 0,\n  \"last_used\": \"日期\"\n}\n\n【路径】\n- SOP目录：memory/（递归扫描）\n- skill_tree：memory/autonomous_operation_sop/skill_tree.json\n- helper模块：memory/autonomous_operation_sop/helper.py\n\n【报告格式】\n- 扫描统计（总SOP数、已入库数、新入库数）\n- 新入库列表：分类 | SOP名 | 入库方式(标签/智能分类) | 分类理由\n- 新建分类说明（如有）\n- 跳过列表"
+}

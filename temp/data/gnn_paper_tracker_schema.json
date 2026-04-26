@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GNN Paper Tracker Entry",
+  "description": "Schema for a single GNN paper tracking record.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Local unique identifier for the entry."
+    },
+    "title": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "array",
+      "description": "List of authors in order.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "year": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        {
+          "type": "string",
+          "enum": [
+            "TBD"
+          ]
+        }
+      ],
+      "description": "Publication year or 'TBD'."
+    },
+    "venue": {
+      "type": "string",
+      "description": "Conference/journal/preprint venue."
+    },
+    "domain_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "High-level domain tags, e.g., representation/geometric/topological."
+    },
+    "topic_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Fine-grained topic tags."
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "arxiv",
+        "conference",
+        "journal",
+        "thesis",
+        "other"
+      ]
+    },
+    "link": {
+      "type": "string",
+      "description": "Primary URL for the paper."
+    },
+    "code_link": {
+      "type": "string",
+      "description": "URL of code repository (if any)."
+    },
+    "reading_status": {
+      "type": "string",
+      "enum": [
+        "unread",
+        "skimmed",
+        "deep-read",
+        "revisited"
+      ]
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Reading priority (1-5, 5 is highest)."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short textual summary (1-3 sentences)."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Longer notes and cross-task references."
+    },
+    "added_at": {
+      "type": "string",
+      "description": "Date when the entry was added (YYYY-MM-DD)."
+    },
+    "last_updated": {
+      "type": "string",
+      "description": "Last updated date (YYYY-MM-DD)."
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "authors",
+    "source",
+    "link",
+    "reading_status",
+    "priority"
+  ],
+  "additionalProperties": false
+}
